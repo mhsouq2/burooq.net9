@@ -1,0 +1,1 @@
+Upload these files to the root of your GitHub repository. Cloudflare will deploy automatically.
