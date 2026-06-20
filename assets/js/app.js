@@ -1,1 +1,0 @@
-document.getElementById('menu').onclick=()=>{let n=document.getElementById('nav');n.style.display=n.style.display==='flex'?'none':'flex'};
