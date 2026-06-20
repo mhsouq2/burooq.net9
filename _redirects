@@ -1,0 +1,18 @@
+# Cloudflare Pages Redirects
+
+# Redirect common misspellings and alternate URLs
+/facebook-ads /facebook-ads-mastery.html 301
+/facebook-advertising /facebook-ads-mastery.html 301
+/meta-ads /articles/meta-ads-guide.html 301
+/shopify-ads /articles/facebook-ads-for-shopify.html 301
+/scaling /articles/how-to-scale-facebook-ads.html 301
+/creative /articles/facebook-ads-creative-strategy.html 301
+/testing /articles/facebook-ads-testing-framework.html 301
+/retargeting /articles/facebook-retargeting-guide.html 301
+/playbook https://sooqster.gumroad.com/l/xirot 301
+/buy https://sooqster.gumroad.com/l/xirot 301
+/download https://sooqster.gumroad.com/l/xirot 301
+/ebook https://sooqster.gumroad.com/l/xirot 301
+
+# 404 catch
+/* /index.html 200

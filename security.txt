@@ -1,0 +1,6 @@
+# Security Policy
+Contact: mailto:security@challengehomeschool.com
+Preferred-Languages: en
+Canonical: https://challengehomeschool.com/security.txt
+Policy: https://challengehomeschool.com/security-policy.html
+Expires: 2026-01-01T00:00:00.000Z

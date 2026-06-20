@@ -1,0 +1,5 @@
+# ads.txt - Authorized Digital Sellers
+# https://challengehomeschool.com/ads.txt
+# This site does not currently run programmatic advertising.
+# Direct sales only via Gumroad.
+# contact: contact@challengehomeschool.com

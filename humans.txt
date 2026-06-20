@@ -1,0 +1,18 @@
+/* TEAM */
+Name: Facebook Ads Mastery Team
+Contact: contact [at] challengehomeschool.com
+From: Digital Marketing Experts
+
+/* SITE */
+Last update: 2025/01/01
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3
+Components: Vanilla JS, Meta Pixel, Schema.org
+
+/* THANKS */
+Pexels.com - Free stock photography
+Google Fonts - Typography
+
+/* TOOLS */
+Stack: Cloudflare Pages, HTML/CSS/JS

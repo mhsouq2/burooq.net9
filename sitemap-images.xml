@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://challengehomeschool.com/</loc>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg</image:loc>
+      <image:caption>Digital marketing team analyzing Facebook ads dashboard and campaign performance metrics</image:caption>
+      <image:title>Facebook Ads Campaign Management Dashboard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg</image:loc>
+      <image:caption>Marketing analytics dashboard showing Facebook ads performance data and ROAS metrics</image:caption>
+      <image:title>Facebook Ads Performance Analytics</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg</image:loc>
+      <image:caption>Shopify ecommerce store owner managing Facebook ads campaigns for online retail</image:caption>
+      <image:title>Facebook Ads for Shopify Ecommerce</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg</image:loc>
+      <image:caption>Business growth chart showing Facebook ads scaling profitability</image:caption>
+      <image:title>Facebook Ads Scaling Strategy</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://challengehomeschool.com/facebook-ads-mastery.html</loc>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg</image:loc>
+      <image:caption>Professional digital marketer reviewing Facebook ads campaign performance analytics on laptop</image:caption>
+      <image:title>Facebook Ads Mastery Guide</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg</image:loc>
+      <image:caption>Creative team developing Facebook and Instagram ad creative strategy</image:caption>
+      <image:title>Facebook Ads Creative Development</image:title>
+    </image:image>
+  </url>
+
+</urlset>

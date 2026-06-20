@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+
+Sitemap: https://challengehomeschool.com/sitemap.xml
+Sitemap: https://challengehomeschool.com/sitemap-pages.xml
+Sitemap: https://challengehomeschool.com/sitemap-images.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+
+ 

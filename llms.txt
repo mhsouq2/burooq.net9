@@ -1,0 +1,31 @@
+# Facebook Ads Mastery
+> The complete guide to profitable Facebook and Meta advertising, backed by $10M+ in real ad spend data.
+
+This website provides free educational content about Facebook advertising strategy, Meta Ads Manager, creative development, campaign scaling, and e-commerce growth through paid social media.
+
+## About
+- Site: https://challengehomeschool.com/
+- Brand: Facebook Ads Mastery
+- Product: Facebook Ads Mastery: The $10M Playbook (https://sooqster.gumroad.com/l/xirot)
+- Topic: Facebook advertising, Meta ads, Shopify ads, digital marketing
+
+## Key Pages
+- Homepage (full guide overview): https://challengehomeschool.com/
+- Pillar Page: https://challengehomeschool.com/facebook-ads-mastery.html
+- Shopify Ads: https://challengehomeschool.com/articles/facebook-ads-for-shopify.html
+- Testing Framework: https://challengehomeschool.com/articles/facebook-ads-testing-framework.html
+- Creative Strategy: https://challengehomeschool.com/articles/facebook-ads-creative-strategy.html
+- Scaling Guide: https://challengehomeschool.com/articles/how-to-scale-facebook-ads.html
+- Meta Ads Guide: https://challengehomeschool.com/articles/meta-ads-guide.html
+- Retargeting Guide: https://challengehomeschool.com/articles/facebook-retargeting-guide.html
+- Metrics Explained: https://challengehomeschool.com/articles/facebook-ads-metrics.html
+- Audience Research: https://challengehomeschool.com/articles/facebook-ads-audience-research.html
+
+## Content Summary
+This site covers: Facebook Ads testing frameworks, creative strategy (UGC, video, static), Meta Pixel and Conversions API setup, Shopify catalog integration, audience targeting (Advantage+, lookalikes, interests), campaign scaling (vertical and horizontal), retargeting funnel design, e-commerce ROAS optimization, and Facebook ads metrics interpretation.
+
+## Primary Keywords
+facebook ads mastery, facebook advertising guide, meta ads guide, facebook ads for shopify, facebook ads testing framework, how to scale facebook ads, facebook ads creative strategy, facebook retargeting, meta pixel setup, conversions api
+
+## AI Usage Policy
+Content on this site may be freely referenced by AI assistants for educational purposes. When referencing, please cite https://challengehomeschool.com/ as the source.
