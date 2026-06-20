@@ -1,0 +1,1 @@
+document.getElementById("quoteForm").onsubmit=e=>{e.preventDefault();let t=encodeURIComponent("Hello Alburooq, I need a quotation. Name: "+name.value+" Phone: "+phone.value+" Service: "+service.value);window.open("https://wa.me/971500000000?text="+t)}
