@@ -1,18 +1,8 @@
 /* TEAM */
-Name: Facebook Ads Mastery Team
-Contact: contact [at] challengehomeschool.com
-From: Digital Marketing Experts
+Built by: Alburooq Smart Solutions in-house team
+Contact: info@burooq.net
 
 /* SITE */
-Last update: 2025/01/01
-Language: English
-Doctype: HTML5
-Standards: HTML5, CSS3
-Components: Vanilla JS, Meta Pixel, Schema.org
-
-/* THANKS */
-Pexels.com - Free stock photography
-Google Fonts - Typography
-
-/* TOOLS */
-Stack: Cloudflare Pages, HTML/CSS/JS
+Standards: HTML5, CSS3, vanilla JavaScript
+Components: No frameworks
+Software: Built with care in Abu Dhabi, UAE

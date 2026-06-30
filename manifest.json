@@ -1,26 +1,12 @@
 {
-  "name": "Facebook Ads Mastery",
-  "short_name": "FB Ads Mastery",
-  "description": "The complete guide to profitable Facebook and Meta advertising",
+  "name": "Alburooq Smart Solutions",
+  "short_name": "Alburooq",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0f",
-  "theme_color": "#4f6ef7",
-  "orientation": "portrait-primary",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0F3D63",
+  "description": "CCTV, smart home, access control and networking specialists in Abu Dhabi.",
   "icons": [
-    {
-      "src": "/assets/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/assets/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
-  ],
-  "categories": ["education", "business"],
-  "lang": "en"
+    { "src": "/assets/logo/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
 }
