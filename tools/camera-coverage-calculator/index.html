@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camera Coverage Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Estimate how many cameras are needed to cover a given area based on lens angle and distance.">
-<link rel="canonical" href="https://www.alburooq.ae/tools/camera-coverage-calculator">
-
+<title>CCTV Camera Coverage Calculator: Field of View Estimator | Alburooq</title>
+<meta name="description" content="Free camera coverage calculator. Estimate how far a security camera sees and how wide its coverage is, based on mounting height, tilt and lens angle.">
+<link rel="canonical" href="https://www.alburooq.ae/tools/camera-coverage-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Camera Coverage Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Estimate how many cameras are needed to cover a given area based on lens angle and distance.">
-<meta property="og:url" content="https://www.alburooq.ae/tools/camera-coverage-calculator">
+<meta property="og:title" content="CCTV Camera Coverage Calculator: Field of View Estimator | Alburooq">
+<meta property="og:description" content="Free camera coverage calculator. Estimate how far a security camera sees and how wide its coverage is, based on mounting height, tilt and lens angle.">
+<meta property="og:url" content="https://www.alburooq.ae/tools/camera-coverage-calculator/">
 <meta property="og:image" content="https://www.alburooq.ae/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Camera Coverage Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Estimate how many cameras are needed to cover a given area based on lens angle and distance.">
+<meta name="twitter:title" content="CCTV Camera Coverage Calculator: Field of View Estimator | Alburooq">
+<meta name="twitter:description" content="Free camera coverage calculator. Estimate how far a security camera sees and how wide its coverage is, based on mounting height, tilt and lens angle.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,30 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Camera Coverage Calculator",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "url":"https://www.alburooq.ae/tools/camera-coverage-calculator/",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},
+  "provider":{"@type":"Organization","name":"Alburooq Smart Solutions"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How high should a security camera be mounted?","acceptedAnswer":{"@type":"Answer","text":"Most residential entrance cameras work best mounted around 2.4 to 3 meters high, balancing tamper resistance with clear facial identification."}},
+    {"@type":"Question","name":"What lens angle is best for a driveway camera?","acceptedAnswer":{"@type":"Answer","text":"A narrower angle, around 30-60 degrees, generally works best for long driveways since it preserves detail at distance."}},
+    {"@type":"Question","name":"Can one camera cover my whole garden?","acceptedAnswer":{"@type":"Answer","text":"A single wide-angle or panoramic camera can cover a small to medium garden, but larger or irregular gardens usually need more than one camera."}},
+    {"@type":"Question","name":"Does a wider lens angle mean better security?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Wider angles cover more area but reduce detail at any given point."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -95,15 +117,117 @@
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
     <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Camera Coverage Calculator</span></div>
+    <p class="eyebrow">Free Tool · Updated 2026</p>
     <h1>Camera Coverage Calculator</h1>
-    <p class="u-max-w-md">Estimate how many cameras are needed to cover a given area based on lens angle and distance.</p>
+    <p class="u-max-w-md">Estimate how far a security camera sees and how wide its ground coverage is, based on mounting height, downward tilt and lens angle.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="coverage-calc">
+  <div class="form-row">
+    <div class="form-field"><label for="c-height">Mounting height (meters)</label><input id="c-height" type="number" value="3" min="1" max="20" step="0.1"></div>
+    <div class="form-field"><label for="c-angle">Lens horizontal angle (degrees)</label>
+      <select id="c-angle">
+        <option value="90">90° (standard fixed lens)</option>
+        <option value="105" selected>105° (wide-angle fixed lens)</option>
+        <option value="180">180° (panoramic/fisheye)</option>
+        <option value="30">30° (telephoto / long-range lens)</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-field"><label for="c-tilt">Downward tilt angle (degrees from horizontal)</label><input id="c-tilt" type="number" value="20" min="0" max="80"></div>
+  <button class="btn btn-primary btn-block" id="c-calc">Calculate Coverage</button>
+  <div id="c-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.4rem;" id="c-distance">-</span><span class="label" style="color:var(--color-gray-500);">Ground distance to view center</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.4rem;" id="c-width">-</span><span class="label" style="color:var(--color-gray-500);">Approx. coverage width at that point</span></div>
+    </div>
+    <p class="form-hint" style="margin-top:.75rem;">This estimates the area a single camera covers on the ground. For full-property coverage planning with no blind spots, a site survey is recommended.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('c-calc');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var height = parseFloat(document.getElementById('c-height').value) || 3;
+    var angle = parseFloat(document.getElementById('c-angle').value) || 90;
+    var tilt = parseFloat(document.getElementById('c-tilt').value) || 20;
+    var tiltRad = tilt * Math.PI / 180;
+    // ground distance from camera base to center of view, using height and tilt
+    var distance = tilt > 0 ? height / Math.tan(tiltRad) : height * 3; // fallback for near-0 tilt
+    if(!isFinite(distance) || distance <= 0) distance = height * 2;
+    var angleRad = angle * Math.PI / 180;
+    var width = 2 * distance * Math.tan(angleRad/2);
+    document.getElementById('c-result').style.display = 'block';
+    document.getElementById('c-distance').textContent = distance.toFixed(1) + ' m';
+    document.getElementById('c-width').textContent = Math.abs(width).toFixed(1) + ' m wide';
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Related reading</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../articles/how-many-cctv-cameras-do-i-need/">How Many CCTV Cameras Do I Need?</a>
+    <a class="card card--service" href="../cctv-storage-calculator/">CCTV Storage Calculator</a>
+    <a class="card card--service" href="../../services/cctv-installation-abu-dhabi/">CCTV Installation Service</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How camera coverage is calculated</h2>
+<p>A security camera's ground coverage depends on three things: how high it's mounted, how far it's tilted downward, and its lens's horizontal field of view (its "angle"). This calculator uses basic trigonometry to estimate the ground distance to the center of the camera's view, and the approximate width of coverage at that distance, based on the values you enter.</p>
+
+<h2 id="lens-angles">Understanding lens angles: which one do you need?</h2>
+<ul>
+  <li><strong>30° (telephoto/long-range)</strong> — narrow field of view but sees much further in detail; ideal for long driveways or perimeter fence lines where identifying faces or plates at distance matters more than wide coverage.</li>
+  <li><strong>90° (standard)</strong> — a balanced field of view suited to most entrances and general-purpose coverage.</li>
+  <li><strong>105° (wide-angle)</strong> — covers more ground area per camera, useful for gardens, parking areas and open spaces, at the cost of less detail at any single point.</li>
+  <li><strong>180° (panoramic/fisheye)</strong> — covers an extremely wide area from a single mounting point, often used in lobbies, large open rooms or as an overview camera, though image detail at the edges is reduced.</li>
+</ul>
+
+<h2 id="mounting-height">Why mounting height and tilt matter so much</h2>
+<p>A camera mounted too low is easy to tamper with and captures less useful ground area; mounted too high without enough downward tilt, faces become difficult to identify because the camera looks down at the tops of heads rather than faces. Most residential entrance cameras work best mounted around 2.4 to 3 meters high with a moderate downward tilt, balancing tamper resistance against clear facial identification.</p>
+
+<h2 id="combining">Combining coverage with camera count</h2>
+<p>This calculator estimates a single camera's coverage footprint. To work out how many cameras your full property needs, combine this with our guide on <a href="../../articles/how-many-cctv-cameras-do-i-need/">how many CCTV cameras you actually need</a>, which walks through coverage by property type and access point.</p>
+
+<h2 id="limitations">What this calculator doesn't account for</h2>
+<p>Real-world coverage is also affected by obstructions (trees, walls, parked vehicles), lighting conditions for night recording, and the specific camera model's actual lens characteristics, which can vary slightly from the nominal angle. For exact placement planning that accounts for your property's actual layout and obstructions, a free site survey gives a guaranteed, accurate result.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Site Survey</a></p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+<div class="faq-item"><button class="faq-q">How high should a security camera be mounted?</button><div class="faq-a"><p>Most residential entrance cameras work best mounted around 2.4 to 3 meters high, balancing tamper resistance with clear facial identification at a moderate downward tilt.</p></div></div>
+<div class="faq-item"><button class="faq-q">What lens angle is best for a driveway camera?</button><div class="faq-a"><p>A narrower angle (around 30-60°) generally works best for long driveways, since it preserves detail at distance for reading plates or identifying faces, compared to a wide-angle lens which sacrifices detail for broader coverage.</p></div></div>
+<div class="faq-item"><button class="faq-q">Can one camera cover my whole garden?</button><div class="faq-a"><p>A single wide-angle or panoramic camera can cover a small to medium garden from a good vantage point, but larger or irregularly shaped gardens usually need more than one camera to avoid blind spots at corners.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does a wider lens angle mean better security?</button><div class="faq-a"><p>Not necessarily. Wider angles cover more area but reduce detail at any given point, which can make faces or plates harder to identify. The right angle depends on whether you need broad coverage or fine detail at a specific spot.</p></div></div>
+
+  </div>
+</section>
 
 </main>
 <footer class="site-footer">

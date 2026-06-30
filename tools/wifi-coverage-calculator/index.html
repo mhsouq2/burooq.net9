@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WiFi Coverage Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Estimate access points needed based on property size and wall density.">
-<link rel="canonical" href="https://www.alburooq.ae/tools/wifi-coverage-calculator">
-
+<title>WiFi Coverage Calculator: How Many Access Points Do You Need? | Alburooq</title>
+<meta name="description" content="Free WiFi coverage calculator. Estimate how many access points your villa or office needs based on area, floors and wall construction.">
+<link rel="canonical" href="https://www.alburooq.ae/tools/wifi-coverage-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WiFi Coverage Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Estimate access points needed based on property size and wall density.">
-<meta property="og:url" content="https://www.alburooq.ae/tools/wifi-coverage-calculator">
+<meta property="og:title" content="WiFi Coverage Calculator: How Many Access Points Do You Need? | Alburooq">
+<meta property="og:description" content="Free WiFi coverage calculator. Estimate how many access points your villa or office needs based on area, floors and wall construction.">
+<meta property="og:url" content="https://www.alburooq.ae/tools/wifi-coverage-calculator/">
 <meta property="og:image" content="https://www.alburooq.ae/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WiFi Coverage Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Estimate access points needed based on property size and wall density.">
+<meta name="twitter:title" content="WiFi Coverage Calculator: How Many Access Points Do You Need? | Alburooq">
+<meta name="twitter:description" content="Free WiFi coverage calculator. Estimate how many access points your villa or office needs based on area, floors and wall construction.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,30 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"WiFi Coverage Calculator",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "url":"https://www.alburooq.ae/tools/wifi-coverage-calculator/",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},
+  "provider":{"@type":"Organization","name":"Alburooq Smart Solutions"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How many WiFi access points do I need for a 2-floor villa?","acceptedAnswer":{"@type":"Answer","text":"Most 2-floor villas with standard concrete construction need 2 to 4 access points, depending on total floor area and layout."}},
+    {"@type":"Question","name":"Why does my villa have WiFi dead zones even with an expensive router?","acceptedAnswer":{"@type":"Answer","text":"Dense concrete walls and floor slabs common in UAE villas attenuate WiFi signal significantly, meaning a single router often cannot reach every room reliably."}},
+    {"@type":"Question","name":"Is mesh WiFi better than multiple separate access points?","acceptedAnswer":{"@type":"Answer","text":"Access points wired back to a central switch generally perform more consistently through multiple concrete walls and floors than relaying signal wirelessly between mesh units."}},
+    {"@type":"Question","name":"Where should I place my WiFi access point for best coverage?","acceptedAnswer":{"@type":"Answer","text":"Central, elevated placement away from metal objects, large appliances and cabinets gives noticeably better coverage."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -95,15 +117,118 @@
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
     <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">WiFi Coverage Calculator</span></div>
+    <p class="eyebrow">Free Tool · Updated 2026</p>
     <h1>WiFi Coverage Calculator</h1>
-    <p class="u-max-w-md">Estimate access points needed based on property size and wall density.</p>
+    <p class="u-max-w-md">Estimate how many WiFi access points your property needs based on total area, number of floors, and wall construction, to avoid dead zones without overspending.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="wifi-calc">
+  <div class="form-row">
+    <div class="form-field"><label for="w-area">Total property area (sqm)</label><input id="w-area" type="number" value="400" min="20" max="10000"></div>
+    <div class="form-field"><label for="w-floors">Number of floors</label><input id="w-floors" type="number" value="2" min="1" max="10"></div>
+  </div>
+  <div class="form-field"><label for="w-walls">Wall construction</label>
+    <select id="w-walls">
+      <option value="1">Drywall / light partition (minimal signal loss)</option>
+      <option value="1.4" selected>Standard concrete block (typical UAE villa)</option>
+      <option value="1.8">Dense concrete with rebar (heavy attenuation)</option>
+    </select>
+  </div>
+  <div class="form-field"><label for="w-priority">Priority</label>
+    <select id="w-priority">
+      <option value="1" selected>Reliable everyday coverage</option>
+      <option value="0.8">High-performance (gaming, 4K streaming, video calls everywhere)</option>
+    </select>
+  </div>
+  <button class="btn btn-primary btn-block" id="w-calc">Calculate Access Points Needed</button>
+  <div id="w-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.6rem;" id="w-aps">-</span><span class="label" style="color:var(--color-gray-500);">Recommended access points</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.6rem;" id="w-coverage">-</span><span class="label" style="color:var(--color-gray-500);">Approx. sqm per access point</span></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('w-calc');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var area = parseFloat(document.getElementById('w-area').value) || 400;
+    var floors = parseFloat(document.getElementById('w-floors').value) || 1;
+    var wallFactor = parseFloat(document.getElementById('w-walls').value) || 1.4;
+    var priorityFactor = parseFloat(document.getElementById('w-priority').value) || 1;
+
+    // baseline: one AP covers ~120 sqm in open space, reduced by wall density and floor separation
+    var baseCoveragePerAP = 120 / wallFactor * priorityFactor;
+    var areaPerFloor = area / floors;
+    var apsPerFloor = Math.max(1, Math.ceil(areaPerFloor / baseCoveragePerAP));
+    var totalAPs = apsPerFloor * floors;
+
+    document.getElementById('w-result').style.display = 'block';
+    document.getElementById('w-aps').textContent = totalAPs;
+    document.getElementById('w-coverage').textContent = Math.round(area/totalAPs) + ' sqm';
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Related reading</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../articles/wifi-dead-zones-villa-fix/">Why Your Villa Has WiFi Dead Zones</a>
+    <a class="card card--service" href="../../articles/structured-cabling-vs-wifi-office-abu-dhabi/">Structured Cabling vs WiFi</a>
+    <a class="card card--service" href="../../services/wifi-solutions/">WiFi Solutions Service</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How this WiFi coverage estimate works</h2>
+<p>WiFi access point count depends on total floor area, number of floors (since signal doesn't pass through concrete slabs well), the density of your walls, and how demanding your usage is. This calculator estimates a baseline coverage radius per access point and adjusts it for wall construction common in UAE villas and offices, then divides your total area accordingly.</p>
+
+<h2 id="why-walls-matter">Why concrete walls are the real culprit behind WiFi dead zones</h2>
+<p>UAE villas are typically built with dense concrete block and rebar reinforcement, which attenuates WiFi signal far more than the drywall common in many router marketing photos and review videos. A single router on the ground floor often simply cannot reach upstairs bedrooms reliably, no matter how expensive or "powerful" that router claims to be. This is the single most common cause of WiFi dead zones we diagnose during surveys.</p>
+
+<h2 id="placement">Access point placement matters as much as count</h2>
+<p>Having the "right" number of access points doesn't help if they're placed inside cabinets, behind TVs, or clustered on one side of the property. Central, elevated placement, away from metal objects and large appliances, makes a measurable difference even before adding more hardware. For a full explanation of why villas develop dead zones and how to fix them properly, see our guide on <a href="../../articles/wifi-dead-zones-villa-fix/">why your villa has WiFi dead zones</a>.</p>
+
+<h2 id="wired-vs-mesh">Wired-backbone access points vs consumer mesh systems</h2>
+<p>Consumer mesh WiFi kits relay signal wirelessly between units, which works reasonably well in open-plan homes but loses significant performance through multiple concrete walls and floors. Access points wired back to a central switch via structured cabling don't suffer this relay penalty, delivering more consistent speed throughout the property. This is why most commercial offices and larger villas we wire use cabled access points rather than pure mesh systems.</p>
+
+<h2 id="next-steps">Getting an exact access point plan</h2>
+<p>This calculator gives a strong starting estimate, but a proper WiFi survey measures actual signal strength room by room with the equipment you'll use, identifying precisely where coverage drops and what's needed to fix it, rather than estimating from area alone.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free WiFi Survey</a></p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+<div class="faq-item"><button class="faq-q">How many WiFi access points do I need for a 2-floor villa?</button><div class="faq-a"><p>Most 2-floor villas with standard concrete construction need 2 to 4 access points, depending on total floor area and layout. Use the calculator above for an estimate matched to your property size.</p></div></div>
+<div class="faq-item"><button class="faq-q">Why does my villa have WiFi dead zones even with an expensive router?</button><div class="faq-a"><p>Dense concrete walls and floor slabs common in UAE villas attenuate WiFi signal significantly, meaning a single router, regardless of price, often cannot reach every room reliably.</p></div></div>
+<div class="faq-item"><button class="faq-q">Is mesh WiFi better than multiple separate access points?</button><div class="faq-a"><p>Mesh systems work well in open-plan spaces, but access points wired back to a central switch generally perform more consistently through multiple concrete walls and floors, since they don't lose performance relaying signal wirelessly between units.</p></div></div>
+<div class="faq-item"><button class="faq-q">Where should I place my WiFi access point for best coverage?</button><div class="faq-a"><p>Central, elevated placement away from metal objects, large appliances and cabinets gives noticeably better coverage than placement behind a TV or inside a media cabinet.</p></div></div>
+
+  </div>
+</section>
 
 </main>
 <footer class="site-footer">

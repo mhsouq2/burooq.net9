@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VAT Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Quickly calculate 5% UAE VAT on quotations and invoices.">
-<link rel="canonical" href="https://www.alburooq.ae/tools/vat-calculator">
-
+<title>UAE VAT Calculator 2026 — Add or Remove 5% VAT | Alburooq</title>
+<meta name="description" content="Free UAE VAT calculator. Add or remove 5% VAT from any amount instantly, with the correct formula explained. Useful for invoices, quotations and shopping.">
+<link rel="canonical" href="https://www.alburooq.ae/tools/vat-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="VAT Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Quickly calculate 5% UAE VAT on quotations and invoices.">
-<meta property="og:url" content="https://www.alburooq.ae/tools/vat-calculator">
+<meta property="og:title" content="UAE VAT Calculator 2026 — Add or Remove 5% VAT | Alburooq">
+<meta property="og:description" content="Free UAE VAT calculator. Add or remove 5% VAT from any amount instantly, with the correct formula explained. Useful for invoices, quotations and shopping.">
+<meta property="og:url" content="https://www.alburooq.ae/tools/vat-calculator/">
 <meta property="og:image" content="https://www.alburooq.ae/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VAT Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Quickly calculate 5% UAE VAT on quotations and invoices.">
+<meta name="twitter:title" content="UAE VAT Calculator 2026 — Add or Remove 5% VAT | Alburooq">
+<meta name="twitter:description" content="Free UAE VAT calculator. Add or remove 5% VAT from any amount instantly, with the correct formula explained. Useful for invoices, quotations and shopping.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,30 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"UAE VAT Calculator",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "url":"https://www.alburooq.ae/tools/vat-calculator/",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},
+  "provider":{"@type":"Organization","name":"Alburooq Smart Solutions"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is the VAT rate in the UAE?","acceptedAnswer":{"@type":"Answer","text":"The standard UAE VAT rate is 5%, applied to most goods and services since January 2018."}},
+    {"@type":"Question","name":"How do I remove VAT from a total price?","acceptedAnswer":{"@type":"Answer","text":"Divide the VAT-inclusive total by 1.05 to find the net amount, then subtract the net amount from the total to find the VAT portion."}},
+    {"@type":"Question","name":"Is VAT charged on installation services in the UAE?","acceptedAnswer":{"@type":"Answer","text":"Yes, installation and maintenance services such as CCTV, smart home and networking installation are subject to the standard 5% VAT rate."}},
+    {"@type":"Question","name":"How do I calculate 5% VAT quickly in my head?","acceptedAnswer":{"@type":"Answer","text":"Take 5% of the net amount, which is the same as dividing the net amount by 20."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -94,16 +116,117 @@
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">VAT Calculator</span></div>
-    <h1>VAT Calculator</h1>
-    <p class="u-max-w-md">Quickly calculate 5% UAE VAT on quotations and invoices.</p>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">UAE VAT Calculator</span></div>
+    <p class="eyebrow">Free Tool · Updated 2026</p>
+    <h1>UAE VAT Calculator</h1>
+    <p class="u-max-w-md">Quickly add or remove 5% UAE VAT from any amount. Get the net price, VAT amount and total instantly, with the correct formula explained below.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="vat-calc">
+  <div class="form-field"><label for="v-amount">Amount (AED)</label><input id="v-amount" type="number" value="1000" min="0" step="0.01"></div>
+  <div class="form-field">
+    <label for="v-mode">I want to...</label>
+    <select id="v-mode">
+      <option value="add" selected>Add 5% VAT to this amount (amount is excluding VAT)</option>
+      <option value="remove">Remove 5% VAT from this amount (amount includes VAT)</option>
+    </select>
+  </div>
+  <button class="btn btn-primary btn-block" id="v-calc">Calculate</button>
+  <div id="v-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--3">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.4rem;" id="v-net">-</span><span class="label" style="color:var(--color-gray-500);">Net (excl. VAT)</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-amber-500);font-size:1.4rem;" id="v-vat">-</span><span class="label" style="color:var(--color-gray-500);">VAT (5%)</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.4rem;" id="v-total">-</span><span class="label" style="color:var(--color-gray-500);">Total (incl. VAT)</span></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('v-calc');
+  if(!btn) return;
+  function fmt(n){ return 'AED ' + n.toLocaleString('en-AE', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  btn.addEventListener('click', function(){
+    var amount = parseFloat(document.getElementById('v-amount').value) || 0;
+    var mode = document.getElementById('v-mode').value;
+    var net, vat, total;
+    if(mode === 'add'){
+      net = amount;
+      vat = amount * 0.05;
+      total = amount * 1.05;
+    } else {
+      total = amount;
+      net = amount / 1.05;
+      vat = total - net;
+    }
+    document.getElementById('v-result').style.display = 'block';
+    document.getElementById('v-net').textContent = fmt(net);
+    document.getElementById('v-vat').textContent = fmt(vat);
+    document.getElementById('v-total').textContent = fmt(total);
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How UAE VAT calculation works</h2>
+<p>The UAE applies a standard Value Added Tax (VAT) rate of 5% on most goods and services, introduced in January 2018. VAT is calculated on the net (pre-tax) price of a product or service, and the total a customer pays is the net price plus 5% VAT. This calculator works in both directions: add 5% VAT to a net amount to get the total, or work backward from a VAT-inclusive total to find the original net amount and the VAT portion.</p>
+
+<h2 id="formulas">The VAT formulas used</h2>
+<ul>
+  <li><strong>Adding VAT:</strong> Total = Net Amount × 1.05</li>
+  <li><strong>Removing VAT:</strong> Net Amount = Total ÷ 1.05, and VAT = Total − Net Amount</li>
+</ul>
+<p>A common mistake is simply taking 5% off a VAT-inclusive total to "remove VAT" — this gives the wrong answer, because 5% of the total is not the same as the VAT that was added to the original net amount. Always divide by 1.05 to back out VAT correctly, not multiply by 0.95.</p>
+
+<h2 id="who-needs-this">Who actually needs a VAT calculator</h2>
+<p>This tool is useful well beyond construction and ELV quotations: freelancers and small business owners pricing invoices, shoppers comparing VAT-inclusive vs VAT-exclusive prices, and anyone reconciling receipts where only one of the two figures (net or gross) is shown. If you're comparing quotations from different contractors, always confirm whether the quoted price already includes VAT, since a 5% difference on a large project (like a full villa CCTV or smart home installation) is a meaningful amount.</p>
+
+<h2 id="invoicing">VAT on business invoices in the UAE</h2>
+<p>UAE-registered businesses above the mandatory VAT registration threshold must issue tax invoices showing the net amount, VAT amount, and total separately, along with their Tax Registration Number (TRN). When requesting quotations for installation services, always ask whether the figure quoted is VAT-inclusive, and confirm the contractor's TRN is shown on the final invoice.</p>
+
+<h2 id="get-quote">Planning a project and need a VAT-clear quotation?</h2>
+<p>Every quotation we issue clearly separates the net amount, VAT, and total, so there's no ambiguity when comparing against other contractors.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+<div class="faq-item"><button class="faq-q">What is the VAT rate in the UAE?</button><div class="faq-a"><p>The standard UAE VAT rate is 5%, applied to most goods and services since January 2018, with some categories zero-rated or exempt.</p></div></div>
+<div class="faq-item"><button class="faq-q">How do I remove VAT from a total price?</button><div class="faq-a"><p>Divide the VAT-inclusive total by 1.05 to find the net amount, then subtract the net amount from the total to find the VAT portion. Do not simply subtract 5% of the total, as this gives an incorrect result.</p></div></div>
+<div class="faq-item"><button class="faq-q">Is VAT charged on installation services in the UAE?</button><div class="faq-a"><p>Yes, installation and maintenance services such as CCTV, smart home and networking installation are subject to the standard 5% VAT rate, which should be clearly shown on your quotation and invoice.</p></div></div>
+<div class="faq-item"><button class="faq-q">How do I calculate 5% VAT quickly in my head?</button><div class="faq-a"><p>A quick estimate is to take 5% of the net amount, which is the same as dividing the net amount by 20. For example, AED 1,000 in VAT-exclusive price has AED 50 in VAT, for a total of AED 1,050.</p></div></div>
+
+  </div>
+</section>
 
 </main>
 <footer class="site-footer">

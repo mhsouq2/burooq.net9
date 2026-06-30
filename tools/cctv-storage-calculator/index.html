@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CCTV Storage Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Free calculator to estimate NVR hard drive storage needed based on camera count, resolution, frame rate and retention days.">
-<link rel="canonical" href="https://www.alburooq.ae/tools/cctv-storage-calculator">
-
+<title>CCTV Storage Calculator: NVR Hard Drive Size Estimator | Alburooq</title>
+<meta name="description" content="Free CCTV storage calculator. Estimate the exact NVR hard drive size you need based on camera count, resolution, frame rate, compression and retention days.">
+<link rel="canonical" href="https://www.alburooq.ae/tools/cctv-storage-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CCTV Storage Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Free calculator to estimate NVR hard drive storage needed based on camera count, resolution, frame rate and retention days.">
-<meta property="og:url" content="https://www.alburooq.ae/tools/cctv-storage-calculator">
+<meta property="og:title" content="CCTV Storage Calculator: NVR Hard Drive Size Estimator | Alburooq">
+<meta property="og:description" content="Free CCTV storage calculator. Estimate the exact NVR hard drive size you need based on camera count, resolution, frame rate, compression and retention days.">
+<meta property="og:url" content="https://www.alburooq.ae/tools/cctv-storage-calculator/">
 <meta property="og:image" content="https://www.alburooq.ae/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CCTV Storage Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Free calculator to estimate NVR hard drive storage needed based on camera count, resolution, frame rate and retention days.">
+<meta name="twitter:title" content="CCTV Storage Calculator: NVR Hard Drive Size Estimator | Alburooq">
+<meta name="twitter:description" content="Free CCTV storage calculator. Estimate the exact NVR hard drive size you need based on camera count, resolution, frame rate, compression and retention days.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,30 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"CCTV Storage Calculator",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "url":"https://www.alburooq.ae/tools/cctv-storage-calculator/",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},
+  "provider":{"@type":"Organization","name":"Alburooq Smart Solutions"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much storage do I need for 8 CCTV cameras?","acceptedAnswer":{"@type":"Answer","text":"For 8 cameras at 4MP, motion-triggered recording, and 30 days retention, expect roughly 1-2 TB of storage, though continuous recording or higher resolution will increase this significantly."}},
+    {"@type":"Question","name":"Is 1TB enough for CCTV?","acceptedAnswer":{"@type":"Answer","text":"1TB is generally enough for a small system with motion-triggered recording and standard retention, but is often insufficient for 8+ cameras or continuous recording setups."}},
+    {"@type":"Question","name":"How many days of CCTV footage should I keep?","acceptedAnswer":{"@type":"Answer","text":"30 days is a common standard for villas and small businesses. Higher-security commercial sites sometimes retain 60-90 days."}},
+    {"@type":"Question","name":"Does H.265 really save that much storage compared to H.264?","acceptedAnswer":{"@type":"Answer","text":"Yes, H.265 typically reduces file size by 40-50% compared to H.264 at the same resolution and quality."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -95,24 +117,51 @@
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
     <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">CCTV Storage Calculator</span></div>
+    <p class="eyebrow">Free Tool · Updated 2026</p>
     <h1>CCTV Storage Calculator</h1>
-    <p class="u-max-w-md">Estimate the hard drive capacity your NVR needs based on camera count, resolution, frame rate and retention period.</p>
+    <p class="u-max-w-md">Work out exactly how much NVR hard drive storage your camera system needs, based on camera count, resolution, frame rate, compression and how many days of footage you want to keep.</p>
   </div>
 </section>
-<section class="section"><div class="container">
-<div class="card u-max-w-md" id="storage-calc">
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="storage-calc">
   <div class="form-row">
-    <div class="form-field"><label for="t-cams">Number of cameras</label><input id="t-cams" type="number" value="8" min="1"></div>
+    <div class="form-field"><label for="t-cams">Number of cameras</label><input id="t-cams" type="number" value="8" min="1" max="200"></div>
     <div class="form-field"><label for="t-res">Resolution</label>
-      <select id="t-res"><option value="2">2MP (1080p)</option><option value="4" selected>4MP</option><option value="8">8MP (4K)</option></select>
+      <select id="t-res">
+        <option value="2">2MP (1080p)</option>
+        <option value="4" selected>4MP</option>
+        <option value="8">8MP (4K)</option>
+      </select>
     </div>
   </div>
   <div class="form-row">
-    <div class="form-field"><label for="t-fps">Frame rate (fps)</label><input id="t-fps" type="number" value="15" min="1"></div>
-    <div class="form-field"><label for="t-days">Retention (days)</label><input id="t-days" type="number" value="30" min="1"></div>
+    <div class="form-field"><label for="t-fps">Frame rate (fps)</label><input id="t-fps" type="number" value="15" min="1" max="60"></div>
+    <div class="form-field"><label for="t-days">Retention (days)</label><input id="t-days" type="number" value="30" min="1" max="365"></div>
   </div>
-  <button class="btn btn-primary" id="t-calc">Calculate Storage</button>
-  <p id="t-result" class="form-success" style="display:none;margin-top:1rem;"></p>
+  <div class="form-field"><label for="t-codec">Video compression</label>
+    <select id="t-codec">
+      <option value="1" selected>H.265 / H.265+ (modern, efficient)</option>
+      <option value="1.8">H.264 (older, larger files)</option>
+    </select>
+  </div>
+  <div class="form-field"><label for="t-motion">Recording mode</label>
+    <select id="t-motion">
+      <option value="1">Continuous (24/7) recording</option>
+      <option value="0.4" selected>Motion-triggered recording (typical)</option>
+    </select>
+  </div>
+  <button class="btn btn-primary btn-block" id="t-calc">Calculate Storage Needed</button>
+  <div id="t-result" style="display:none;margin-top:1.25rem;">
+    <p class="form-success" id="t-result-text" style="margin-bottom:.75rem;"></p>
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.5rem;" id="t-tb">-</span><span class="label" style="color:var(--color-gray-500);">TB needed</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.5rem;" id="t-recommend">-</span><span class="label" style="color:var(--color-gray-500);">Recommended drive</span></div>
+    </div>
+  </div>
 </div>
 <script>
 (function(){
@@ -123,20 +172,79 @@
     var mp = parseFloat(document.getElementById('t-res').value) || 4;
     var fps = parseFloat(document.getElementById('t-fps').value) || 15;
     var days = parseFloat(document.getElementById('t-days').value) || 30;
-    // Rough H.265 bitrate estimate (Mbps) scaling with MP and fps
-    var bitrateMbps = mp * 0.9 + (fps/30)*1.5;
+    var codecFactor = parseFloat(document.getElementById('t-codec').value) || 1;
+    var motionFactor = parseFloat(document.getElementById('t-motion').value) || 1;
+
+    var bitrateMbps = (mp * 0.9 + (fps/30)*1.5) * codecFactor;
     var bytesPerSec = (bitrateMbps * 1000000) / 8;
-    var totalBytes = bytesPerSec * 86400 * days * cams;
+    var totalBytes = bytesPerSec * 86400 * days * cams * motionFactor;
     var totalTB = totalBytes / (1024*1024*1024*1024);
-    var result = document.getElementById('t-result');
-    result.style.display = 'block';
-    result.textContent = 'Estimated storage needed: ' + totalTB.toFixed(2) + ' TB for ' + cams + ' camera(s) over ' + days + ' days.';
+
+    var recommended;
+    var standardSizes = [1,2,4,6,8,10,12,16];
+    recommended = standardSizes.find(function(s){ return s >= totalTB; }) || (Math.ceil(totalTB/4)*4 + ' (multi-drive RAID)');
+
+    document.getElementById('t-result').style.display = 'block';
+    document.getElementById('t-tb').textContent = totalTB.toFixed(2) + ' TB';
+    document.getElementById('t-recommend').textContent = (typeof recommended === 'number' ? recommended + ' TB drive' : recommended);
+    document.getElementById('t-result-text').textContent = 'For ' + cams + ' camera(s) at ' + mp + 'MP recording ' + days + ' days of footage, you need approximately ' + totalTB.toFixed(2) + ' TB of storage.';
   });
 })();
 </script>
 
-<p style="margin-top:1.5rem;" class="form-hint">This is an estimate using typical H.265 compression. Actual storage needs vary with scene complexity and motion detection settings. For an exact recommendation, <a href="../../request-quote/">request a free site survey</a>.</p>
-</div></section>
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Related reading</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../articles/how-many-cctv-cameras-do-i-need/">How Many CCTV Cameras Do I Need?</a>
+    <a class="card card--service" href="../../articles/cctv-installation-company-abu-dhabi/">Choosing a CCTV Installer</a>
+    <a class="card card--service" href="../../services/cctv-installation-abu-dhabi/">CCTV Installation Service</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How this calculator works</h2>
+<p>CCTV storage capacity depends on five variables: camera count, resolution, frame rate, compression format, and whether the system records continuously or only on motion detection. This calculator combines all five into a single estimate using typical H.265 compression rates, the standard used by virtually all modern CCTV systems sold in the UAE today.</p>
+
+<h2 id="why-it-matters">Why getting storage right actually matters</h2>
+<p>An undersized hard drive is one of the most common and expensive CCTV mistakes. The system records perfectly, the cameras work fine, but the NVR silently overwrites old footage long before you expect it to, because the hard drive was never sized for your actual camera count and resolution. The first time you need footage from three weeks ago and discover it's gone is the worst possible moment to learn this.</p>
+
+<h2 id="continuous-vs-motion">Continuous vs motion-triggered recording: which should you choose?</h2>
+<p>Continuous (24/7) recording captures everything, with no risk of missing an event due to a motion sensor not triggering in time, but requires roughly 2.5x more storage than motion-triggered recording. Motion-triggered recording only records when the camera detects movement, dramatically reducing storage needs, but depends on motion sensitivity being correctly tuned; too sensitive and it records constantly anyway, too insensitive and it can miss the start of an event. Most villa and small office installations use motion-triggered recording on secondary cameras and continuous recording only on the highest-priority points like the main gate.</p>
+
+<h2 id="resolution-tradeoff">Resolution vs retention period: the trade-off</h2>
+<p>Higher resolution cameras produce dramatically more data. Going from 2MP to 8MP roughly quadruples file size per camera. If your budget or hard drive capacity is fixed, you generally get better results from fewer high-resolution cameras at your most important points (main gate, entrance) combined with standard resolution elsewhere, rather than uniform high resolution across every camera, which can force you to shorten your retention period to fit the same hard drive. For a full breakdown of how many cameras you actually need before sizing storage, see our guide on <a href="../../articles/how-many-cctv-cameras-do-i-need/">how many CCTV cameras you need</a>.</p>
+
+<h2 id="next-steps">Use this number as a starting point, not a final quote</h2>
+<p>This calculator gives a solid planning estimate based on typical compression rates, but actual storage needs vary with scene complexity (a busy street view records more data than a quiet garden corner) and your NVR's specific encoding efficiency. The only way to get a guaranteed, exact recommendation is during a site survey, where we also confirm camera placement and count for your specific property.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Site Survey</a></p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+<div class="faq-item"><button class="faq-q">How much storage do I need for 8 CCTV cameras?</button><div class="faq-a"><p>For 8 cameras at 4MP, motion-triggered recording, and 30 days retention, expect roughly 1-2 TB of storage, though continuous recording or higher resolution will increase this significantly. Use the calculator above for a number matched to your exact setup.</p></div></div>
+<div class="faq-item"><button class="faq-q">Is 1TB enough for CCTV?</button><div class="faq-a"><p>1TB is generally enough for a small system (2-4 cameras) with motion-triggered recording and standard retention, but is often insufficient for 8+ cameras or continuous recording setups.</p></div></div>
+<div class="faq-item"><button class="faq-q">How many days of CCTV footage should I keep?</button><div class="faq-a"><p>30 days is a common standard for villas and small businesses, balancing storage cost against having enough history to investigate an incident. Higher-security commercial sites sometimes retain 60-90 days.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does H.265 really save that much storage compared to H.264?</button><div class="faq-a"><p>Yes, H.265 typically reduces file size by 40-50% compared to H.264 at the same resolution and quality, which is why nearly all modern NVRs default to H.265 or H.265+ compression.</p></div></div>
+
+  </div>
+</section>
 
 </main>
 <footer class="site-footer">
