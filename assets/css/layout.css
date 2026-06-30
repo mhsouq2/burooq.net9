@@ -6,7 +6,7 @@
 .section--tight{padding-block:var(--sp-7);}
 .section--alt{background:var(--color-gray-50);}
 .section--navy{background:var(--color-navy-950);color:#fff;}
-.section--navy h2,.section--navy h3,.section--navy p{color:#fff;}
+.section--navy h1,.section--navy h2,.section--navy h3,.section--navy h4,.section--navy p{color:#fff;}
 .section--navy .eyebrow{color:var(--color-amber-500);}
 
 /* Header */
