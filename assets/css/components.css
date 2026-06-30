@@ -1,0 +1,52 @@
+/* ==========================================================================
+   components.css — signature components
+   ========================================================================== */
+
+/* Signature: control-room status strip used in hero + section dividers */
+.status-strip{display:flex;flex-wrap:wrap;gap:var(--sp-6);font-family:var(--font-mono);font-size:var(--fs-200);color:var(--color-blue-100);letter-spacing:.04em;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);padding-block:var(--sp-3);}
+.status-strip span{display:inline-flex;align-items:center;gap:.4rem;}
+.status-strip .dot{width:7px;height:7px;border-radius:50%;background:var(--color-success);box-shadow:0 0 0 3px rgba(30,142,90,.25);animation:pulse 2.4s infinite var(--ease);}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+
+/* Eyebrow label */
+.eyebrow{color:var(--color-blue-600);display:inline-flex;align-items:center;gap:.5rem;margin-bottom:var(--sp-3);}
+.eyebrow::before{content:'';width:18px;height:2px;background:var(--color-amber-500);display:inline-block;}
+
+/* Breadcrumb */
+.breadcrumb{font-size:var(--fs-200);color:var(--color-gray-500);padding-block:var(--sp-3);}
+.breadcrumb a{color:var(--color-gray-500);}
+.breadcrumb span[aria-current]{color:var(--color-navy-900);font-weight:600;}
+
+/* Grid of cards */
+.grid{display:grid;gap:var(--sp-5);}
+.grid--3{grid-template-columns:repeat(3,1fr);}
+.grid--4{grid-template-columns:repeat(4,1fr);}
+.grid--2{grid-template-columns:repeat(2,1fr);}
+@media (max-width:900px){.grid--3,.grid--4{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:600px){.grid--2,.grid--3,.grid--4{grid-template-columns:1fr;}}
+
+/* Stat block */
+.stat{display:flex;flex-direction:column;}
+.stat .num{font-family:var(--font-display);font-size:var(--fs-800);font-weight:700;color:var(--color-amber-500);}
+.stat .label{font-size:var(--fs-300);color:var(--color-blue-100);}
+
+/* Process / numbered list — used only where order is real (install steps) */
+.process{list-style:none;padding:0;display:grid;gap:var(--sp-5);counter-reset:step;}
+.process li{display:grid;grid-template-columns:56px 1fr;gap:var(--sp-4);align-items:start;}
+.process li::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--font-mono);font-size:var(--fs-500);color:var(--color-amber-500);border:1px solid var(--color-gray-300);border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;}
+
+/* FAQ accordion */
+.faq-item{border-bottom:var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:var(--sp-4) 0;font-family:var(--font-display);font-size:var(--fs-500);font-weight:600;color:var(--color-navy-950);display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
+.faq-q::after{content:'+';font-size:1.6rem;color:var(--color-blue-600);font-weight:400;transition:transform var(--dur-base) var(--ease);}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height var(--dur-base) var(--ease);}
+.faq-a p{padding-bottom:var(--sp-4);}
+
+/* Badges / tags */
+.tag{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:var(--fs-200);background:var(--color-blue-100);color:var(--color-navy-900);padding:.25rem .6rem;border-radius:var(--radius-sm);}
+
+/* Testimonial */
+.testimonial{background:var(--color-gray-50);border-radius:var(--radius-md);padding:var(--sp-6);border:var(--border);}
+.testimonial .stars{color:var(--color-amber-500);letter-spacing:2px;margin-bottom:var(--sp-3);}
+.testimonial footer{margin-top:var(--sp-4);font-size:var(--fs-300);color:var(--color-navy-900);font-weight:600;}

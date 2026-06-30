@@ -1,0 +1,16 @@
+/* ==========================================================================
+   responsive.css — fine-grained breakpoint adjustments
+   ========================================================================== */
+@media (max-width:1100px){
+  .container{padding-inline:var(--sp-4);}
+}
+@media (max-width:768px){
+  .section{padding-block:var(--sp-7);}
+  h1{font-size:var(--fs-800);}
+  .hero-grid{grid-template-columns:1fr !important;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:480px){
+  .footer-grid{grid-template-columns:1fr;}
+  .sticky-rail a{width:48px;height:48px;}
+}

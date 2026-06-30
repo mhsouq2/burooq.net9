@@ -1,0 +1,8 @@
+/* ==========================================================================
+   print.css
+   ========================================================================== */
+@media print{
+  .site-header,.sticky-rail,.site-footer,.newsletter,form{display:none !important;}
+  body{color:#000;}
+  a{color:#000;text-decoration:underline;}
+}

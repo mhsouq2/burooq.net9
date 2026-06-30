@@ -1,0 +1,18 @@
+/* ==========================================================================
+   cards.css
+   ========================================================================== */
+.card{background:#fff;border:var(--border);border-radius:var(--radius-md);padding:var(--sp-5);box-shadow:var(--shadow-sm);transition:box-shadow var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.card .card-icon{width:48px;height:48px;margin-bottom:var(--sp-4);}
+.card h3{font-size:var(--fs-500);margin-bottom:var(--sp-2);}
+.card p{margin-bottom:var(--sp-3);font-size:var(--fs-300);}
+.card a.card-link{font-size:var(--fs-300);font-weight:600;}
+
+.card--service{display:flex;flex-direction:column;height:100%;}
+.card--area{text-align:center;padding:var(--sp-4);}
+.card--project{padding:0;overflow:hidden;}
+.card--project img{aspect-ratio:4/3;object-fit:cover;}
+.card--project .card-body{padding:var(--sp-4);}
+
+.card--feature{border:none;background:var(--color-gray-50);}
+.card--quote{border-left:4px solid var(--color-amber-500);}
