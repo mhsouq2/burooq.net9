@@ -54,3 +54,62 @@
 .sticky-rail .rail-whatsapp{background:#22c35e;}
 .sticky-rail .rail-call{background:var(--color-blue-600);}
 .sticky-rail .rail-quote{background:var(--color-amber-500);}
+
+/* ── Mobile nav dropdown expansion (tap-to-open) ─────────────────────── */
+@media (max-width:900px){
+  .main-nav ul{
+    position:fixed;inset:64px 0 0 0;
+    background:#fff;flex-direction:column;
+    padding:var(--sp-4) var(--sp-5);
+    gap:0;overflow-y:auto;
+    transform:translateX(100%);
+    transition:transform var(--dur-base) var(--ease);
+    display:flex;
+    box-shadow:-4px 0 24px rgba(15,61,99,.15);
+  }
+  .main-nav.open ul{transform:translateX(0);}
+
+  .main-nav > ul > li{
+    border-bottom:1px solid var(--color-gray-100);
+  }
+  .main-nav > ul > li > a{
+    display:block;padding:var(--sp-4) 0;
+    font-size:1.05rem;font-weight:600;
+    color:var(--color-navy-950);
+  }
+  /* Dropdown arrow indicator */
+  .has-dropdown > a::after{
+    content:'›';float:right;font-size:1.3rem;
+    color:var(--color-blue-600);
+    transition:transform var(--dur-base) var(--ease);
+  }
+  .has-dropdown.open > a::after{transform:rotate(90deg);}
+
+  /* Sub-menu: hidden by default, shown when .open */
+  .dropdown{
+    position:static;opacity:1;visibility:visible;
+    transform:none;box-shadow:none;border:none;
+    background:var(--color-gray-50);
+    border-radius:var(--radius-md);
+    margin-bottom:.5rem;
+    max-height:0;overflow:hidden;
+    padding:0;
+    transition:max-height .35s ease, padding .35s ease;
+    display:flex;flex-direction:column;gap:0;
+  }
+  .has-dropdown.open .dropdown{
+    max-height:800px;
+    padding:var(--sp-2) var(--sp-3) var(--sp-3);
+  }
+  .dropdown li a{
+    display:block;padding:.55rem .5rem;
+    font-size:.9rem;color:var(--color-navy-950);
+    border-bottom:1px solid var(--color-gray-100);
+  }
+  .dropdown li:last-child a{border-bottom:none;}
+  .dropdown li a:hover{color:var(--color-blue-600);background:none;}
+
+  /* Hide hover-based desktop arrow (we add our own via CSS above) */
+  .main-nav a::after{display:none;}
+  .has-dropdown > a::after{display:inline;}
+}
