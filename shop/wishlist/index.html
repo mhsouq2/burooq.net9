@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant POS | Alburooq Smart Solutions</title>
-<meta name="description" content="Point-of-sale system built for UAE restaurants with VAT-ready invoicing.">
-<link rel="canonical" href="https://www.alburooq.ae/software/restaurant-pos">
-
+<title>Your Wishlist | Alburooq Smart Solutions Shop</title>
+<meta name="description" content="Items you have saved for later from the Alburooq Smart Solutions shop.">
+<link rel="canonical" href="https://www.alburooq.ae/shop/wishlist/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Restaurant POS | Alburooq Smart Solutions">
-<meta property="og:description" content="Point-of-sale system built for UAE restaurants with VAT-ready invoicing.">
-<meta property="og:url" content="https://www.alburooq.ae/software/restaurant-pos">
+<meta property="og:title" content="Your Wishlist | Alburooq Smart Solutions Shop">
+<meta property="og:description" content="Items you have saved for later from the Alburooq Smart Solutions shop.">
+<meta property="og:url" content="https://www.alburooq.ae/shop/wishlist/">
 <meta property="og:image" content="https://www.alburooq.ae/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Restaurant POS | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Point-of-sale system built for UAE restaurants with VAT-ready invoicing.">
+<meta name="twitter:title" content="Your Wishlist | Alburooq Smart Solutions Shop">
+<meta name="twitter:description" content="Items you have saved for later from the Alburooq Smart Solutions shop.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +117,7 @@ ml('account','2426568');
       </ul>
     </nav>
     <div class="header-cta">
+      <a href="../../shop/cart/" class="btn btn-outline btn-sm" aria-label="Cart" style="position:relative;">Cart <span class="nav-badge" data-cart-count>0</span></a>
       <a class="btn btn-whatsapp btn-sm" href="https://wa.me/971544389066" data-track="header_whatsapp" target="_blank" rel="noopener"><span class="btn-text">WhatsApp</span></a>
       <a class="btn btn-primary btn-sm" href="../../request-quote/" data-track="header_quote">Request Quote</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -128,20 +128,17 @@ ml('account','2426568');
 </header>
 
 <main id="main">
-
-<section class="section--navy" style="padding-block:3.5rem;">
+<section class="section--navy" style="padding-block:3rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">Restaurant POS</span></div>
-    <h1>Restaurant POS</h1>
-    <p class="u-max-w-md">Point-of-sale system built for UAE restaurants with VAT-ready invoicing.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../../shop/" style="color:var(--color-blue-100)">Shop</a> / <span aria-current="page" style="color:#fff">Wishlist</span></div>
+    <h1>Your Wishlist</h1>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
-
+<section class="section">
+  <div class="container u-max-w-md">
+    <div id="wishlist-items"></div>
+  </div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="container footer-grid">
@@ -153,22 +150,20 @@ ml('account','2426568');
       </div>
     </div>
     <div>
-      <h4>Services</h4>
+      <h4>Shop</h4>
       <ul>
-        <li><a href="../../services/cctv-installation-abu-dhabi">CCTV Installation</a></li>
-        <li><a href="../../services/smart-home">Smart Home</a></li>
-        <li><a href="../../services/access-control">Access Control</a></li>
-        <li><a href="../../services/networking">Networking</a></li>
-        <li><a href="../../services/">All Services</a></li>
+        <li><a href="../../shop/">All Products</a></li>
+        <li><a href="../../shop/cart/">Cart</a></li>
+        <li><a href="../../shop/wishlist/">Wishlist</a></li>
+        <li><a href="../../services/">Services</a></li>
       </ul>
     </div>
     <div>
       <h4>Areas</h4>
       <ul>
-        <li><a href="../../areas/abu-dhabi">Abu Dhabi City</a></li>
-        <li><a href="../../areas/mussafah">Mussafah</a></li>
-        <li><a href="../../areas/khalifa-city">Khalifa City</a></li>
-        <li><a href="../../areas/yas-island">Yas Island</a></li>
+        <li><a href="../../areas/abu-dhabi/">Abu Dhabi City</a></li>
+        <li><a href="../../areas/mussafah/">Mussafah</a></li>
+        <li><a href="../../areas/khalifa-city/">Khalifa City</a></li>
         <li><a href="../../areas/">All Areas</a></li>
       </ul>
     </div>
@@ -177,7 +172,6 @@ ml('account','2426568');
       <ul>
         <li><a href="../../about/">About Us</a></li>
         <li><a href="../../projects/">Projects</a></li>
-        <li><a href="../../testimonials/">Testimonials</a></li>
         <li><a href="../../faq/">FAQ</a></li>
         <li><a href="../../contact/">Contact</a></li>
       </ul>
