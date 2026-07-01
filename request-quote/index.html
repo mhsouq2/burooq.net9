@@ -32,6 +32,16 @@
 <link rel="stylesheet" href="../assets/css/animations.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
 
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){
+w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account','2426568');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -62,7 +72,14 @@
 <li><a href="../areas/"><strong>View all areas →</strong></a></li></ul>
         </li>
         <li><a href="../software/">Software</a></li>
-        <li><a href="../shop/">Shop</a></li>
+        <li class="has-dropdown">
+          <a href="../shop/">Shop</a>
+          <ul class="dropdown">
+            <li><a href="../shop/">All Products</a></li>
+            <li><a href="../shop/cart/">Cart <span class="nav-badge" data-cart-count>0</span></a></li>
+            <li><a href="../shop/wishlist/">Wishlist <span class="nav-badge" data-wishlist-count>0</span></a></li>
+          </ul>
+        </li>
         <li><a href="../tools/">Tools</a></li>
         <li><a href="../projects/">Projects</a></li>
         <li class="has-dropdown">
@@ -229,6 +246,7 @@
 <script src="../assets/js/slider.js" defer></script>
 <script src="../assets/js/search.js" defer></script>
 <script src="../assets/js/analytics.js" defer></script>
+<script src="../assets/js/shop.js" defer></script>
 <script src="../assets/js/main.js" defer></script>
 </body>
 </html>

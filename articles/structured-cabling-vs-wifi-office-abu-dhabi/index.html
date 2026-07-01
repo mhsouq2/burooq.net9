@@ -55,6 +55,16 @@
   ]
 }
 </script>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){
+w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account','2426568');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -85,7 +95,14 @@
 <li><a href="../../areas/"><strong>View all areas →</strong></a></li></ul>
         </li>
         <li><a href="../../software/">Software</a></li>
-        <li><a href="../../shop/">Shop</a></li>
+        <li class="has-dropdown">
+          <a href="../../shop/">Shop</a>
+          <ul class="dropdown">
+            <li><a href="../../shop/">All Products</a></li>
+            <li><a href="../../shop/cart/">Cart <span class="nav-badge" data-cart-count>0</span></a></li>
+            <li><a href="../../shop/wishlist/">Wishlist <span class="nav-badge" data-wishlist-count>0</span></a></li>
+          </ul>
+        </li>
         <li><a href="../../tools/">Tools</a></li>
         <li><a href="../../projects/">Projects</a></li>
         <li class="has-dropdown">
@@ -181,14 +198,13 @@
 <div class="faq-item"><button class="faq-q">When is the cheapest time to install structured cabling?</button><div class="faq-a"><p>During a new fit-out or renovation, before walls and ceilings are finished.</p></div></div>
 
 
-    <div class="card card--feature" style="margin-top:2rem;">
-      <h3>Get our free planning checklist</h3>
-      <p>Subscribe and we'll send you a short, practical checklist on this topic, plus occasional tips for Abu Dhabi property owners.</p>
-      <form data-form data-demo="true" action="#" class="form-row" style="align-items:end;margin-top:1rem;">
-        <div class="form-field" style="margin-bottom:0;"><label for="art-email" class="u-sr-only">Email address</label><input id="art-email" name="email" type="email" placeholder="you@email.com" required></div>
-        <button class="btn btn-primary" type="submit" style="height:fit-content;">Send Me the Checklist</button>
-      </form>
-      <p class="form-hint" style="margin-top:.5rem;">No spam. Unsubscribe anytime.</p>
+    <div class="card card--feature" style="margin-top:2rem;background:var(--color-navy-950);border:none;padding:1.75rem;">
+      <h3 style="color:#fff;margin-bottom:.5rem;">🛡 Also worth reading — free scam protection guide</h3>
+      <p style="color:var(--color-blue-100);font-size:.9rem;margin-bottom:1.25rem;">While you're here — our free PDF reveals every trick scammers use to steal your money and card details. No signup needed.</p>
+      <a href="https://storage.googleapis.com/mailerlite-uploads-prod/d2426568/U56ZRumI7rADi8gFpLhBrZUnPq8sEJnDcstCfpsp.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-block" download>Download Free Guide (PDF)</a>
+      <p style="text-align:center;color:var(--color-gray-500);font-size:.75rem;margin:.75rem 0;">or subscribe for home security tips from our engineers</p>
+      <div class="ml-embedded" data-form="default"></div>
+      <p style="text-align:center;margin-top:.75rem;"><a href="https://payhip.com/b/NBRYz" target="_blank" rel="noopener" style="color:var(--color-amber-500);font-size:.85rem;">Buy the full 23-page Protection Guide — AED 39 →</a></p>
     </div>
 
     <section id="comments" style="margin-top:3rem;">
@@ -310,6 +326,7 @@
 <script src="../../assets/js/slider.js" defer></script>
 <script src="../../assets/js/search.js" defer></script>
 <script src="../../assets/js/analytics.js" defer></script>
+<script src="../../assets/js/shop.js" defer></script>
 <script src="../../assets/js/main.js" defer></script>
 <script>
 (function(){
