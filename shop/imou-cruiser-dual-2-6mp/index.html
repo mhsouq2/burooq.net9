@@ -77,15 +77,44 @@ ml('account','2426568');
 
 <style>
 /* Gallery */
-.gallery-main{width:100%;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:var(--color-gray-50);border:var(--border);cursor:zoom-in;position:relative;}
-.gallery-main img{width:100%;height:100%;object-fit:contain;transition:transform .4s var(--ease);}
-.gallery-main:hover img{transform:scale(1.04);}
-.gallery-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-top:.75rem;}
-.thumb{border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;aspect-ratio:1/1;background:var(--color-gray-50);}
-.thumb img{width:100%;height:100%;object-fit:contain;}
-.thumb.active,.thumb:hover{border-color:var(--color-blue-600);}
+.gallery-main{
+  width:100%;aspect-ratio:4/3;
+  border-radius:16px;overflow:hidden;
+  background:linear-gradient(135deg,var(--color-gray-50) 0%,#dce8f5 100%);
+  border:1px solid var(--color-gray-100);
+  cursor:zoom-in;position:relative;
+  box-shadow:0 8px 32px rgba(15,61,99,.1);
+}
+.gallery-main img{
+  width:100%;height:100%;object-fit:contain;
+  transition:transform .5s cubic-bezier(.25,.46,.45,.94);
+  padding:1rem;
+}
+.gallery-main:hover img{transform:scale(1.06);}
+.gallery-badge{
+  position:absolute;top:1rem;left:1rem;
+  background:var(--color-amber-500);color:var(--color-navy-950);
+  font-family:var(--font-mono);font-size:.65rem;letter-spacing:.08em;
+  font-weight:700;padding:.3rem .7rem;border-radius:4px;
+  text-transform:uppercase;z-index:2;
+}
+.gallery-thumbs{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;
+  margin-top:.75rem;
+}
+.thumb{
+  border-radius:10px;overflow:hidden;
+  border:2px solid var(--color-gray-100);
+  cursor:pointer;aspect-ratio:1/1;
+  background:linear-gradient(135deg,#f0f5fb,#e4eefb);
+  transition:all .2s ease;
+  box-shadow:var(--shadow-sm);
+}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:.25rem;}
+.thumb.active{border-color:var(--color-blue-600);box-shadow:0 0 0 3px var(--color-blue-100);}
+.thumb:hover{border-color:var(--color-blue-600);transform:translateY(-2px);box-shadow:var(--shadow-md);}
 /* Pricing block */
-.price-block{background:var(--color-gray-50);border-radius:12px;padding:1.5rem;border:var(--border);margin-bottom:1.25rem;}
+.price-block{background:linear-gradient(135deg,#EFF6FF,#E4EEFB);border-radius:14px;padding:1.5rem;border:2px solid var(--color-blue-100);margin-bottom:1.25rem;box-shadow:0 2px 12px rgba(28,109,208,.08);}
 .price-aed{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--color-navy-950);}
 .price-sub{font-size:.85rem;color:var(--color-gray-500);margin-top:.2rem;}
 .badge-vat{display:inline-flex;align-items:center;background:#EAF7EF;color:var(--color-success);font-size:.72rem;font-family:var(--font-mono);padding:.2rem .55rem;border-radius:4px;letter-spacing:.04em;margin-left:.5rem;}
@@ -137,38 +166,27 @@ ml('account','2426568');
             <li><a href="../../shop/wishlist/">Wishlist</a></li>
           </ul>
         </li>
-        <li class="has-dropdown">
-          <a href="../../articles/">Articles</a>
-          <ul class="dropdown"><li><a href="../../articles/how-many-cctv-cameras-do-i-need/">How Many CCTV Cameras Do I Need?</a></li>
-<li><a href="../../articles/how-to-choose-outdoor-security-camera/">How to Choose an Outdoor Camera</a></li>
-<li><a href="../../articles/nvr-vs-dvr-cctv/">NVR vs DVR: Which Recorder?</a></li>
-<li><a href="../../articles/ip-camera-vs-analog-camera/">IP Camera vs Analog Camera</a></li>
-<li><a href="../../articles/cctv-not-recording-night-vision-not-working/">CCTV Not Recording at Night? 8 Fixes</a></li>
-<li><a href="../../articles/cctv-installation-company-abu-dhabi/">Best CCTV Company in Abu Dhabi</a></li>
-<li><a href="../../articles/smart-home-automation-cost-abu-dhabi/">Smart Home Cost in Abu Dhabi</a></li>
-<li><a href="../../articles/access-control-system-villa-vs-office/">Access Control: Villa vs Office</a></li>
-<li><a href="../../articles/intercom-system-villa-abu-dhabi/">Intercom System for Villa</a></li>
-<li><a href="../../articles/garage-door-motor-installation-abu-dhabi/">Garage Door Motor Abu Dhabi</a></li>
-<li><a href="../../articles/structured-cabling-vs-wifi-office-abu-dhabi/">Structured Cabling vs WiFi</a></li>
-<li><a href="../../articles/fire-alarm-installation-civil-defense-abu-dhabi/">Fire Alarm & Civil Defense</a></li>
-<li><a href="../../articles/wifi-dead-zones-villa-fix/">WiFi Dead Zones Fix</a></li>
-<li><a href="../../articles/"><strong>View all articles →</strong></a></li></ul>
-        </li>
-<li><a href="../../articles/how-to-choose-outdoor-security-camera/">How to Choose an Outdoor Camera</a></li>
-<li><a href="../../articles/nvr-vs-dvr-cctv/">NVR vs DVR: Which Recorder?</a></li>
-<li><a href="../../articles/ip-camera-vs-analog-camera/">IP Camera vs Analog Camera</a></li>
-<li><a href="../../articles/cctv-not-recording-night-vision-not-working/">CCTV Not Recording at Night? 8 Fixes</a></li>
-<li><a href="../../articles/cctv-installation-company-abu-dhabi/">Best CCTV Company in Abu Dhabi</a></li>
-<li><a href="../../articles/smart-home-automation-cost-abu-dhabi/">Smart Home Cost in Abu Dhabi</a></li>
-<li><a href="../../articles/access-control-system-villa-vs-office/">Access Control: Villa vs Office</a></li>
-<li><a href="../../articles/intercom-system-villa-abu-dhabi/">Intercom System for Villa</a></li>
-<li><a href="../../articles/garage-door-motor-installation-abu-dhabi/">Garage Door Motor Abu Dhabi</a></li>
-<li><a href="../../articles/structured-cabling-vs-wifi-office-abu-dhabi/">Structured Cabling vs WiFi</a></li>
-<li><a href="../../articles/fire-alarm-installation-civil-defense-abu-dhabi/">Fire Alarm & Civil Defense</a></li>
-<li><a href="../../articles/wifi-dead-zones-villa-fix/">WiFi Dead Zones Fix</a></li>
-<li><a href="../../articles/"><strong>View all articles →</strong></a></li></ul>
-        </li>
+                
         <li><a href="../../tools/">Tools</a></li>
+                <li class="has-dropdown">
+          <a href="../../articles/">Articles</a>
+          <ul class="dropdown">
+            <li><a href="../../articles/how-many-cctv-cameras-do-i-need/">How Many CCTV Cameras Do I Need?</a></li>
+            <li><a href="../../articles/how-to-choose-outdoor-security-camera/">How to Choose an Outdoor Camera</a></li>
+            <li><a href="../../articles/nvr-vs-dvr-cctv/">NVR vs DVR: Which Recorder?</a></li>
+            <li><a href="../../articles/ip-camera-vs-analog-camera/">IP Camera vs Analog Camera</a></li>
+            <li><a href="../../articles/cctv-not-recording-night-vision-not-working/">CCTV Not Recording at Night?</a></li>
+            <li><a href="../../articles/cctv-installation-company-abu-dhabi/">Best CCTV Company Abu Dhabi</a></li>
+            <li><a href="../../articles/smart-home-automation-cost-abu-dhabi/">Smart Home Cost Abu Dhabi</a></li>
+            <li><a href="../../articles/access-control-system-villa-vs-office/">Access Control: Villa vs Office</a></li>
+            <li><a href="../../articles/intercom-system-villa-abu-dhabi/">Intercom System for Villa</a></li>
+            <li><a href="../../articles/garage-door-motor-installation-abu-dhabi/">Garage Door Motor Abu Dhabi</a></li>
+            <li><a href="../../articles/structured-cabling-vs-wifi-office-abu-dhabi/">Structured Cabling vs WiFi</a></li>
+            <li><a href="../../articles/fire-alarm-installation-civil-defense-abu-dhabi/">Fire Alarm & Civil Defense</a></li>
+            <li><a href="../../articles/wifi-dead-zones-villa-fix/">WiFi Dead Zones Fix</a></li>
+            <li><a href="../../articles/"><strong>View all articles →</strong></a></li>
+          </ul>
+        </li>
         <li><a href="../../about/">About</a></li>
         <li><a href="../../contact/">Contact</a></li>
       </ul>
@@ -202,6 +220,7 @@ ml('account','2426568');
     <!-- LEFT: IMAGE GALLERY -->
     <div>
       <div class="gallery-main" id="mainImg" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="gallery-badge">📷 Click to zoom</span>
         <img id="mainImgEl" src="images/img-6.jpg" alt="Imou Cruiser Dual 2 6MP outdoor dual-lens WiFi CCTV camera front view">
       </div>
       <div class="gallery-thumbs" id="thumbs">
@@ -258,8 +277,8 @@ ml('account','2426568');
 
       <!-- ORDER BUTTONS -->
       <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.5rem;">
-        <a href="https://wa.me/971544389066?text=Hi%2C%20I%20want%20to%20order%20the%20Imou%20Cruiser%20Dual%202%206MP%20camera.%20Please%20confirm%20availability%20and%20payment%20details." target="_blank" rel="noopener" class="btn btn-whatsapp btn-block" style="font-size:1rem;padding:.9rem;">
-          📱 Order via WhatsApp
+        <a href="https://wa.me/971544389066?text=Hi%2C%20I%20want%20to%20order%20the%20Imou%20Cruiser%20Dual%202%206MP%20camera.%20Please%20confirm%20availability%20and%20payment%20details." target="_blank" rel="noopener" class="btn btn-whatsapp btn-block" style="font-size:1.05rem;padding:1rem;letter-spacing:.01em;">
+          📱 Order via WhatsApp — Instant Reply
         </a>
         <a href="../../request-quote/" class="btn btn-primary btn-block" style="font-size:1rem;padding:.9rem;">
           📋 Request a Formal Quote
@@ -270,10 +289,10 @@ ml('account','2426568');
       </div>
 
       <!-- TRUST BADGES -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;text-align:center;margin-bottom:1.5rem;">
-        <div style="padding:.75rem;background:var(--color-gray-50);border-radius:8px;font-size:.78rem;color:var(--color-navy-950);">🚚<br><strong>Free Delivery</strong><br>Abu Dhabi</div>
-        <div style="padding:.75rem;background:var(--color-gray-50);border-radius:8px;font-size:.78rem;color:var(--color-navy-950);">🔒<br><strong>Genuine</strong><br>Imou product</div>
-        <div style="padding:.75rem;background:var(--color-gray-50);border-radius:8px;font-size:.78rem;color:var(--color-navy-950);">🛠<br><strong>1-Year</strong><br>Warranty</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;text-align:center;margin-bottom:1.5rem;" class="trust-badges">
+        <div style="padding:1rem .75rem;background:linear-gradient(135deg,#EFF6FF,#fff);border:1px solid var(--color-blue-100);border-radius:10px;font-size:.78rem;color:var(--color-navy-950);box-shadow:var(--shadow-sm);">🚚<br><strong>Free Delivery</strong><br><span style="color:var(--color-success)">Abu Dhabi</span></div>
+        <div style="padding:1rem .75rem;background:linear-gradient(135deg,#EAF7EF,#fff);border:1px solid #BFE6CD;border-radius:10px;font-size:.78rem;color:var(--color-navy-950);box-shadow:var(--shadow-sm);">🔒<br><strong>Genuine</strong><br><span style="color:var(--color-success)">Imou product</span></div>
+        <div style="padding:1rem .75rem;background:linear-gradient(135deg,#FFF8EC,#fff);border:1px solid #F5DFA0;border-radius:10px;font-size:.78rem;color:var(--color-navy-950);box-shadow:var(--shadow-sm);">🛠<br><strong>1-Year</strong><br><span style="color:var(--color-amber-600)">Warranty</span></div>
       </div>
 
       <!-- QUICK SPECS -->
