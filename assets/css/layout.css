@@ -28,14 +28,8 @@
 .header-cta{display:flex;gap:var(--sp-3);align-items:center;}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;}
 
-@media (max-width:900px){
-  .main-nav ul{position:fixed;inset:64px 0 0 0;background:#fff;flex-direction:column;padding:var(--sp-6) var(--sp-5);gap:var(--sp-4);overflow-y:auto;transform:translateX(100%);transition:transform var(--dur-base) var(--ease);}
-  .main-nav.open ul{transform:translateX(0);}
-  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;display:none;padding-left:var(--sp-3);}
-  .has-dropdown.open .dropdown{display:flex;}
-  .header-cta .btn-text{display:none;}
-  .nav-toggle{display:block;}
-}
+/* Mobile nav: see full block below */
+@media(max-width:900px){.header-cta .btn-text{display:none;}.nav-toggle{display:block;}}
 
 /* Footer */
 .site-footer{background:var(--color-navy-950);color:var(--color-gray-300);padding-block:var(--sp-9) var(--sp-6);}
@@ -55,63 +49,107 @@
 .sticky-rail .rail-call{background:var(--color-blue-600);}
 .sticky-rail .rail-quote{background:var(--color-amber-500);}
 
-/* ── Mobile nav dropdown expansion (tap-to-open) ─────────────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE NAV — single authoritative block (max-width:900px)
+   ═══════════════════════════════════════════════════════════════ */
 @media (max-width:900px){
+  /* ── Slide-in panel ── */
   .main-nav ul{
-    position:fixed;inset:64px 0 0 0;
-    background:#fff;flex-direction:column;
-    padding:var(--sp-4) var(--sp-5);
-    gap:0;overflow-y:auto;
+    position:fixed;
+    inset:64px 0 0 0;
+    background:#ffffff;
+    flex-direction:column;
+    padding:1rem 1.25rem 2rem;
+    gap:0;
+    overflow-y:auto;
+    overflow-x:hidden;
     transform:translateX(100%);
-    transition:transform var(--dur-base) var(--ease);
+    transition:transform .28s cubic-bezier(.4,0,.2,1);
     display:flex;
-    box-shadow:-4px 0 24px rgba(15,61,99,.15);
+    list-style:none;
+    margin:0;
+    box-shadow:-6px 0 32px rgba(15,61,99,.18);
+    z-index:99;
   }
   .main-nav.open ul{transform:translateX(0);}
 
+  /* ── Top-level list items ── */
   .main-nav > ul > li{
-    border-bottom:1px solid var(--color-gray-100);
+    border-bottom:1px solid #eaedf1;
   }
-  .main-nav > ul > li > a{
-    display:block;padding:var(--sp-4) 0;
-    font-size:1.05rem;font-weight:600;
-    color:var(--color-navy-950);
+  /* ── ALL nav links — FORCE dark color so they don't go white ── */
+  .main-nav a,
+  .main-nav > ul > li > a,
+  .main-nav ul li a{
+    color:#15202B !important;
+    text-decoration:none;
+    display:block;
+    padding:.85rem 0;
+    font-size:1rem;
+    font-weight:600;
+    background:transparent;
   }
-  /* Dropdown arrow indicator */
+  .main-nav ul li a:hover{
+    color:#1C6DD0 !important;
+    background:transparent;
+  }
+  /* ── Dropdown caret ── */
+  .has-dropdown > a{
+    position:relative;
+  }
   .has-dropdown > a::after{
-    content:'›';float:right;font-size:1.3rem;
-    color:var(--color-blue-600);
-    transition:transform var(--dur-base) var(--ease);
+    content:'›';
+    position:absolute;
+    right:0;top:50%;
+    transform:translateY(-50%);
+    font-size:1.4rem;
+    color:#1C6DD0;
+    font-weight:400;
+    transition:transform .25s ease;
+    display:block !important;
   }
-  .has-dropdown.open > a::after{transform:rotate(90deg);}
+  .has-dropdown.open > a::after{
+    transform:translateY(-50%) rotate(90deg);
+  }
 
-  /* Sub-menu: hidden by default, shown when .open */
+  /* ── Sub-menu (dropdown) — hidden until .open ── */
   .dropdown{
-    position:static;opacity:1;visibility:visible;
-    transform:none;box-shadow:none;border:none;
-    background:var(--color-gray-50);
-    border-radius:var(--radius-md);
-    margin-bottom:.5rem;
-    max-height:0;overflow:hidden;
-    padding:0;
-    transition:max-height .35s ease, padding .35s ease;
-    display:flex;flex-direction:column;gap:0;
+    position:static !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    box-shadow:none !important;
+    border:none !important;
+    background:#f5f7fa;
+    border-radius:8px;
+    margin:0 0 .5rem 0;
+    max-height:0;
+    overflow:hidden;
+    padding:0 !important;
+    transition:max-height .3s ease;
+    display:block !important;
+    min-width:unset !important;
+    max-width:unset !important;
+    grid-template-columns:unset !important;
   }
   .has-dropdown.open .dropdown{
-    max-height:800px;
-    padding:var(--sp-2) var(--sp-3) var(--sp-3);
+    max-height:1200px;
+    padding:.5rem .75rem .75rem !important;
   }
+  .dropdown li{border:none;}
   .dropdown li a{
-    display:block;padding:.55rem .5rem;
-    font-size:.9rem;color:var(--color-navy-950);
-    border-bottom:1px solid var(--color-gray-100);
+    color:#15202B !important;
+    font-size:.9rem !important;
+    font-weight:500 !important;
+    padding:.55rem .5rem !important;
+    border-bottom:1px solid #eaedf1;
+    display:block;
   }
-  .dropdown li:last-child a{border-bottom:none;}
-  .dropdown li a:hover{color:var(--color-blue-600);background:none;}
+  .dropdown li:last-child a{border-bottom:none !important;}
+  .dropdown li a:hover{color:#1C6DD0 !important;}
 
-  /* Hide hover-based desktop arrow (we add our own via CSS above) */
-  .main-nav a::after{display:none;}
-  .has-dropdown > a::after{display:inline;}
+  /* ── Nav badges (cart count etc.) ── */
+  .nav-badge{display:inline-flex;}
 }
 
 /* ── Articles dropdown: 2-column grid to prevent tall overflow ──────── */
