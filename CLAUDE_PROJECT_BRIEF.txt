@@ -1,0 +1,145 @@
+# ALBUROOQ SMART SOLUTIONS — PROJECT BRIEF
+# Paste this at the start of any new Claude chat to restore full context instantly.
+
+## BUSINESS DETAILS
+- Company: Alburooq Smart Solutions
+- Domain: burooq.net
+- GitHub repo: mhsouq2/burooq.net9 (GitHub Pages hosting)
+- Phone/WhatsApp: +971 54 438 9066
+- Email: info@burooq.net
+- Location: Abu Dhabi, UAE
+- Business type: Licensed ELV and smart technology integrator
+- Services: CCTV installation, smart home automation, access control, networking, fire alarm, intercom, automatic gates, garage door motors, annual maintenance contracts
+
+## KEY INTEGRATIONS
+- MailerLite account ID: 2426568
+- MailerLite universal script: ml('account','2426568')
+- Free PDF (hosted on MailerLite): https://storage.googleapis.com/mailerlite-uploads-prod/d2426568/U56ZRumI7rADi8gFpLhBrZUnPq8sEJnDcstCfpsp.pdf
+- Payhip paid ebook link: https://payhip.com/b/NBRYz
+- Paid ebook price: AED 39
+- WhatsApp order link: https://wa.me/971544389066
+
+## SITE ARCHITECTURE
+- All files: /home/claude/site/ (when working in Claude)
+- Static HTML/CSS/JS — no frameworks, GitHub Pages compatible
+- Total pages: 89 (as of July 2026)
+- Zero broken links (verified)
+
+## FILE STRUCTURE
+site/
+├── index.html (homepage)
+├── assets/
+│   ├── css/ (variables, main, layout, components, buttons, cards, forms, utilities, animations, responsive)
+│   └── js/ (navigation, faq, forms, shop, slider, search, analytics, main, theme)
+├── articles/ (18 articles — see list below)
+├── services/ (15 service pages)
+├── areas/ (9 area pages)
+├── tools/ (8 tools — 4 working calculators)
+├── shop/ (shop index, cart, wishlist, 12 catalog products + Imou product page)
+├── software/ (5 pages)
+├── free-guide/ (ebook landing page)
+├── sitemap.xml, robots.txt, manifest.json
+
+## ALL 18 ARTICLES (in articles/ folder)
+1. how-many-cctv-cameras-do-i-need
+2. how-to-choose-outdoor-security-camera
+3. nvr-vs-dvr-cctv
+4. ip-camera-vs-analog-camera
+5. cctv-not-recording-night-vision-not-working
+6. cctv-installation-company-abu-dhabi
+7. smart-home-automation-cost-abu-dhabi
+8. access-control-system-villa-vs-office
+9. intercom-system-villa-abu-dhabi
+10. garage-door-motor-installation-abu-dhabi
+11. structured-cabling-vs-wifi-office-abu-dhabi
+12. fire-alarm-installation-civil-defense-abu-dhabi
+13. wifi-dead-zones-villa-fix
+14. how-to-choose-power-bank
+15. most-important-features-bluetooth-speaker
+16. how-to-extend-phone-battery-life
+17. how-to-protect-your-home-from-burglars
+18. how-to-fix-slow-wifi-at-home
+
+## WORKING TOOLS
+- /tools/cctv-storage-calculator/ — H.265/H.264, motion vs continuous, NVR output (INDEXED by Google)
+- /tools/vat-calculator/ — UAE 5% VAT add/remove
+- /tools/camera-coverage-calculator/ — mounting height + lens angle = coverage
+- /tools/wifi-coverage-calculator/ — area + floors + wall type = access point count
+
+## SHOP PRODUCTS
+Catalog (12): dome-camera-4mp, bullet-camera-4mp, ptz-camera-20x, nvr-8ch-4k, nvr-16ch-4k,
+poe-nvr-kit-4ch, biometric-access-controller, rfid-card-reader, video-intercom-kit,
+poe-switch-8port, cat6-cable-box, surveillance-hdd-4tb
+Real product page: /shop/imou-cruiser-dual-2-6mp/ — AED 270 camera + AED 120 installation
+  - 20 real product images in /images/ folder
+  - WhatsApp checkout, installment option (AED 67.50 × 4), lightbox gallery
+
+## EBOOKS BUILT (PDFs)
+Free guides (scam protection):
+- exposed-scammer-tricks-FREE.pdf — 7 pages, free download, burooq.net/free-guide/
+- scam-fraud-protection-guide-PREMIUM.pdf — 23 pages, AED 39 on Payhip
+
+Home security guides:
+- home-security-checklist-FREE.pdf — 7 pages
+- home-security-smart-home-guide-FULL.pdf — 17 pages
+
+## CSS/DESIGN SYSTEM
+Color palette:
+- Navy dark: #0A2A45 (navy-950)
+- Navy: #0F3D63 (navy-900)
+- Blue: #1C6DD0
+- Amber: #E8A33D
+- Ink: #15202B
+- Gray: #6B7785
+- Light BG: #F5F7FA
+
+Fonts: Space Grotesk (headings), Inter (body), IBM Plex Mono (code/labels)
+CSS variables in: assets/css/variables.css
+
+## KEY FIXES APPLIED
+- Mobile nav text: color:#15202B !important in layout.css (was white on white)
+- Navigation.js: tap-to-expand dropdowns on mobile
+- Articles dropdown: 2-column grid CSS to prevent overflow on desktop
+- Nav rebuilt across all 89 pages with all 18 articles
+
+## GOOGLE STATUS (as of July 2026)
+- 10 articles indexed same-day (very fast — domain trusted by Google)
+- CCTV storage calculator indexed
+- 5 new articles submitted July 2, 2026 — expect same-day indexing
+- Sitemap at: burooq.net/sitemap.xml
+
+## SEO SCHEMA ON ALL ARTICLES
+- Article + FAQPage + HowTo + BreadcrumbList JSON-LD
+- Canonical URLs, OG tags, Twitter card meta
+
+## MAILERLITE SETUP
+- Universal script on all 89 pages
+- Embedded form: <div class="ml-embedded" data-form="default"></div>
+- In: every article sidebar, every article mid-body CTA, homepage ebook section, footer
+- NOTE: Replace "default" with real MailerLite form ID from dashboard when ready
+
+## PENDING TASKS
+1. Set real MailerLite form ID (replace data-form="default" with actual ID from MailerLite dashboard)
+2. wifi-dead-zones-villa-fix article still short — needs full rewrite
+3. Canonical domain consistency (www vs non-www redirect)
+4. Replace placeholder logo (assets/logo/logo.svg is a wordmark placeholder)
+5. Consider adding more Imou/real product pages to shop
+
+## HOW TO START A NEW BUILD SESSION
+When starting fresh in a new Claude chat:
+1. Paste this entire document at the start
+2. Say what you want to build/change
+3. Claude will have full context and can continue without re-explaining anything
+
+## ARTICLE TEMPLATE PATTERN
+Each article uses:
+- rel="../../" for asset paths (articles are 2 levels deep)
+- Full nav with all 18 articles in dropdown
+- Section--navy hero, two-column layout (article + sidebar)
+- Sidebar: quote CTA, free PDF download, MailerLite form, Payhip link, related articles
+- Mid-article CTA box: navy background, PDF download + MailerLite form
+- FAQ section with accordion (faq.js)
+- Comment section (localStorage, pending review)
+- All schema: Article + FAQPage + HowTo JSON-LD
+- Footer with 5-column grid
+- Sticky rail: WhatsApp + Call + Quote buttons
