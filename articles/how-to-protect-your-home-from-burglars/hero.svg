@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280">
+<rect width="480" height="280" fill="#0A2A45" rx="14"/>
+<rect x="140" y="80" width="200" height="160" rx="4" fill="#15202B" stroke="#1C6DD0" stroke-width="1.5"/>
+<rect x="200" y="160" width="80" height="80" rx="2" fill="#1C6DD0" opacity=".3"/>
+<circle cx="237" cy="200" r="8" fill="#E8A33D"/>
+<rect x="140" y="60" width="200" height="24" rx="4" fill="#0F3D63"/>
+<text x="240" y="77" text-anchor="middle" font-family="Arial" font-size="10" fill="#E8A33D">SECURED</text>
+<circle cx="100" cy="100" r="22" fill="#E8A33D" opacity=".15" stroke="#E8A33D" stroke-width="1"/>
+<text x="100" y="95" text-anchor="middle" font-family="Arial" font-size="18" fill="#E8A33D">📷</text>
+<text x="100" y="114" text-anchor="middle" font-family="Arial" font-size="7" fill="#E8A33D">CCTV</text>
+<circle cx="380" cy="100" r="22" fill="#27AE60" opacity=".15" stroke="#27AE60" stroke-width="1"/>
+<text x="380" y="95" text-anchor="middle" font-family="Arial" font-size="18" fill="#27AE60">💡</text>
+<text x="380" y="114" text-anchor="middle" font-family="Arial" font-size="7" fill="#27AE60">Motion Light</text>
+<circle cx="100" cy="180" r="22" fill="#1C6DD0" opacity=".2" stroke="#1C6DD0" stroke-width="1"/>
+<text x="100" y="175" text-anchor="middle" font-family="Arial" font-size="18" fill="#1C6DD0">🔐</text>
+<text x="100" y="194" text-anchor="middle" font-family="Arial" font-size="7" fill="#1C6DD0">Smart Lock</text>
+<circle cx="380" cy="180" r="22" fill="#E8A33D" opacity=".15" stroke="#E8A33D" stroke-width="1"/>
+<text x="380" y="175" text-anchor="middle" font-family="Arial" font-size="18" fill="#E8A33D">🚪</text>
+<text x="380" y="194" text-anchor="middle" font-family="Arial" font-size="7" fill="#E8A33D">Auto Gate</text>
+<text x="240" y="258" text-anchor="middle" font-family="Arial" font-size="9" fill="#6B7785">12 proven security measures</text>
+</svg>
