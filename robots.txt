@@ -3,4 +3,4 @@ Allow: /
 Disallow: /shop/cart
 Disallow: /shop/wishlist
 
-Sitemap: https://www.alburooq.ae/sitemap.xml
+Sitemap: https://burooq.net/sitemap.xml
