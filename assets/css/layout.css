@@ -29,10 +29,6 @@
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;}
 
 @media (max-width:900px){
-  .main-nav ul{position:fixed;inset:64px 0 0 0;background:#fff;flex-direction:column;padding:var(--sp-6) var(--sp-5);gap:var(--sp-4);overflow-y:auto;transform:translateX(100%);transition:transform var(--dur-base) var(--ease);}
-  .main-nav.open ul{transform:translateX(0);}
-  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;display:none;padding-left:var(--sp-3);}
-  .has-dropdown.open .dropdown{display:flex;}
   .header-cta .btn-text{display:none;}
   .nav-toggle{display:block;}
 }
@@ -66,6 +62,7 @@
     transition:transform var(--dur-base) var(--ease);
     display:flex;
     box-shadow:-4px 0 24px rgba(15,61,99,.15);
+    z-index:300;
   }
   .main-nav.open ul{transform:translateX(0);}
 
