@@ -1,0 +1,247 @@
+<!--
+SEO ANALYSIS
+============
+Primary Keyword: how to configure UNV intercom
+Secondary Keywords: UNV video intercom setup, UNV indoor station configuration, UNV door station IP setup, uniview intercom default password
+Search Intent: Informational / technical how-to, post-purchase or pre-installation research
+Meta Title: How to Configure a UNV Video Intercom System (Step-by-Step Guide)
+Meta Description: Set up a UNV indoor station and door station step by step — network settings, activation, IP addressing and linking devices, with images for each step.
+Slug: unv-intercom-configuration
+Canonical URL: https://burooq.net/how-to/unv-intercom-configuration/
+Reading Time: ~7 minutes
+Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Deployment Guide" and "Indoor Station Deployment Guide" (official Uniview documentation).
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Configure a UNV Video Intercom System (Step-by-Step) | Alburooq</title>
+<meta name="description" content="Set up a UNV indoor station and door station step by step — network settings, activation, IP addressing and linking devices, with an image for each step.">
+<link rel="canonical" href="https://burooq.net/how-to/unv-intercom-configuration/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Configure a UNV Video Intercom System (Step-by-Step)">
+<meta property="og:description" content="Network settings, activation, IP addressing and device linking for UNV indoor and door stations — with images for each step.">
+<meta property="og:url" content="https://burooq.net/how-to/unv-intercom-configuration/">
+<meta property="og:image" content="https://burooq.net/how-to/unv-intercom-configuration/hero.svg">
+<meta property="og:site_name" content="Alburooq Smart Solutions">
+<link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/buttons.css">
+<link rel="stylesheet" href="../../assets/css/cards.css">
+<link rel="stylesheet" href="../../assets/css/forms.css">
+<link rel="stylesheet" href="../../assets/css/utilities.css">
+<link rel="stylesheet" href="../../assets/css/animations.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','2426568');
+</script>
+<!-- End MailerLite Universal -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Configure a UNV Video Intercom System (Step-by-Step)","description":"Set up a UNV indoor station and door station step by step — network settings, activation, IP addressing and linking devices.","author":{"@type":"Organization","name":"Alburooq Smart Solutions"},"publisher":{"@type":"Organization","name":"Alburooq Smart Solutions","logo":{"@type":"ImageObject","url":"https://burooq.net/assets/logo/logo.svg"}},"datePublished":"2026-07-08","dateModified":"2026-07-08","image":"https://burooq.net/how-to/unv-intercom-configuration/hero.svg","mainEntityOfPage":"https://burooq.net/how-to/unv-intercom-configuration/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://burooq.net/"},{"@type":"ListItem","position":2,"name":"How-To","item":"https://burooq.net/how-to/"},{"@type":"ListItem","position":3,"name":"Configure a UNV Video Intercom","item":"https://burooq.net/how-to/unv-intercom-configuration/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to Configure a UNV Video Intercom System","description":"Step-by-step configuration of a UNV indoor station and door station, from wiring to first live call.",
+"step":[
+{"@type":"HowToStep","name":"Wire and power on the devices","text":"Connect the indoor station, PoE switch, and door station as shown in the wiring diagram, then power everything on."},
+{"@type":"HowToStep","name":"Log in and set the admin password","text":"Log in with the default admin credentials and immediately set a new password on first boot."},
+{"@type":"HowToStep","name":"Configure network settings","text":"Enable DHCP or set a static IP for the indoor station, matching the same IP segment as the door station and any linked cameras."},
+{"@type":"HowToStep","name":"Set device location", "text":"Enter the compound, building, unit and room number so multiple units don't conflict on the same network."},
+{"@type":"HowToStep","name":"Search and add the door station","text":"Use the auto-search feature to find the door station on the network and add it to the indoor station's device list."},
+{"@type":"HowToStep","name":"Test the call and remote unlock","text":"Place a test call from the door station to the indoor station and confirm remote door release works before finishing installation."}
+]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-bar">
+    <a href="../../" class="brand"><img src="../../assets/logo/logo.svg" alt="Alburooq Smart Solutions" width="180" height="45"></a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li class="has-dropdown"><a href="../../services/">Services</a>
+          <ul class="dropdown">
+            <li><a href="../../services/intercom/">Intercom Installation</a></li>
+            <li><a href="../../services/cctv-installation-abu-dhabi/">CCTV Installation</a></li>
+            <li><a href="../../services/smart-home/">Smart Home</a></li>
+            <li><a href="../../services/">All Services</a></li>
+          </ul>
+        </li>
+        <li><a href="../../shop/">Shop</a></li>
+        <li><a href="../../tools/">Tools</a></li>
+        <li class="has-dropdown"><a href="../../how-to/">How-To</a>
+          <ul class="dropdown">
+            <li><a href="../../how-to/unv-intercom-configuration/">Configure a UNV Video Intercom</a></li>
+            <li><a href="../../how-to/">All How-To Guides</a></li>
+          </ul>
+        </li>
+        <li><a href="../../articles/">Articles</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-whatsapp btn-sm" href="https://wa.me/971544389066" target="_blank" rel="noopener"><span class="btn-text">WhatsApp</span></a>
+      <a class="btn btn-primary btn-sm" href="../../request-quote/">Request Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#0F3D63" stroke-width="2"><line x1="3" y1="7" x2="23" y2="7"/><line x1="3" y1="13" x2="23" y2="13"/><line x1="3" y1="19" x2="23" y2="19"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="section--navy" style="padding-block:3.5rem;">
+  <div class="container">
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">How-To</a> / <span aria-current="page" style="color:#fff">Configure a UNV Video Intercom</span></div>
+    <p class="eyebrow">How-To Guide · Updated July 2026 · ~7 min read</p>
+    <h1>How to Configure a UNV Video Intercom System</h1>
+    <p class="u-max-w-md">Wiring, activation, network settings and device linking for a UNV indoor station and door station — with an image for every step.</p>
+  </div>
+</section>
+
+<section class="section"><div class="container grid grid--2" style="align-items:start;">
+<article class="u-max-w-md">
+
+<div style="border-radius:12px;overflow:hidden;margin-bottom:1.5rem;background:var(--color-gray-50);">
+<img src="hero.svg" alt="UNV indoor station connected to an outdoor door station over the network" width="480" height="320" style="width:100%;height:auto;display:block;" loading="lazy">
+</div>
+
+<div class="card" style="background:var(--color-blue-100);border-color:var(--color-blue-600);margin-bottom:1.5rem;">
+  <strong>Quick answer:</strong> a UNV intercom is configured in six stages — wire and power on, set the admin password, configure network settings, set the device location, search and add the door station, then test the call and remote unlock. Most installs take 20–30 minutes once wiring is complete.
+</div>
+
+<h2>What you'll need</h2>
+<ul>
+  <li>UNV indoor station (e.g. OEI-371S-H-W or similar) and matching door station</li>
+  <li>A PoE switch or PoE injector for power over the network cable</li>
+  <li>A phone or PC on the same local network for initial setup</li>
+</ul>
+
+<h2 id="howto">Step-by-step configuration</h2>
+
+<ol class="process">
+  <li><div><h4>Step 1 — Wire and power on the devices</h4>
+    <p>Connect the indoor station, PoE switch, and door station according to the wiring diagram in the box, then power everything on. The indoor station's home screen appears automatically once powered.</p>
+  </div></li>
+
+  <li><div><h4>Step 2 — Log in and set the admin password</h4>
+    <p>On first login, UNV indoor stations use a default admin password (commonly <code>123456</code> on current models — always confirm against your specific unit's quick-start guide, as this can vary by firmware version). Change this immediately and set a recovery email if prompted, so you can retrieve the password later if forgotten.</p>
+  </div></li>
+
+  <li><div><h4>Step 3 — Configure network settings</h4>
+    <p>DHCP is enabled by default, which assigns the indoor station an IP address automatically. For a permanent installation, switch to a static IP instead so the address never changes after a router restart. Whichever method you use, the door station, indoor station, and any linked network cameras must all sit on the <strong>same IP segment</strong>, or the call and live-view functions won't work.</p>
+    <p>Most UNV door stations and cameras ship with a default static IP in the <code>192.168.1.x</code> range — check the label on the device or use UNV's EZTools application to auto-discover it on your network rather than guessing.</p>
+  </div></li>
+
+  <li><div><h4>Step 4 — Set the device location</h4>
+    <p>Enter the compound/building/unit/room information on the indoor station. This isn't cosmetic — in multi-unit buildings, this location data is what prevents two apartments' intercoms from cross-linking to the wrong door station.</p>
+  </div></li>
+
+  <li><div><h4>Step 5 — Search and add the door station</h4>
+    <p>From the indoor station's device management screen, use the auto-search function to detect the door station on the network, then add it to the device list. If it isn't found, double check Step 3 — a mismatched IP segment is the most common cause.</p>
+  </div></li>
+
+  <li><div><h4>Step 6 — Test the call and remote unlock</h4>
+    <p>Place a test call from the door station and confirm video, audio, and remote door release all work correctly before finishing the installation. Test at least twice — once with a normal call, and once specifically testing the remote unlock button.</p>
+  </div></li>
+</ol>
+
+<h2 id="tips">Expert tips</h2>
+<ul>
+  <li>If the door station can't be found during Step 5, it's almost always an IP segment mismatch — recheck Step 3 first before assuming a hardware fault.</li>
+  <li>Use a static IP for any intercom on a permanent installation — a DHCP-assigned address can change after a router reboot and silently break the link between devices.</li>
+  <li>Keep a note of the device location settings (building/unit/room) somewhere accessible — this is the first thing to check if a resident reports "wrong door" video calls.</li>
+</ul>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li><strong>Skipping the password change</strong> — leaving the default admin password active is a real security risk on a device that controls a physical door.</li>
+  <li><strong>Mixed IP segments</strong> — the single most common reason a freshly wired system "won't connect."</li>
+  <li><strong>Not testing remote unlock specifically</strong> — a working video call doesn't guarantee the door release relay is wired and configured correctly.</li>
+</ul>
+
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq-item"><button class="faq-q">What is the default admin password on a UNV indoor station?</button><div class="faq-a"><p>Commonly 123456 on current models, but this can vary by firmware version — always check your specific unit's quick-start guide and change it immediately after first login.</p></div></div>
+<div class="faq-item"><button class="faq-q">Why can't my indoor station find the door station?</button><div class="faq-a"><p>This is almost always an IP segment mismatch. The indoor station, door station and any linked cameras must all be on the same network segment to communicate.</p></div></div>
+<div class="faq-item"><button class="faq-q">Should I use DHCP or a static IP for a UNV intercom?</button><div class="faq-a"><p>DHCP is fine for quick testing, but a static IP is recommended for any permanent installation, since a DHCP-assigned address can change after a router restart and break the device link.</p></div></div>
+<div class="faq-item"><button class="faq-q">Can I configure a UNV intercom myself, or do I need a professional?</button><div class="faq-a"><p>A single indoor/door station pair is usually self-installable following the steps above. Multi-unit buildings with several linked stations benefit from professional configuration to avoid cross-linking between units — see our <a href="../../services/intercom/">Intercom installation service</a>.</p></div></div>
+
+<h2 id="summary">Summary</h2>
+<p>Configuring a UNV video intercom comes down to getting the network settings right first — same IP segment across all devices — then working through activation, location settings, device linking and a thorough test call. If you'd rather have it configured professionally, our <a href="../../services/intercom/">Intercom installation service</a> in Abu Dhabi includes full setup and testing.</p>
+
+<div class="card card--feature" style="margin-top:1.5rem;background:linear-gradient(135deg,#EFF6FF,#E4EEFB);border:2px solid var(--color-blue-100);">
+  <h3>Want it configured professionally?</h3>
+  <p style="font-size:.9rem;margin-bottom:1rem;">Free site check and fixed-price quote within 24 hours.</p>
+  <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+    <a class="btn btn-primary" href="../../request-quote/">Request a Free Quote</a>
+    <a class="btn btn-whatsapp" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp Us</a>
+  </div>
+</div>
+
+</article>
+
+<div>
+  <div class="card card--feature" style="margin-bottom:1.5rem;">
+    <h3>Related product</h3>
+    <p style="font-size:.875rem;">Video Intercom Kit — Villa Gate (7" Monitor)</p>
+    <a class="btn btn-outline btn-block" href="../../shop/video-intercom-kit-villa/">View Product</a>
+  </div>
+  <div class="card card--feature">
+    <h3>Related articles</h3>
+    <div style="display:flex;flex-direction:column;gap:.6rem;">
+      <a class="card card--service" href="../../articles/intercom-system-villa-abu-dhabi/">Intercom System for Villa</a>
+      <a class="card card--service" href="../../articles/smart-lock-guide-abu-dhabi/">Smart Lock Guide</a>
+      <a class="card card--service" href="../../services/intercom/">Intercom Installation Service</a>
+    </div>
+  </div>
+</div>
+</div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="../../assets/logo/logo.svg" alt="Alburooq Smart Solutions" width="160" height="40" style="margin-bottom:1rem;">
+      <p style="color:var(--color-gray-300);font-size:.875rem;max-width:280px;">Abu Dhabi's trusted CCTV and smart technology installer.</p>
+      <a class="btn btn-whatsapp btn-sm" href="https://wa.me/971544389066" target="_blank" rel="noopener" style="margin-top:.5rem;">WhatsApp</a>
+    </div>
+    <div><h4>Services</h4><ul>
+      <li><a href="../../services/intercom/">Intercom</a></li>
+      <li><a href="../../services/cctv-installation-abu-dhabi/">CCTV Installation</a></li>
+      <li><a href="../../services/">All Services</a></li>
+    </ul></div>
+    <div><h4>How-To</h4><ul>
+      <li><a href="../unv-intercom-configuration/">Configure a UNV Intercom</a></li>
+      <li><a href="../">All How-To Guides</a></li>
+    </ul></div>
+    <div><h4>Shop</h4><ul>
+      <li><a href="../../shop/video-intercom-kit-villa/">Intercom Kit</a></li>
+      <li><a href="../../shop/">All Products</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="tel:+971544389066">+971 54 438 9066</a></li>
+      <li><a href="mailto:info@burooq.net">info@burooq.net</a></li>
+      <li>Abu Dhabi, UAE</li>
+    </ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span data-year>2026</span> Alburooq Smart Solutions. All rights reserved.</span>
+    <span><a href="../../privacy-policy/">Privacy</a> · <a href="../../terms/">Terms</a> · <a href="../../sitemap.xml">Sitemap</a></span>
+  </div>
+</footer>
+<script src="../../assets/js/navigation.js" defer></script>
+<script src="../../assets/js/faq.js" defer></script>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
