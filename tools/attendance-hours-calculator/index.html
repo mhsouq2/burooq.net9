@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Hours & Overtime Calculator | Alburooq</title>
+<meta name="description" content="Calculate total worked hours and overtime from clock-in and clock-out times. Free tool — no signup required.">
+<link rel="canonical" href="https://burooq.net/tools/attendance-hours-calculator/">
+<link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/buttons.css">
+<link rel="stylesheet" href="../../assets/css/cards.css">
+<link rel="stylesheet" href="../../assets/css/forms.css">
+<link rel="stylesheet" href="../../assets/css/utilities.css">
+<link rel="stylesheet" href="../../assets/css/animations.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','2426568');
+</script>
+<!-- End MailerLite Universal -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://burooq.net/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://burooq.net/tools/"},{"@type":"ListItem","position":3,"name":"Attendance Hours Calculator","item":"https://burooq.net/tools/attendance-hours-calculator/"}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-bar">
+    <a href="../../" class="brand"><img src="../../assets/logo/logo.svg" alt="Alburooq Smart Solutions" width="180" height="45"></a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li class="has-dropdown"><a href="../../services/">Services</a>
+          <ul class="dropdown">
+            <li><a href="../../services/time-attendance/">Time Attendance</a></li>
+            <li><a href="../../services/">All Services</a></li>
+          </ul>
+        </li>
+        <li><a href="../../shop/">Shop</a></li>
+        <li><a href="../../tools/">Tools</a></li>
+        <li><a href="../../how-to/">How-To</a></li>
+        <li><a href="../../articles/">Articles</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-whatsapp btn-sm" href="https://wa.me/971544389066" target="_blank" rel="noopener"><span class="btn-text">WhatsApp</span></a>
+      <a class="btn btn-primary btn-sm" href="../../request-quote/">Request Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#0F3D63" stroke-width="2"><line x1="3" y1="7" x2="23" y2="7"/><line x1="3" y1="13" x2="23" y2="13"/><line x1="3" y1="19" x2="23" y2="19"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="section--navy" style="padding-block:3.5rem;">
+  <div class="container">
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Attendance Hours Calculator</span></div>
+    <h1>Attendance Hours &amp; Overtime Calculator</h1>
+    <p class="u-max-w-md">Enter clock-in and clock-out times to calculate hours worked and overtime — instantly, free.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-block:2.5rem;">
+  <div class="container" style="max-width:640px;">
+    <div class="card card--feature">
+      <div class="form-row">
+        <div class="form-field"><label for="clock-in">Clock in</label><input type="time" id="clock-in" value="08:00"></div>
+        <div class="form-field"><label for="clock-out">Clock out</label><input type="time" id="clock-out" value="18:00"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label for="break-mins">Unpaid break (minutes)</label><input type="number" id="break-mins" value="60" min="0"></div>
+        <div class="form-field"><label for="standard-hours">Standard work day (hours)</label><input type="number" id="standard-hours" value="8" min="1" step="0.5"></div>
+      </div>
+      <div style="display:flex;gap:2rem;margin-top:1.25rem;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:.8rem;color:var(--color-gray-500);">Total worked</div>
+          <div id="total-hours" style="font-family:var(--font-mono);font-size:1.8rem;font-weight:700;color:var(--color-navy-950);">10h 00m</div>
+        </div>
+        <div>
+          <div style="font-size:.8rem;color:var(--color-gray-500);">Overtime</div>
+          <div id="overtime-hours" style="font-family:var(--font-mono);font-size:1.8rem;font-weight:700;color:var(--color-success);">2h 00m</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card--feature" style="margin-top:1.5rem;background:var(--color-navy-950);border:none;">
+      <h3 style="color:#fff;">📋 Get the full Time Attendance Buying Checklist (PDF)</h3>
+      <p style="color:var(--color-blue-100);font-size:.9rem;margin-bottom:1rem;">Device type, integration and compliance checklist — free download.</p>
+      <div class="ml-embedded" data-form="default"></div>
+    </div>
+
+    <div class="card" style="margin-top:1.5rem;background:var(--color-blue-100);border-color:var(--color-blue-600);">
+      <strong>Want this automated?</strong>
+      <p style="font-size:.9rem;margin-top:.4rem;">A biometric time attendance system calculates this automatically for every employee and feeds it straight into payroll — see our <a href="../../articles/biometric-time-attendance-system-abu-dhabi/">full buying guide</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="../../assets/logo/logo.svg" alt="Alburooq Smart Solutions" width="160" height="40" style="margin-bottom:1rem;">
+      <p style="color:var(--color-gray-300);font-size:.875rem;max-width:280px;">Abu Dhabi's trusted CCTV and smart technology installer.</p>
+      <a class="btn btn-whatsapp btn-sm" href="https://wa.me/971544389066" target="_blank" rel="noopener" style="margin-top:.5rem;">WhatsApp</a>
+    </div>
+    <div><h4>Services</h4><ul>
+      <li><a href="../../services/time-attendance/">Time Attendance</a></li>
+      <li><a href="../../services/">All Services</a></li>
+    </ul></div>
+    <div><h4>Tools</h4><ul>
+      <li><a href="../">All Free Tools</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="tel:+971544389066">+971 54 438 9066</a></li>
+      <li><a href="mailto:info@burooq.net">info@burooq.net</a></li>
+      <li>Abu Dhabi, UAE</li>
+    </ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span data-year>2026</span> Alburooq Smart Solutions. All rights reserved.</span>
+    <span><a href="../../privacy-policy/">Privacy</a> · <a href="../../terms/">Terms</a> · <a href="../../sitemap.xml">Sitemap</a></span>
+  </div>
+</footer>
+<script src="../../assets/js/navigation.js" defer></script>
+<script src="../../assets/js/main.js" defer></script>
+<script>
+(function(){
+  var cin = document.getElementById('clock-in');
+  var cout = document.getElementById('clock-out');
+  var brk = document.getElementById('break-mins');
+  var std = document.getElementById('standard-hours');
+  var totalEl = document.getElementById('total-hours');
+  var otEl = document.getElementById('overtime-hours');
+
+  function fmt(mins){
+    if(mins < 0) mins = 0;
+    var h = Math.floor(mins/60);
+    var m = Math.round(mins%60);
+    return h + 'h ' + (m<10?'0':'') + m + 'm';
+  }
+
+  function calc(){
+    var [ih, im] = cin.value.split(':').map(Number);
+    var [oh, om] = cout.value.split(':').map(Number);
+    var startMins = ih*60+im;
+    var endMins = oh*60+om;
+    var diff = endMins - startMins;
+    if(diff < 0) diff += 24*60; // overnight shift
+    diff -= parseFloat(brk.value || 0);
+    var standardMins = parseFloat(std.value || 8) * 60;
+    var overtime = diff - standardMins;
+    totalEl.textContent = fmt(diff);
+    otEl.textContent = fmt(overtime);
+    otEl.style.color = overtime > 0 ? 'var(--color-success)' : 'var(--color-gray-500)';
+  }
+
+  [cin, cout, brk, std].forEach(function(el){ el.addEventListener('input', calc); });
+  calc();
+})();
+</script>
+</body>
+</html>
