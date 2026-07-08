@@ -51,14 +51,18 @@ Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Depl
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://burooq.net/"},{"@type":"ListItem","position":2,"name":"How-To","item":"https://burooq.net/how-to/"},{"@type":"ListItem","position":3,"name":"Configure a UNV Video Intercom","item":"https://burooq.net/how-to/unv-intercom-configuration/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","name":"How to Configure a UNV Video Intercom System","description":"Step-by-step configuration of a UNV indoor station and door station, from wiring to first live call.",
+{"@context":"https://schema.org","@type":"HowTo","name":"How to Configure a UNV Video Intercom System","description":"Step-by-step configuration of a UNV indoor station and door station, from device discovery to mobile app pairing.",
 "step":[
-{"@type":"HowToStep","name":"Wire and power on the devices","text":"Connect the indoor station, PoE switch, and door station as shown in the wiring diagram, then power everything on."},
-{"@type":"HowToStep","name":"Log in and set the admin password","text":"Log in with the default admin credentials and immediately set a new password on first boot."},
-{"@type":"HowToStep","name":"Configure network settings","text":"Enable DHCP or set a static IP for the indoor station, matching the same IP segment as the door station and any linked cameras."},
-{"@type":"HowToStep","name":"Set device location", "text":"Enter the compound, building, unit and room number so multiple units don't conflict on the same network."},
-{"@type":"HowToStep","name":"Search and add the door station","text":"Use the auto-search feature to find the door station on the network and add it to the indoor station's device list."},
-{"@type":"HowToStep","name":"Test the call and remote unlock","text":"Place a test call from the door station to the indoor station and confirm remote door release works before finishing installation."}
+{"@type":"HowToStep","name":"Find all devices on the network","text":"Wire and power on the indoor station, PoE switch and door station, then use UNV's EZTools to auto-discover them on the network."},
+{"@type":"HowToStep","name":"Find each device's IP address","text":"Check the default static IP on each device's label or read it from EZTools."},
+{"@type":"HowToStep","name":"Change the IP address if needed","text":"Switch to a static IP for permanent installs, keeping all devices on the same IP segment."},
+{"@type":"HowToStep","name":"Log in to the door station","text":"Enter the door station's IP in a browser and log in with the admin account, changing the default password immediately."},
+{"@type":"HowToStep","name":"Configure the door station","text":"Set the device location (building/unit/room) and confirm room-number settings."},
+{"@type":"HowToStep","name":"Configure the indoor station","text":"Complete the first-login wizard: Wi-Fi, time zone, and indoor station type/location."},
+{"@type":"HowToStep","name":"Pair the door station with the indoor monitor","text":"Use the indoor station's auto-search to find and add the door station to its device list."},
+{"@type":"HowToStep","name":"Test the call","text":"Place a test call and confirm video and audio work in both directions."},
+{"@type":"HowToStep","name":"Configure door unlock","text":"Test the remote door release relay specifically, separate from the call/video test."},
+{"@type":"HowToStep","name":"Connect to your mobile phone","text":"Install EZView or UNV-Link and scan the device QR code to bind it for remote access."}
 ]}
 </script>
 </head>
@@ -82,6 +86,7 @@ Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Depl
         <li class="has-dropdown"><a href="../../how-to/">How-To</a>
           <ul class="dropdown">
             <li><a href="../../how-to/unv-intercom-configuration/">Configure a UNV Video Intercom</a></li>
+            <li><a href="../../how-to/biometric-attendance-system-setup/">Set Up a Biometric Attendance System</a></li>
             <li><a href="../../how-to/">All How-To Guides</a></li>
           </ul>
         </li>
@@ -104,7 +109,7 @@ Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Depl
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
     <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">How-To</a> / <span aria-current="page" style="color:#fff">Configure a UNV Video Intercom</span></div>
-    <p class="eyebrow">How-To Guide · Updated July 2026 · ~7 min read</p>
+    <p class="eyebrow">How-To Guide · Updated July 2026 · ~10 min read</p>
     <h1>How to Configure a UNV Video Intercom System</h1>
     <p class="u-max-w-md">Wiring, activation, network settings and device linking for a UNV indoor station and door station — with an image for every step.</p>
   </div>
@@ -118,7 +123,12 @@ Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Depl
 </div>
 
 <div class="card" style="background:var(--color-blue-100);border-color:var(--color-blue-600);margin-bottom:1.5rem;">
-  <strong>Quick answer:</strong> a UNV intercom is configured in six stages — wire and power on, set the admin password, configure network settings, set the device location, search and add the door station, then test the call and remote unlock. Most installs take 20–30 minutes once wiring is complete.
+  <strong>Quick answer:</strong> configuring a UNV intercom is a 10-step process — find all devices, check IP addresses, adjust IPs if needed, log in, configure the door station, configure the indoor station, pair the two, test the call, test door unlock, then connect your mobile phone via EZView or UNV-Link. Most installs take 30–45 minutes once wiring is complete.
+</div>
+
+<div class="card" style="background:var(--color-blue-100);border-color:var(--color-blue-600);margin-bottom:1.5rem;">
+  <strong>📄 Want the exact official screenshots?</strong>
+  <p style="font-size:.9rem;margin-top:.4rem;">This guide is based on Uniview's own official deployment documentation. For the literal interface screenshots (login screen, network settings, device management), see the <a href="https://www.uniview.com/res/202312/07/20231207_1895503_Video%20Intercom%20Deployment%20Guide-V1.2-EN_984380_168459_0.pdf" target="_blank" rel="noopener">official Uniview Video Intercom Deployment Guide (PDF)</a>.</p>
 </div>
 
 <h2>What you'll need</h2>
@@ -131,31 +141,60 @@ Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Depl
 <h2 id="howto">Step-by-step configuration</h2>
 
 <ol class="process">
-  <li><div><h4>Step 1 — Wire and power on the devices</h4>
-    <p>Connect the indoor station, PoE switch, and door station according to the wiring diagram in the box, then power everything on. The indoor station's home screen appears automatically once powered.</p>
+  <li><div><h4>Step 1 — Find all devices on the network</h4>
+    <p>Connect the indoor station, PoE switch, and door station according to the wiring diagram in the box, then power everything on. Use UNV's <strong>EZTools</strong> desktop application (free from Uniview) to auto-discover every UNV device on your local network — this saves you from hunting for IP addresses manually and is the fastest way to confirm all devices powered on correctly.</p>
   </div></li>
 
-  <li><div><h4>Step 2 — Log in and set the admin password</h4>
-    <p>On first login, UNV indoor stations use a default admin password (commonly <code>123456</code> on current models — always confirm against your specific unit's quick-start guide, as this can vary by firmware version). Change this immediately and set a recovery email if prompted, so you can retrieve the password later if forgotten.</p>
+  <li><div><h4>Step 2 — Find each device's IP address</h4>
+    <div style="border-radius:10px;overflow:hidden;border:1px solid var(--color-gray-100);margin:.75rem 0;">
+      <img src="network-settings-mockup.svg" alt="Network settings screen showing DHCP toggle and static IP fields for IP address, subnet mask and gateway" style="width:100%;display:block;" loading="lazy">
+    </div>
+    <p>Most UNV door stations and cameras ship with a default static IP in the <code>192.168.1.x</code> range — check the label on the device itself, or read it directly from the EZTools device list rather than guessing. Note the IP of the indoor station, door station, and any linked cameras before continuing.</p>
   </div></li>
 
-  <li><div><h4>Step 3 — Configure network settings</h4>
-    <p>DHCP is enabled by default, which assigns the indoor station an IP address automatically. For a permanent installation, switch to a static IP instead so the address never changes after a router restart. Whichever method you use, the door station, indoor station, and any linked network cameras must all sit on the <strong>same IP segment</strong>, or the call and live-view functions won't work.</p>
-    <p>Most UNV door stations and cameras ship with a default static IP in the <code>192.168.1.x</code> range — check the label on the device or use UNV's EZTools application to auto-discover it on your network rather than guessing.</p>
+  <li><div><h4>Step 3 — Change the IP address (if needed)</h4>
+    <p>DHCP is enabled by default on the indoor station, assigning an IP automatically. For a permanent installation, switch to a static IP instead so the address never changes after a router restart. Whichever method you use, the door station, indoor station, and any linked network cameras must all sit on the <strong>same IP segment</strong> (e.g. all starting <code>192.168.1.x</code>), or the call and live-view functions won't work. This single mismatch causes the majority of "devices won't connect" support calls.</p>
   </div></li>
 
-  <li><div><h4>Step 4 — Set the device location</h4>
-    <p>Enter the compound/building/unit/room information on the indoor station. This isn't cosmetic — in multi-unit buildings, this location data is what prevents two apartments' intercoms from cross-linking to the wrong door station.</p>
+  <li><div><h4>Step 4 — Log in to the door station</h4>
+    <p>Open a browser and enter the door station's IP address directly (e.g. <code>http://192.168.1.13</code>). Log in with the administrator account. On first login, UNV devices use a default admin password (commonly <code>123456</code> on current models — always confirm against your specific unit's quick-start guide, as this can vary by firmware version). Change this immediately.</p>
   </div></li>
 
-  <li><div><h4>Step 5 — Search and add the door station</h4>
-    <p>From the indoor station's device management screen, use the auto-search function to detect the door station on the network, then add it to the device list. If it isn't found, double check Step 3 — a mismatched IP segment is the most common cause.</p>
+  <li><div><h4>Step 5 — Configure the door station</h4>
+    <p>Set the door station's device location (compound/building/unit/room). In multi-unit buildings, this location data is what prevents two apartments' intercoms from cross-linking to the wrong door station. Confirm the door station's protocol/room-number settings match what you'll enter on the indoor station in the next step.</p>
   </div></li>
 
-  <li><div><h4>Step 6 — Test the call and remote unlock</h4>
-    <p>Place a test call from the door station and confirm video, audio, and remote door release all work correctly before finishing the installation. Test at least twice — once with a normal call, and once specifically testing the remote unlock button.</p>
+  <li><div><h4>Step 6 — Configure the indoor station</h4>
+    <p>On the indoor station, follow the first-login wizard: set Wi-Fi (if used), time zone, and the indoor station type (main station or extension). The default location for a main indoor station is District 1, Building 1, Unit 1, Room 1 — update this to match your property's actual numbering.</p>
+  </div></li>
+
+  <li><div><h4>Step 7 — Pair the door station with the indoor monitor</h4>
+    <p>From the indoor station's device management screen, use the auto-search function to detect the door station on the network, then add it to the device list. If it isn't found, double check Step 3 — a mismatched IP segment is the most common cause. Network cameras can be added the same way if you want their feed viewable from the indoor station.</p>
+  </div></li>
+
+  <li><div><h4>Step 8 — Test the call</h4>
+    <p>Place a test call from the door station to the indoor station and confirm both video and audio work in both directions. Test at least twice from a cold start (door station idle, not already on a call screen) to rule out a one-off glitch.</p>
+  </div></li>
+
+  <li><div><h4>Step 9 — Configure door unlock</h4>
+    <p>Confirm the remote door release relay is wired and configured, then test it specifically — a working video call does not guarantee the unlock relay itself is correctly wired. Trigger the unlock from the indoor station during a test call and physically confirm the door latch releases.</p>
+  </div></li>
+
+  <li><div><h4>Step 10 — Connect to your mobile phone</h4>
+    <p>Install <strong>EZView</strong> (Uniview's mobile app) or <strong>UNV-Link</strong> — Uniview's newer app, which is replacing EZView (EZView service is expected to be phased out by 2027, so UNV-Link is the better long-term choice for new installs). Scan the QR code on the indoor station or door station to bind it to your account, enabling remote call answering and live view from your phone even when you're away.</p>
   </div></li>
 </ol>
+
+<h2 id="troubleshooting-table">Common problems and solutions</h2>
+<table style="width:100%;border-collapse:collapse;font-size:.9rem;margin:1rem 0;">
+  <thead><tr style="background:var(--color-navy-900);color:#fff;"><th style="padding:.6rem;text-align:left;">Problem</th><th style="padding:.6rem;text-align:left;">Likely cause</th><th style="padding:.6rem;text-align:left;">Fix</th></tr></thead>
+  <tbody>
+    <tr style="background:var(--color-gray-50);"><td style="padding:.6rem;">Indoor station can't find the door station</td><td style="padding:.6rem;">IP segment mismatch (Step 3)</td><td style="padding:.6rem;">Confirm all devices share the same first three IP octets</td></tr>
+    <tr><td style="padding:.6rem;">Call connects but no audio</td><td style="padding:.6rem;">Speaker/mic muted or volume set to zero on one end</td><td style="padding:.6rem;">Check volume settings on both indoor and door station</td></tr>
+    <tr style="background:var(--color-gray-50);"><td style="padding:.6rem;">Video call works but door won't unlock</td><td style="padding:.6rem;">Relay wiring issue, separate from network config</td><td style="padding:.6rem;">Re-check the physical lock relay wiring — this is Step 9, not a network problem</td></tr>
+    <tr><td style="padding:.6rem;">Mobile app won't bind to the device</td><td style="padding:.6rem;">QR code expired, or device not yet on the internet/cloud</td><td style="padding:.6rem;">Regenerate the QR code from the device's cloud/EZCloud settings and retry</td></tr>
+  </tbody>
+</table>
 
 <h2 id="tips">Expert tips</h2>
 <ul>
@@ -176,6 +215,8 @@ Sources referenced (facts paraphrased, not quoted): Uniview "Video Intercom Depl
 <div class="faq-item"><button class="faq-q">Why can't my indoor station find the door station?</button><div class="faq-a"><p>This is almost always an IP segment mismatch. The indoor station, door station and any linked cameras must all be on the same network segment to communicate.</p></div></div>
 <div class="faq-item"><button class="faq-q">Should I use DHCP or a static IP for a UNV intercom?</button><div class="faq-a"><p>DHCP is fine for quick testing, but a static IP is recommended for any permanent installation, since a DHCP-assigned address can change after a router restart and break the device link.</p></div></div>
 <div class="faq-item"><button class="faq-q">Can I configure a UNV intercom myself, or do I need a professional?</button><div class="faq-a"><p>A single indoor/door station pair is usually self-installable following the steps above. Multi-unit buildings with several linked stations benefit from professional configuration to avoid cross-linking between units — see our <a href="../../services/intercom/">Intercom installation service</a>.</p></div></div>
+<div class="faq-item"><button class="faq-q">Should I use EZView or UNV-Link for the mobile app?</button><div class="faq-a"><p>For new installs, UNV-Link is the better choice — it's Uniview's newer app and EZView's service is expected to be phased out by 2027. Both work with the same account login if you're migrating from an existing EZView setup.</p></div></div>
+<div class="faq-item"><button class="faq-q">The video call works but the door won't unlock — what's wrong?</button><div class="faq-a"><p>This is almost always a separate issue from the network/call configuration — check the physical door release relay wiring specifically (Step 9), since a working call doesn't confirm the unlock relay is wired correctly.</p></div></div>
 
 <h2 id="summary">Summary</h2>
 <p>Configuring a UNV video intercom comes down to getting the network settings right first — same IP segment across all devices — then working through activation, location settings, device linking and a thorough test call. If you'd rather have it configured professionally, our <a href="../../services/intercom/">Intercom installation service</a> in Abu Dhabi includes full setup and testing.</p>
