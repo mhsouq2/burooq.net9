@@ -95,7 +95,8 @@
     display:flex;flex-direction:column;gap:0;
   }
   .has-dropdown.open .dropdown{
-    max-height:800px;
+    max-height:60vh;
+    overflow-y:auto;
     padding:var(--sp-2) var(--sp-3) var(--sp-3);
   }
   .dropdown li a{
