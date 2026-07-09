@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+<rect width="480" height="320" fill="#E4EEFB" rx="16"/>
+<circle cx="140" cy="120" r="34" fill="#0F3D63"/><circle cx="140" cy="120" r="14" fill="#1C6DD0"/>
+<rect x="220" y="90" width="70" height="60" rx="8" fill="#0F3D63"/><circle cx="255" cy="120" r="14" fill="#E4EEFB"/>
+<g transform="translate(350,90)"><rect width="60" height="80" rx="10" fill="#0F3D63"/><circle cx="30" cy="30" r="12" fill="#E8A33D"/></g>
+<rect x="80" y="200" width="320" height="8" rx="4" fill="#CBD3DC"/>
+<rect x="120" y="216" width="240" height="6" rx="3" fill="#CBD3DC"/>
+<text x="240" y="260" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#0F3D63">CCTV · SMART HOME · SECURITY</text>
+</svg>
