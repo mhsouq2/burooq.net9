@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM | Alburooq Smart Solutions</title>
-<meta name="description" content="Lead and customer tracking built for service businesses.">
-<link rel="canonical" href="https://burooq.net/software/crm">
-
+<title>Simple Monthly Cash Flow Calculator | Alburooq</title>
+<meta name="description" content="Calculate your business's monthly net cash flow and projected closing balance from opening balance, cash inflows and outflows.">
+<link rel="canonical" href="https://burooq.net/tools/cash-flow-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CRM | Alburooq Smart Solutions">
-<meta property="og:description" content="Lead and customer tracking built for service businesses.">
-<meta property="og:url" content="https://burooq.net/software/crm">
+<meta property="og:title" content="Simple Monthly Cash Flow Calculator | Alburooq">
+<meta property="og:description" content="Calculate your business's monthly net cash flow and projected closing balance from opening balance, cash inflows and outflows.">
+<meta property="og:url" content="https://burooq.net/tools/cash-flow-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CRM | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Lead and customer tracking built for service businesses.">
+<meta name="twitter:title" content="Simple Monthly Cash Flow Calculator | Alburooq">
+<meta name="twitter:description" content="Calculate your business's monthly net cash flow and projected closing balance from opening balance, cash inflows and outflows.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Simple Cash Flow Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/cash-flow-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's the difference between cash flow and profit?", "acceptedAnswer": {"@type": "Answer", "text": "Profit is revenue minus expenses on an accounting basis (including invoices not yet paid), while cash flow tracks actual cash moving in and out of your bank account - a business can be profitable but still run short on cash."}}, {"@type": "Question", "name": "What should I include as cash inflows?", "acceptedAnswer": {"@type": "Answer", "text": "Actual cash received: client payments collected, loan proceeds, or owner capital injected - not sales invoiced but not yet paid."}}, {"@type": "Question", "name": "What should I include as cash outflows?", "acceptedAnswer": {"@type": "Answer", "text": "Actual cash paid out: supplier payments, payroll, rent, loan repayments and other operating expenses paid during the period."}}, {"@type": "Question", "name": "What does a negative closing balance mean?", "acceptedAnswer": {"@type": "Answer", "text": "It means your projected outflows exceed the cash you have available, which is an early warning sign to delay non-critical payments, chase outstanding invoices, or arrange short-term financing before it becomes a real shortfall."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,98 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">CRM</span></div>
-    <h1>CRM</h1>
-    <p class="u-max-w-md">Lead and customer tracking built for service businesses.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Simple Cash Flow Calculator</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Simple Cash Flow Calculator</h1>
+    <p class="u-max-w-md">Enter your opening cash balance, expected inflows (sales, collections) and outflows (expenses, payroll, supplier payments) to see your net cash flow and projected closing balance for the month.</p>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="cf-calc">
+  <div class="form-field"><label for="cf-open">Opening balance (AED)</label><input id="cf-open" type="number" value="20000" step="1"></div>
+  <div class="form-field"><label for="cf-in">Total cash inflows this month (AED)</label><input id="cf-in" type="number" value="45000" min="0" step="1"></div>
+  <div class="form-field"><label for="cf-out">Total cash outflows this month (AED)</label><input id="cf-out" type="number" value="38000" min="0" step="1"></div>
+  <button class="btn btn-primary btn-block" id="cf-calc-btn">Calculate</button>
+  <div id="cf-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="cf-net">-</span><span class="label" style="color:var(--color-gray-500);">Net Cash Flow</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.3rem;" id="cf-close">-</span><span class="label" style="color:var(--color-gray-500);">Projected Closing Balance</span></div>
+    </div>
+    <p id="cf-note" class="form-hint" style="margin-top:.75rem;"></p>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('cf-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var open = parseFloat(document.getElementById('cf-open').value)||0;
+    var inflow = parseFloat(document.getElementById('cf-in').value)||0;
+    var outflow = parseFloat(document.getElementById('cf-out').value)||0;
+    var net = inflow - outflow;
+    var close = open + net;
+    function fmt(n){ return 'AED ' + n.toLocaleString('en-AE',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+    document.getElementById('cf-result').style.display='block';
+    document.getElementById('cf-net').textContent = fmt(net);
+    document.getElementById('cf-close').textContent = fmt(close);
+    var note = document.getElementById('cf-note');
+    note.textContent = close < 0 ? 'Your projected closing balance is negative — this month\'s outflows exceed available cash. Consider delaying non-critical payments or following up on outstanding invoices.' : (net < 0 ? 'Net cash flow is negative this month, but your opening balance covers it.' : 'Positive net cash flow this month.');
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The cash flow formula</h2>
+<ul>
+<li><strong>Net Cash Flow</strong> = Total Inflows − Total Outflows</li>
+<li><strong>Closing Balance</strong> = Opening Balance + Net Cash Flow</li>
+</ul>
+<p>Cash flow is different from profit — a business can be profitable on paper (invoices issued) while running out of cash if clients haven't paid yet, or unprofitable in a given month while still holding healthy cash reserves from previous months. Tracking cash flow monthly catches shortfalls before they become a real problem.</p>
+<h2 id="who-needs-this">Why small installation businesses should track this monthly</h2>
+<p>Installation and contracting businesses often have a gap between paying for materials upfront and collecting final payment from clients on completion. Running this calculation before committing to a large project's material purchase helps confirm you have — or will have — enough cash on hand to cover the gap.</p>
+<h2 id="get-quote">Need equipment for an upcoming project?</h2>
+<p>Ask us about staged payment options that can help manage your cash flow on larger installation projects.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Contact Us</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">What's the difference between cash flow and profit?</button><div class="faq-a"><p>Profit is revenue minus expenses on an accounting basis (including invoices not yet paid), while cash flow tracks actual cash moving in and out of your bank account - a business can be profitable but still run short on cash.</p></div></div>
+<div class="faq-item"><button class="faq-q">What should I include as cash inflows?</button><div class="faq-a"><p>Actual cash received: client payments collected, loan proceeds, or owner capital injected - not sales invoiced but not yet paid.</p></div></div>
+<div class="faq-item"><button class="faq-q">What should I include as cash outflows?</button><div class="faq-a"><p>Actual cash paid out: supplier payments, payroll, rent, loan repayments and other operating expenses paid during the period.</p></div></div>
+<div class="faq-item"><button class="faq-q">What does a negative closing balance mean?</button><div class="faq-a"><p>It means your projected outflows exceed the cash you have available, which is an early warning sign to delay non-critical payments, chase outstanding invoices, or arrange short-term financing before it becomes a real shortfall.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

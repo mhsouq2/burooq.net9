@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM | Alburooq Smart Solutions</title>
-<meta name="description" content="Lead and customer tracking built for service businesses.">
-<link rel="canonical" href="https://burooq.net/software/crm">
-
+<title>UAE Gratuity Calculator 2026 (End of Service) | Alburooq</title>
+<meta name="description" content="Calculate UAE end-of-service gratuity based on basic salary and years of service, per UAE labour law. Free, instant calculator for employers and employees.">
+<link rel="canonical" href="https://burooq.net/tools/employee-gratuity-calculator-uae/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CRM | Alburooq Smart Solutions">
-<meta property="og:description" content="Lead and customer tracking built for service businesses.">
-<meta property="og:url" content="https://burooq.net/software/crm">
+<meta property="og:title" content="UAE Gratuity Calculator 2026 (End of Service) | Alburooq">
+<meta property="og:description" content="Calculate UAE end-of-service gratuity based on basic salary and years of service, per UAE labour law. Free, instant calculator for employers and employees.">
+<meta property="og:url" content="https://burooq.net/tools/employee-gratuity-calculator-uae/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CRM | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Lead and customer tracking built for service businesses.">
+<meta name="twitter:title" content="UAE Gratuity Calculator 2026 (End of Service) | Alburooq">
+<meta name="twitter:description" content="Calculate UAE end-of-service gratuity based on basic salary and years of service, per UAE labour law. Free, instant calculator for employers and employees.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "UAE End of Service Gratuity Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/employee-gratuity-calculator-uae/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is gratuity calculated on basic salary or total salary?", "acceptedAnswer": {"@type": "Answer", "text": "Basic salary only - housing, transport and other allowances are not included in the standard UAE gratuity calculation."}}, {"@type": "Question", "name": "Do I need a minimum period of service to get gratuity?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, an employee generally needs to complete at least one full year of continuous service to become eligible for end-of-service gratuity."}}, {"@type": "Question", "name": "Is there a maximum gratuity amount?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, total gratuity is generally capped at two years' worth of total salary under UAE labour law, regardless of how many additional years were served beyond that."}}, {"@type": "Question", "name": "Does resigning early affect my gratuity amount?", "acceptedAnswer": {"@type": "Answer", "text": "It can, depending on your specific contract type and notice period served - some scenarios reduce the gratuity percentage for early resignation, so this calculator's estimate assumes a standard full-entitlement scenario."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,108 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">CRM</span></div>
-    <h1>CRM</h1>
-    <p class="u-max-w-md">Lead and customer tracking built for service businesses.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">UAE End of Service Gratuity Calculator</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>UAE End of Service Gratuity Calculator</h1>
+    <p class="u-max-w-md">Enter basic salary and total years of service to estimate the end-of-service gratuity owed under UAE labour law — 21 days' basic pay per year for the first 5 years, and 30 days' basic pay per year after that, capped at two years' total salary.</p>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="gr-calc">
+  <div class="form-field"><label for="gr-basic">Basic salary (AED/month)</label><input id="gr-basic" type="number" value="8000" min="0" step="1"></div>
+  <div class="form-field"><label for="gr-years">Total years of service</label><input id="gr-years" type="number" value="4" min="0" step="0.1"></div>
+  <button class="btn btn-primary btn-block" id="gr-calc-btn">Calculate Gratuity</button>
+  <div id="gr-result" style="display:none;margin-top:1.25rem;">
+    <div class="stat" style="text-align:center;"><span class="num" style="color:var(--color-navy-900);font-size:1.8rem;" id="gr-total">-</span><span class="label" style="color:var(--color-gray-500);">Estimated Gratuity</span></div>
+    <p id="gr-note" class="form-hint" style="margin-top:.75rem;"></p>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('gr-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var basic = parseFloat(document.getElementById('gr-basic').value)||0;
+    var years = parseFloat(document.getElementById('gr-years').value)||0;
+    var dailyRate = basic / 30;
+    var gratuity = 0;
+    var note = '';
+    if(years < 1){
+      gratuity = 0;
+      note = 'Under UAE labour law, an employee generally must complete at least one year of continuous service to be eligible for gratuity.';
+    } else if(years <= 5){
+      gratuity = dailyRate * 21 * years;
+      note = 'Calculated at 21 days\' basic salary per year of service (first 5 years rate).';
+    } else {
+      var first5 = dailyRate * 21 * 5;
+      var remaining = years - 5;
+      var after5 = dailyRate * 30 * remaining;
+      gratuity = first5 + after5;
+      note = 'Calculated as 21 days/year for the first 5 years plus 30 days/year for each year after that.';
+    }
+    var cap = basic * 24; // 2 years total salary cap, approx
+    if(gratuity > cap){
+      gratuity = cap;
+      note += ' Capped at two years\' total salary as per UAE labour law.';
+    }
+    document.getElementById('gr-result').style.display='block';
+    document.getElementById('gr-total').textContent = 'AED ' + gratuity.toLocaleString('en-AE',{minimumFractionDigits:2,maximumFractionDigits:2});
+    document.getElementById('gr-note').textContent = note;
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The UAE gratuity formula</h2>
+<ul>
+<li><strong>First 5 years of service:</strong> 21 days' basic salary for each year</li>
+<li><strong>After 5 years of service:</strong> 30 days' basic salary for each additional year</li>
+<li><strong>Cap:</strong> Total gratuity is generally capped at two years' total salary</li>
+<li>Gratuity is calculated on <strong>basic salary only</strong>, not including housing, transport or other allowances</li>
+</ul>
+<p>An employee generally needs to complete at least one full year of continuous service to be entitled to gratuity. Calculations can vary slightly for early resignation under certain contract types versus termination by the employer, and rules have been updated over time — always verify against current MOHRE guidance for a specific case.</p>
+<h2 id="disclaimer">This is an estimate, not legal advice</h2>
+<p>UAE gratuity rules have specific provisions depending on contract type, reason for leaving, and unpaid leave periods that can affect the final figure. This calculator gives a solid planning estimate using the standard formula — for an exact, legally binding calculation, consult MOHRE guidance or an employment lawyer.</p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">Is gratuity calculated on basic salary or total salary?</button><div class="faq-a"><p>Basic salary only - housing, transport and other allowances are not included in the standard UAE gratuity calculation.</p></div></div>
+<div class="faq-item"><button class="faq-q">Do I need a minimum period of service to get gratuity?</button><div class="faq-a"><p>Yes, an employee generally needs to complete at least one full year of continuous service to become eligible for end-of-service gratuity.</p></div></div>
+<div class="faq-item"><button class="faq-q">Is there a maximum gratuity amount?</button><div class="faq-a"><p>Yes, total gratuity is generally capped at two years' worth of total salary under UAE labour law, regardless of how many additional years were served beyond that.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does resigning early affect my gratuity amount?</button><div class="faq-a"><p>It can, depending on your specific contract type and notice period served - some scenarios reduce the gratuity percentage for early resignation, so this calculator's estimate assumes a standard full-entitlement scenario.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

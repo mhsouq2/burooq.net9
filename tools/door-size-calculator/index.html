@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM | Alburooq Smart Solutions</title>
-<meta name="description" content="Lead and customer tracking built for service businesses.">
-<link rel="canonical" href="https://burooq.net/software/crm">
-
+<title>Door Size Calculator — Standard Door Sizes | Alburooq</title>
+<meta name="description" content="Find the right standard door size for your rough opening, and check clearances for smart locks and access control readers.">
+<link rel="canonical" href="https://burooq.net/tools/door-size-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CRM | Alburooq Smart Solutions">
-<meta property="og:description" content="Lead and customer tracking built for service businesses.">
-<meta property="og:url" content="https://burooq.net/software/crm">
+<meta property="og:title" content="Door Size Calculator — Standard Door Sizes | Alburooq">
+<meta property="og:description" content="Find the right standard door size for your rough opening, and check clearances for smart locks and access control readers.">
+<meta property="og:url" content="https://burooq.net/tools/door-size-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CRM | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Lead and customer tracking built for service businesses.">
+<meta name="twitter:title" content="Door Size Calculator — Standard Door Sizes | Alburooq">
+<meta name="twitter:description" content="Find the right standard door size for your rough opening, and check clearances for smart locks and access control readers.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Door Size Calculator (Standard Sizes Guide)", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/door-size-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's a standard main entrance door size?", "acceptedAnswer": {"@type": "Answer", "text": "90 x 210 cm is a very common standard main entrance door size in this region, though villas often use wider entrance doors (100cm+) for a grander look."}}, {"@type": "Question", "name": "Can any door take a smart lock?", "acceptedAnswer": {"@type": "Answer", "text": "Most solid-core doors of standard thickness (35-55mm) can be retrofitted, but hollow-core doors, very thick custom doors, or doors with unusual existing hardware may need an assessment first."}}, {"@type": "Question", "name": "What if my opening doesn't match any standard size?", "acceptedAnswer": {"@type": "Answer", "text": "You'll likely need a custom or made-to-measure door - this is common in older villas or renovated openings, so measure carefully and share exact dimensions with your door supplier."}}, {"@type": "Question", "name": "Does door material matter for access control?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, solid-core or metal doors are generally recommended for exterior entrances carrying smart locks or access-control readers, both for security and to properly support the hardware's drilling and mounting requirements."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,99 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">CRM</span></div>
-    <h1>CRM</h1>
-    <p class="u-max-w-md">Lead and customer tracking built for service businesses.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Door Size Calculator (Standard Sizes Guide)</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Door Size Calculator (Standard Sizes Guide)</h1>
+    <p class="u-max-w-md">Enter your rough opening width and height to find the closest standard door size, plus a clearance check that's useful when planning a smart lock, video doorbell or access control reader on that door.</p>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="door-calc">
+  <div class="grid grid--2" style="gap:.75rem;">
+    <div class="form-field"><label for="door-width">Rough opening width (cm)</label><input id="door-width" type="number" value="92" min="1" step="1"></div>
+    <div class="form-field"><label for="door-height">Rough opening height (cm)</label><input id="door-height" type="number" value="212" min="1" step="1"></div>
+  </div>
+  <button class="btn btn-primary btn-block" id="door-calc-btn">Find Standard Size</button>
+  <div id="door-result" style="display:none;margin-top:1.25rem;">
+    <div class="stat" style="text-align:center;"><span class="num" style="color:var(--color-navy-900);font-size:1.4rem;" id="door-size">-</span><span class="label" style="color:var(--color-gray-500);">Closest Standard Door Size</span></div>
+    <p id="door-note" class="form-hint" style="margin-top:.75rem;"></p>
+  </div>
+</div>
+<script>
+(function(){
+  var sizes = [
+    {w:70,h:200,label:'70 × 200 cm (narrow/utility door)'},
+    {w:80,h:200,label:'80 × 200 cm (standard internal door)'},
+    {w:90,h:210,label:'90 × 210 cm (standard main entrance door)'},
+    {w:100,h:210,label:'100 × 210 cm (wide entrance/double-leaf option)'},
+    {w:120,h:210,label:'120 × 210 cm (double door / wide entrance)'}
+  ];
+  var btn = document.getElementById('door-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var w = parseFloat(document.getElementById('door-width').value)||0;
+    var h = parseFloat(document.getElementById('door-height').value)||0;
+    var best = sizes[0]; var bestDist = 1e9;
+    sizes.forEach(function(s){
+      var d = Math.abs(s.w-w) + Math.abs(s.h-h);
+      if(d < bestDist){ bestDist = d; best = s; }
+    });
+    document.getElementById('door-result').style.display='block';
+    document.getElementById('door-size').textContent = best.label;
+    var note = 'For a smart lock or access-control reader, confirm at least 4-5cm of flat door edge/stile depth for the latch and reader housing, and check the door material (solid core recommended for main entrances) supports drilling for electronic hardware.';
+    document.getElementById('door-note').textContent = note;
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How this tool works</h2>
+<p>Enter your rough opening measurements and the tool matches you to the closest common standard door size used in the region. Standard sizing helps when ordering a replacement door, a smart lock retrofit kit, or planning an access-control reader, since off-standard openings often need a custom or made-to-measure door.</p>
+<h2 id="smart-lock-clearance">Planning a smart lock or access control reader on this door?</h2>
+<p>Beyond size, a few things matter for electronic hardware: door thickness (most smart locks need 35-55mm thickness), whether the door is solid or hollow-core (solid strongly recommended for main entrances carrying a smart lock), and enough flat stile width beside the existing lock for the new hardware's backset and reader housing.</p>
+<h2 id="get-quote">Fitting a smart lock or video intercom to this door?</h2>
+<p>We handle smart lock and video intercom installation across Abu Dhabi, including confirming your specific door is compatible before ordering hardware.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">What's a standard main entrance door size?</button><div class="faq-a"><p>90 x 210 cm is a very common standard main entrance door size in this region, though villas often use wider entrance doors (100cm+) for a grander look.</p></div></div>
+<div class="faq-item"><button class="faq-q">Can any door take a smart lock?</button><div class="faq-a"><p>Most solid-core doors of standard thickness (35-55mm) can be retrofitted, but hollow-core doors, very thick custom doors, or doors with unusual existing hardware may need an assessment first.</p></div></div>
+<div class="faq-item"><button class="faq-q">What if my opening doesn't match any standard size?</button><div class="faq-a"><p>You'll likely need a custom or made-to-measure door - this is common in older villas or renovated openings, so measure carefully and share exact dimensions with your door supplier.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does door material matter for access control?</button><div class="faq-a"><p>Yes, solid-core or metal doors are generally recommended for exterior entrances carrying smart locks or access-control readers, both for security and to properly support the hardware's drilling and mounting requirements.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM | Alburooq Smart Solutions</title>
-<meta name="description" content="Lead and customer tracking built for service businesses.">
-<link rel="canonical" href="https://burooq.net/software/crm">
-
+<title>Free UAE Invoice Generator (with VAT) | Alburooq</title>
+<meta name="description" content="Create a professional, VAT-compliant invoice for your UAE business in seconds. Add line items, auto-calculate 5% VAT, then print or save as PDF.">
+<link rel="canonical" href="https://burooq.net/tools/invoice-generator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CRM | Alburooq Smart Solutions">
-<meta property="og:description" content="Lead and customer tracking built for service businesses.">
-<meta property="og:url" content="https://burooq.net/software/crm">
+<meta property="og:title" content="Free UAE Invoice Generator (with VAT) | Alburooq">
+<meta property="og:description" content="Create a professional, VAT-compliant invoice for your UAE business in seconds. Add line items, auto-calculate 5% VAT, then print or save as PDF.">
+<meta property="og:url" content="https://burooq.net/tools/invoice-generator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CRM | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Lead and customer tracking built for service businesses.">
+<meta name="twitter:title" content="Free UAE Invoice Generator (with VAT) | Alburooq">
+<meta name="twitter:description" content="Create a professional, VAT-compliant invoice for your UAE business in seconds. Add line items, auto-calculate 5% VAT, then print or save as PDF.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Invoice Generator (UAE, with 5% VAT)", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/invoice-generator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this invoice generator VAT compliant for the UAE?", "acceptedAnswer": {"@type": "Answer", "text": "It calculates the standard 5% VAT correctly and separates net, VAT and total as required, but you are responsible for including your correct TRN, legal business name and invoice numbering sequence to be fully compliant."}}, {"@type": "Question", "name": "Can I save the invoice as a PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — click Print / Save as PDF and choose 'Save as PDF' in your browser's print dialog instead of printing to a physical printer."}}, {"@type": "Question", "name": "Does this store my invoice data anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No, everything is calculated locally in your browser and nothing is saved or sent anywhere, so refreshing the page will clear your entries."}}, {"@type": "Question", "name": "What if some of my line items are zero-rated?", "acceptedAnswer": {"@type": "Answer", "text": "For invoices with a mix of standard-rated and zero-rated items, calculate them as two separate invoices or line-item groups, since this tool applies one VAT rate to the whole invoice."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,129 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">CRM</span></div>
-    <h1>CRM</h1>
-    <p class="u-max-w-md">Lead and customer tracking built for service businesses.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Free Invoice Generator (UAE, with 5% VAT)</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Free Invoice Generator (UAE, with 5% VAT)</h1>
+    <p class="u-max-w-md">Build a clean, professional invoice for a UAE client in under a minute. Add your company details, line items and quantities, and this tool automatically totals the subtotal, 5% VAT and grand total — ready to print or save as a PDF.</p>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="inv-calc">
+  <div class="grid grid--2" style="gap:.75rem;">
+    <div class="form-field"><label for="inv-company">Your company name</label><input id="inv-company" type="text" value="Alburooq Smart Solutions"></div>
+    <div class="form-field"><label for="inv-trn">TRN (Tax Registration Number)</label><input id="inv-trn" type="text" placeholder="100XXXXXXXXXXX3"></div>
+    <div class="form-field"><label for="inv-client">Bill to (client name)</label><input id="inv-client" type="text" placeholder="Client name or company"></div>
+    <div class="form-field"><label for="inv-number">Invoice number</label><input id="inv-number" type="text" value="INV-1001"></div>
+    <div class="form-field"><label for="inv-date">Invoice date</label><input id="inv-date" type="date"></div>
+    <div class="form-field"><label for="inv-due">Due date</label><input id="inv-due" type="date"></div>
+  </div>
+  <div id="inv-rows" style="margin-top:1rem;"></div>
+  <button class="btn btn-outline btn-sm" id="inv-add-row" type="button" style="margin-top:.5rem;">+ Add Line Item</button>
+  <div class="form-field" style="margin-top:1rem;">
+    <label for="inv-vat-toggle">VAT</label>
+    <select id="inv-vat-toggle"><option value="5" selected>Apply 5% VAT</option><option value="0">No VAT (zero-rated/exempt)</option></select>
+  </div>
+  <button class="btn btn-primary btn-block" id="inv-calc-btn" type="button" style="margin-top:1rem;">Calculate Totals</button>
+  <div id="inv-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--3">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="inv-subtotal">-</span><span class="label" style="color:var(--color-gray-500);">Subtotal</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-amber-500);font-size:1.3rem;" id="inv-vat">-</span><span class="label" style="color:var(--color-gray-500);">VAT</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.3rem;" id="inv-total">-</span><span class="label" style="color:var(--color-gray-500);">Total Due</span></div>
+    </div>
+    <button class="btn btn-outline btn-block" id="inv-print" type="button" style="margin-top:1rem;">Print / Save as PDF</button>
+  </div>
+</div>
+<script>
+(function(){
+  var rowsEl = document.getElementById('inv-rows');
+  if(!rowsEl) return;
+  var rowCount = 0;
+  function addRow(desc, qty, price){
+    rowCount++;
+    var id = 'row'+rowCount;
+    var div = document.createElement('div');
+    div.className = 'grid grid--3';
+    div.style.gap = '.5rem';
+    div.style.marginBottom = '.5rem';
+    div.innerHTML = '<div class="form-field" style="margin-bottom:0;"><input placeholder="Description" class="inv-desc" value="'+(desc||'')+'"></div>'+
+      '<div class="form-field" style="margin-bottom:0;"><input type="number" placeholder="Qty" class="inv-qty" value="'+(qty!==undefined?qty:1)+'" min="0" step="1"></div>'+
+      '<div class="form-field" style="margin-bottom:0;"><input type="number" placeholder="Unit Price (AED)" class="inv-price" value="'+(price!==undefined?price:0)+'" min="0" step="0.01"></div>';
+    rowsEl.appendChild(div);
+  }
+  addRow('CCTV camera installation', 1, 500);
+  addRow('4-channel NVR with 2TB HDD', 1, 900);
+  document.getElementById('inv-add-row').addEventListener('click', function(){ addRow('', 1, 0); });
+  function fmt(n){ return 'AED ' + n.toLocaleString('en-AE', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  document.getElementById('inv-calc-btn').addEventListener('click', function(){
+    var descs = document.querySelectorAll('.inv-desc');
+    var qtys = document.querySelectorAll('.inv-qty');
+    var prices = document.querySelectorAll('.inv-price');
+    var subtotal = 0;
+    for(var i=0;i<qtys.length;i++){
+      var q = parseFloat(qtys[i].value)||0;
+      var p = parseFloat(prices[i].value)||0;
+      subtotal += q*p;
+    }
+    var vatRate = parseFloat(document.getElementById('inv-vat-toggle').value)/100;
+    var vat = subtotal*vatRate;
+    var total = subtotal+vat;
+    document.getElementById('inv-result').style.display='block';
+    document.getElementById('inv-subtotal').textContent = fmt(subtotal);
+    document.getElementById('inv-vat').textContent = fmt(vat);
+    document.getElementById('inv-total').textContent = fmt(total);
+  });
+  document.getElementById('inv-print').addEventListener('click', function(){ window.print(); });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How this invoice generator works</h2>
+<p>Fill in your company details, add one line item per row (description, quantity, unit price), then click Calculate Totals. The tool multiplies quantity by unit price for every row, sums the rows into a subtotal, and applies 5% UAE VAT on top unless you select the zero-rated/exempt option. Click Print / Save as PDF to generate a clean, printable copy for your client.</p>
+<h2 id="vat-invoicing">What a compliant UAE tax invoice needs</h2>
+<p>A UAE tax invoice issued by a VAT-registered business should clearly show your Tax Registration Number (TRN), the invoice date, a unique invoice number, the net amount, the VAT amount, and the total. This tool covers the calculation side — always double check your final invoice includes your registered legal business name and TRN exactly as issued by the Federal Tax Authority.</p>
+<h2 id="get-quote">Need help pricing a larger installation project?</h2>
+<p>For full CCTV, smart home or access-control projects, we recommend requesting a formal quotation rather than a single-invoice estimate — our <a href="../quotation-generator/">quotation generator</a> is built for exactly that.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">Is this invoice generator VAT compliant for the UAE?</button><div class="faq-a"><p>It calculates the standard 5% VAT correctly and separates net, VAT and total as required, but you are responsible for including your correct TRN, legal business name and invoice numbering sequence to be fully compliant.</p></div></div>
+<div class="faq-item"><button class="faq-q">Can I save the invoice as a PDF?</button><div class="faq-a"><p>Yes — click Print / Save as PDF and choose 'Save as PDF' in your browser's print dialog instead of printing to a physical printer.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does this store my invoice data anywhere?</button><div class="faq-a"><p>No, everything is calculated locally in your browser and nothing is saved or sent anywhere, so refreshing the page will clear your entries.</p></div></div>
+<div class="faq-item"><button class="faq-q">What if some of my line items are zero-rated?</button><div class="faq-a"><p>For invoices with a mix of standard-rated and zero-rated items, calculate them as two separate invoices or line-item groups, since this tool applies one VAT rate to the whole invoice.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

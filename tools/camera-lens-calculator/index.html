@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM | Alburooq Smart Solutions</title>
-<meta name="description" content="Lead and customer tracking built for service businesses.">
-<link rel="canonical" href="https://burooq.net/software/crm">
-
+<title>CCTV Lens &amp; Field of View Calculator | Alburooq</title>
+<meta name="description" content="Calculate a CCTV camera's horizontal field of view and estimated identification distance from its lens focal length and sensor size.">
+<link rel="canonical" href="https://burooq.net/tools/camera-lens-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CRM | Alburooq Smart Solutions">
-<meta property="og:description" content="Lead and customer tracking built for service businesses.">
-<meta property="og:url" content="https://burooq.net/software/crm">
+<meta property="og:title" content="CCTV Lens &amp; Field of View Calculator | Alburooq">
+<meta property="og:description" content="Calculate a CCTV camera's horizontal field of view and estimated identification distance from its lens focal length and sensor size.">
+<meta property="og:url" content="https://burooq.net/tools/camera-lens-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CRM | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Lead and customer tracking built for service businesses.">
+<meta name="twitter:title" content="CCTV Lens &amp; Field of View Calculator | Alburooq">
+<meta name="twitter:description" content="Calculate a CCTV camera's horizontal field of view and estimated identification distance from its lens focal length and sensor size.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "CCTV Camera Lens & Field of View Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/camera-lens-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What focal length is best for a villa gate camera?", "acceptedAnswer": {"@type": "Answer", "text": "A moderate focal length (around 4-6mm) usually balances driveway coverage with identifiable detail on an approaching person or vehicle - a dedicated longer lens (8mm+) can be added specifically for plate or face capture."}}, {"@type": "Question", "name": "Does a wider field of view mean lower detail?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily on its own, but for the same camera resolution, a wider field of view spreads the same pixel count across a larger scene, so faces and plates appear smaller and less identifiable at distance."}}, {"@type": "Question", "name": "What sensor size do most CCTV cameras use?", "acceptedAnswer": {"@type": "Answer", "text": "1/2.8\" and 1/3\" sensors are very common in mainstream CCTV cameras - check your specific camera's datasheet, since this affects the actual field of view for a given focal length."}}, {"@type": "Question", "name": "Should I use a fixed lens or a varifocal/zoom lens?", "acceptedAnswer": {"@type": "Answer", "text": "A varifocal lens lets you adjust the field of view after mounting to fine-tune coverage versus detail on site, which is useful when the exact distance to the target area isn't known until installation."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,106 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">CRM</span></div>
-    <h1>CRM</h1>
-    <p class="u-max-w-md">Lead and customer tracking built for service businesses.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">CCTV Camera Lens &amp; Field of View Calculator</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>CCTV Camera Lens &amp; Field of View Calculator</h1>
+    <p class="u-max-w-md">Enter a camera's lens focal length and sensor size to estimate its horizontal field of view — the key number for deciding whether a lens will cover a wide area or is better suited to a narrow, longer-range identification shot.</p>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="lens-calc">
+  <div class="form-field"><label for="lens-focal">Lens focal length (mm)</label><input id="lens-focal" type="number" value="4" min="0.1" step="0.1"></div>
+  <div class="form-field">
+    <label for="lens-sensor">Sensor size</label>
+    <select id="lens-sensor">
+      <option value="4.8">1/4" (sensor width ~3.2mm)</option>
+      <option value="5.8" selected>1/3" (sensor width ~4.8mm)</option>
+      <option value="6.4">1/2.8" (sensor width ~5.4mm)</option>
+      <option value="7.2">1/2.5" (sensor width ~5.8mm)</option>
+      <option value="9.6">1/2" (sensor width ~6.4mm)</option>
+    </select>
+  </div>
+  <div class="form-field"><label for="lens-distance">Distance to subject (meters, for identification estimate)</label><input id="lens-distance" type="number" value="15" min="1" step="1"></div>
+  <button class="btn btn-primary btn-block" id="lens-calc-btn">Calculate Field of View</button>
+  <div id="lens-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="lens-fov">-</span><span class="label" style="color:var(--color-gray-500);">Horizontal Field of View</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.3rem;" id="lens-width">-</span><span class="label" style="color:var(--color-gray-500);">Scene Width at Set Distance</span></div>
+    </div>
+    <p id="lens-note" class="form-hint" style="margin-top:.75rem;"></p>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('lens-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var focal = parseFloat(document.getElementById('lens-focal').value)||4;
+    var sensorW = parseFloat(document.getElementById('lens-sensor').value)||4.8;
+    var distance = parseFloat(document.getElementById('lens-distance').value)||15;
+    var fovRad = 2*Math.atan(sensorW/(2*focal));
+    var fovDeg = fovRad * (180/Math.PI);
+    var sceneWidth = 2 * distance * Math.tan(fovRad/2);
+    document.getElementById('lens-result').style.display='block';
+    document.getElementById('lens-fov').textContent = fovDeg.toFixed(1) + '°';
+    document.getElementById('lens-width').textContent = sceneWidth.toFixed(1) + ' m wide';
+    var note = '';
+    if(fovDeg > 80){ note = 'Wide field of view — good for general area overview, but faces/plates will appear small at distance.'; }
+    else if(fovDeg > 40){ note = 'Moderate field of view — a good balance of coverage and detail for most entrances and driveways.'; }
+    else { note = 'Narrow field of view — better suited to a specific chokepoint (gate, lane, door) where identification detail matters more than coverage width.'; }
+    document.getElementById('lens-note').textContent = note;
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The field of view formula</h2>
+<p>Horizontal field of view = 2 &times; arctan(sensor width &divide; (2 &times; focal length)). A shorter focal length (e.g. 2.8mm) gives a wide field of view suited to general area coverage, while a longer focal length (e.g. 8-12mm or a zoom lens) narrows the field of view but lets you see identifiable detail — a clear face or license plate — from further away.</p>
+<h2 id="who-needs-this">Choosing the right lens for a specific camera position</h2>
+<p>A single fixed-lens camera can't do both jobs well at once: covering a wide driveway and clearly identifying a face at the far end. This is exactly why gate cameras are often paired — one wide-angle camera for general coverage, one longer-focal-length camera aimed specifically at the point where identification matters, such as an intercom panel or a specific lane.</p>
+<h2 id="get-quote">Not sure which lens your site needs?</h2>
+<p>Our free site survey includes a walk-through of exactly this trade-off for every camera position on your property.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Site Survey</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">What focal length is best for a villa gate camera?</button><div class="faq-a"><p>A moderate focal length (around 4-6mm) usually balances driveway coverage with identifiable detail on an approaching person or vehicle - a dedicated longer lens (8mm+) can be added specifically for plate or face capture.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does a wider field of view mean lower detail?</button><div class="faq-a"><p>Not necessarily on its own, but for the same camera resolution, a wider field of view spreads the same pixel count across a larger scene, so faces and plates appear smaller and less identifiable at distance.</p></div></div>
+<div class="faq-item"><button class="faq-q">What sensor size do most CCTV cameras use?</button><div class="faq-a"><p>1/2.8" and 1/3" sensors are very common in mainstream CCTV cameras - check your specific camera's datasheet, since this affects the actual field of view for a given focal length.</p></div></div>
+<div class="faq-item"><button class="faq-q">Should I use a fixed lens or a varifocal/zoom lens?</button><div class="faq-a"><p>A varifocal lens lets you adjust the field of view after mounting to fine-tune coverage versus detail on site, which is useful when the exact distance to the target area isn't known until installation.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

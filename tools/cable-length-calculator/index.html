@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM | Alburooq Smart Solutions</title>
-<meta name="description" content="Lead and customer tracking built for service businesses.">
-<link rel="canonical" href="https://burooq.net/software/crm">
-
+<title>Network Cable Length Calculator (Cat6/Cat5e) | Alburooq</title>
+<meta name="description" content="Calculate total network cable length needed for multiple runs, including slack allowance, and estimate the number of 305m cable boxes required.">
+<link rel="canonical" href="https://burooq.net/tools/cable-length-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CRM | Alburooq Smart Solutions">
-<meta property="og:description" content="Lead and customer tracking built for service businesses.">
-<meta property="og:url" content="https://burooq.net/software/crm">
+<meta property="og:title" content="Network Cable Length Calculator (Cat6/Cat5e) | Alburooq">
+<meta property="og:description" content="Calculate total network cable length needed for multiple runs, including slack allowance, and estimate the number of 305m cable boxes required.">
+<meta property="og:url" content="https://burooq.net/tools/cable-length-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CRM | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Lead and customer tracking built for service businesses.">
+<meta name="twitter:title" content="Network Cable Length Calculator (Cat6/Cat5e) | Alburooq">
+<meta name="twitter:description" content="Calculate total network cable length needed for multiple runs, including slack allowance, and estimate the number of 305m cable boxes required.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Network Cable Length Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/cable-length-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much slack allowance should I add for cable runs?", "acceptedAnswer": {"@type": "Answer", "text": "10-20% is typical, covering vertical drops at each end, routing around obstacles, and leaving enough slack for termination and any future re-termination."}}, {"@type": "Question", "name": "What's a standard cable box size?", "acceptedAnswer": {"@type": "Answer", "text": "Cat6 and Cat5e cable most commonly ship in 305m (1000ft) boxes, though smaller reels are available for small jobs."}}, {"@type": "Question", "name": "Should I measure cable runs in a straight line or the actual route?", "acceptedAnswer": {"@type": "Answer", "text": "Always measure (or estimate) the actual route the cable will physically follow, including vertical runs up walls or through ceiling voids, not a straight-line distance, since actual routing is almost always longer."}}, {"@type": "Question", "name": "Does this work for both CCTV and general network cabling?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the same length and slack logic applies whether the run is for a PoE camera, a WiFi access point, or a standard network data point."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,98 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Software</a> / <span aria-current="page" style="color:#fff">CRM</span></div>
-    <h1>CRM</h1>
-    <p class="u-max-w-md">Lead and customer tracking built for service businesses.</p>
-    <a class="btn btn-primary" href="../../request-quote/">Request a Demo</a>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Network Cable Length Calculator</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Network Cable Length Calculator</h1>
+    <p class="u-max-w-md">Enter the number of cable runs (camera drops, access points, network points) and the average distance per run to calculate total cable length needed, including a slack allowance, and how many standard 305m boxes to order.</p>
   </div>
 </section>
-<section class="section"><div class="container u-max-w-md">
-  <p>Contact our team for a walkthrough tailored to your business size and current systems.</p>
-  <p><a href="../">← Back to all software</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="cable-calc">
+  <div class="grid grid--2" style="gap:.75rem;">
+    <div class="form-field"><label for="cable-runs">Number of cable runs</label><input id="cable-runs" type="number" value="12" min="1" step="1"></div>
+    <div class="form-field"><label for="cable-dist">Average distance per run (meters)</label><input id="cable-dist" type="number" value="25" min="1" step="1"></div>
+    <div class="form-field"><label for="cable-slack">Slack allowance (%)</label><input id="cable-slack" type="number" value="15" min="0" step="1"></div>
+    <div class="form-field"><label for="cable-box">Box size (meters)</label><input id="cable-box" type="number" value="305" min="1" step="1"></div>
+  </div>
+  <button class="btn btn-primary btn-block" id="cable-calc-btn">Calculate</button>
+  <div id="cable-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="cable-total">-</span><span class="label" style="color:var(--color-gray-500);">Total Cable Needed</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.4rem;" id="cable-boxes">-</span><span class="label" style="color:var(--color-gray-500);">Boxes to Order</span></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('cable-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var runs = parseFloat(document.getElementById('cable-runs').value)||0;
+    var dist = parseFloat(document.getElementById('cable-dist').value)||0;
+    var slack = (parseFloat(document.getElementById('cable-slack').value)||0)/100;
+    var boxSize = parseFloat(document.getElementById('cable-box').value)||305;
+    var total = runs * dist * (1+slack);
+    var boxes = Math.ceil(total/boxSize);
+    document.getElementById('cable-result').style.display='block';
+    document.getElementById('cable-total').textContent = Math.ceil(total) + ' m';
+    document.getElementById('cable-boxes').textContent = boxes + ' box(es) of ' + boxSize + 'm';
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The cable length formula</h2>
+<ul>
+<li><strong>Total cable needed</strong> = Number of runs &times; average distance per run &times; (1 + slack allowance)</li>
+<li><strong>Boxes to order</strong> = Total cable needed &divide; box size, rounded up</li>
+</ul>
+<p>A slack allowance (commonly 10-20%) accounts for vertical drops at each end, routing around obstacles rather than a perfectly straight line, termination loops, and future re-termination if a connector needs replacing. Cat6 and Cat5e cable both commonly ship in standard 305m (1000ft) boxes.</p>
+<h2 id="who-needs-this">Planning cabling for CCTV, WiFi access points or a full network</h2>
+<p>This applies directly to planning cable runs for PoE CCTV cameras, wireless access points, or general structured cabling points in a villa or office — get an accurate total before ordering to avoid a mid-installation supply run.</p>
+<h2 id="get-quote">Need a full structured cabling plan?</h2>
+<p>We handle end-to-end cable planning and installation for CCTV, networking and smart home projects, including proper cable management and testing.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">How much slack allowance should I add for cable runs?</button><div class="faq-a"><p>10-20% is typical, covering vertical drops at each end, routing around obstacles, and leaving enough slack for termination and any future re-termination.</p></div></div>
+<div class="faq-item"><button class="faq-q">What's a standard cable box size?</button><div class="faq-a"><p>Cat6 and Cat5e cable most commonly ship in 305m (1000ft) boxes, though smaller reels are available for small jobs.</p></div></div>
+<div class="faq-item"><button class="faq-q">Should I measure cable runs in a straight line or the actual route?</button><div class="faq-a"><p>Always measure (or estimate) the actual route the cable will physically follow, including vertical runs up walls or through ceiling voids, not a straight-line distance, since actual routing is almost always longer.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does this work for both CCTV and general network cabling?</button><div class="faq-a"><p>Yes, the same length and slack logic applies whether the run is for a PoE camera, a WiFi access point, or a standard network data point.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">
