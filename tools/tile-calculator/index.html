@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PoE Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Calculate total power budget needed across PoE devices on a switch.">
-<link rel="canonical" href="https://burooq.net/tools/poe-calculator">
-
+<title>Tile Calculator — How Many Tiles Do I Need? | Alburooq</title>
+<meta name="description" content="Calculate how many floor or wall tiles you need, including a wastage allowance, from room area and tile size.">
+<link rel="canonical" href="https://burooq.net/tools/tile-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Calculate total power budget needed across PoE devices on a switch.">
-<meta property="og:url" content="https://burooq.net/tools/poe-calculator">
+<meta property="og:title" content="Tile Calculator — How Many Tiles Do I Need? | Alburooq">
+<meta property="og:description" content="Calculate how many floor or wall tiles you need, including a wastage allowance, from room area and tile size.">
+<meta property="og:url" content="https://burooq.net/tools/tile-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Calculate total power budget needed across PoE devices on a switch.">
+<meta name="twitter:title" content="Tile Calculator — How Many Tiles Do I Need? | Alburooq">
+<meta name="twitter:description" content="Calculate how many floor or wall tiles you need, including a wastage allowance, from room area and tile size.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tile Calculator: How Many Tiles Do I Need?", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/tile-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much extra tile should I order for wastage?", "acceptedAnswer": {"@type": "Answer", "text": "10% is a common default for a simple rectangular room, but irregular layouts, diagonal patterns, or rooms with many cuts and corners should use 15-20% to be safe."}}, {"@type": "Question", "name": "Why order tiles from the same batch?", "acceptedAnswer": {"@type": "Answer", "text": "Tile color and shade can vary slightly between production batches, so ordering all tiles for a room (including your wastage allowance) from a single batch avoids visible color mismatches."}}, {"@type": "Question", "name": "Does this calculator work for wall tiles too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, use the wall area (length x height) in place of room floor area, and the same tile-size and wastage logic applies."}}, {"@type": "Question", "name": "What if my room isn't a simple rectangle?", "acceptedAnswer": {"@type": "Answer", "text": "Break the room into rectangular sections, calculate each section's area separately, then sum them before applying the tile-size and wastage calculation."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,107 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">PoE Calculator</span></div>
-    <h1>PoE Calculator</h1>
-    <p class="u-max-w-md">Calculate total power budget needed across PoE devices on a switch.</p>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Tile Calculator: How Many Tiles Do I Need?</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Tile Calculator: How Many Tiles Do I Need?</h1>
+    <p class="u-max-w-md">Enter your room dimensions, tile size and a wastage allowance to calculate exactly how many tiles (and boxes) to order for a floor or wall.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="tile-calc">
+  <div class="grid grid--2" style="gap:.75rem;">
+    <div class="form-field"><label for="tile-room-l">Room length (meters)</label><input id="tile-room-l" type="number" value="4" min="0" step="0.01"></div>
+    <div class="form-field"><label for="tile-room-w">Room width (meters)</label><input id="tile-room-w" type="number" value="3.5" min="0" step="0.01"></div>
+    <div class="form-field"><label for="tile-size-l">Tile length (cm)</label><input id="tile-size-l" type="number" value="60" min="1" step="1"></div>
+    <div class="form-field"><label for="tile-size-w">Tile width (cm)</label><input id="tile-size-w" type="number" value="60" min="1" step="1"></div>
+    <div class="form-field"><label for="tile-per-box">Tiles per box</label><input id="tile-per-box" type="number" value="4" min="1" step="1"></div>
+    <div class="form-field"><label for="tile-waste">Wastage allowance (%)</label><input id="tile-waste" type="number" value="10" min="0" step="1"></div>
+  </div>
+  <button class="btn btn-primary btn-block" id="tile-calc-btn">Calculate</button>
+  <div id="tile-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--3">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="tile-area">-</span><span class="label" style="color:var(--color-gray-500);">Room Area</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-amber-500);font-size:1.3rem;" id="tile-count">-</span><span class="label" style="color:var(--color-gray-500);">Tiles Needed</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.3rem;" id="tile-boxes">-</span><span class="label" style="color:var(--color-gray-500);">Boxes to Order</span></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('tile-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var rl = parseFloat(document.getElementById('tile-room-l').value)||0;
+    var rw = parseFloat(document.getElementById('tile-room-w').value)||0;
+    var tl = (parseFloat(document.getElementById('tile-size-l').value)||60)/100;
+    var tw = (parseFloat(document.getElementById('tile-size-w').value)||60)/100;
+    var perBox = parseFloat(document.getElementById('tile-per-box').value)||1;
+    var waste = (parseFloat(document.getElementById('tile-waste').value)||0)/100;
+    var roomArea = rl*rw;
+    var tileArea = tl*tw;
+    var tilesNeeded = Math.ceil((roomArea/tileArea) * (1+waste));
+    var boxes = Math.ceil(tilesNeeded/perBox);
+    document.getElementById('tile-result').style.display='block';
+    document.getElementById('tile-area').textContent = roomArea.toFixed(2) + ' m²';
+    document.getElementById('tile-count').textContent = tilesNeeded + ' tiles';
+    document.getElementById('tile-boxes').textContent = boxes + ' boxes';
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The tile calculation formula</h2>
+<ul>
+<li><strong>Room area</strong> = Room length &times; Room width</li>
+<li><strong>Tiles needed</strong> = (Room area &divide; single tile area) &times; (1 + wastage allowance)</li>
+<li><strong>Boxes to order</strong> = Tiles needed &divide; tiles per box, rounded up</li>
+</ul>
+<p>The wastage allowance covers cutting waste around edges, corners and obstacles, plus breakage — 10% is a common default for a simple rectangular room, but irregular room shapes, diagonal tile patterns, or a room with many corners and cutouts should use a higher allowance (15-20%).</p>
+<h2 id="who-needs-this">A quick material-planning step before any renovation</h2>
+<p>Getting tile quantity right before ordering avoids the common problem of running short mid-installation and having to order a second batch that may not perfectly match the original batch's shade — tile color can vary slightly between production batches.</p>
+<h2 id="get-quote">Renovating and need networking or smart home wiring planned first?</h2>
+<p>If tiling is part of a larger renovation, it's worth planning any in-floor or in-wall cabling routes before tiles go down.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">How much extra tile should I order for wastage?</button><div class="faq-a"><p>10% is a common default for a simple rectangular room, but irregular layouts, diagonal patterns, or rooms with many cuts and corners should use 15-20% to be safe.</p></div></div>
+<div class="faq-item"><button class="faq-q">Why order tiles from the same batch?</button><div class="faq-a"><p>Tile color and shade can vary slightly between production batches, so ordering all tiles for a room (including your wastage allowance) from a single batch avoids visible color mismatches.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does this calculator work for wall tiles too?</button><div class="faq-a"><p>Yes, use the wall area (length x height) in place of room floor area, and the same tile-size and wastage logic applies.</p></div></div>
+<div class="faq-item"><button class="faq-q">What if my room isn't a simple rectangle?</button><div class="faq-a"><p>Break the room into rectangular sections, calculate each section's area separately, then sum them before applying the tile-size and wastage calculation.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

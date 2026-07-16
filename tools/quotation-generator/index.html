@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PoE Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Calculate total power budget needed across PoE devices on a switch.">
-<link rel="canonical" href="https://burooq.net/tools/poe-calculator">
-
+<title>Free Quotation Generator for UAE Businesses | Alburooq</title>
+<meta name="description" content="Create a professional project quotation with line items, validity period and VAT breakdown for your UAE business or installation project — free and instant.">
+<link rel="canonical" href="https://burooq.net/tools/quotation-generator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Calculate total power budget needed across PoE devices on a switch.">
-<meta property="og:url" content="https://burooq.net/tools/poe-calculator">
+<meta property="og:title" content="Free Quotation Generator for UAE Businesses | Alburooq">
+<meta property="og:description" content="Create a professional project quotation with line items, validity period and VAT breakdown for your UAE business or installation project — free and instant.">
+<meta property="og:url" content="https://burooq.net/tools/quotation-generator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Calculate total power budget needed across PoE devices on a switch.">
+<meta name="twitter:title" content="Free Quotation Generator for UAE Businesses | Alburooq">
+<meta name="twitter:description" content="Create a professional project quotation with line items, validity period and VAT breakdown for your UAE business or installation project — free and instant.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free Quotation Generator (UAE)", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/quotation-generator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's the difference between a quotation and an invoice?", "acceptedAnswer": {"@type": "Answer", "text": "A quotation is a proposed price sent before work starts and is not a demand for payment, while an invoice is issued once work is agreed or completed and formally requests payment with VAT invoice details."}}, {"@type": "Question", "name": "How long should a quotation stay valid?", "acceptedAnswer": {"@type": "Answer", "text": "14 to 30 days is typical for installation projects, since material costs can shift — this tool defaults to 14 days but you can set any validity period."}}, {"@type": "Question", "name": "Does this quotation include VAT automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it applies the standard UAE 5% VAT rate on top of your subtotal automatically."}}, {"@type": "Question", "name": "Can I convert a quotation into an invoice later?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — once a client accepts a quotation, use the same line items in our invoice generator to issue the formal tax invoice."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,114 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">PoE Calculator</span></div>
-    <h1>PoE Calculator</h1>
-    <p class="u-max-w-md">Calculate total power budget needed across PoE devices on a switch.</p>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Free Quotation Generator (UAE)</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Free Quotation Generator (UAE)</h1>
+    <p class="u-max-w-md">Put together a clear, professional quotation for a client or project in minutes. Add line items, a validity period and payment terms, and this tool totals everything including 5% VAT — ready to print or send.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="quo-calc">
+  <div class="grid grid--2" style="gap:.75rem;">
+    <div class="form-field"><label for="quo-company">Your company name</label><input id="quo-company" type="text" value="Alburooq Smart Solutions"></div>
+    <div class="form-field"><label for="quo-client">Prepared for (client)</label><input id="quo-client" type="text" placeholder="Client name or company"></div>
+    <div class="form-field"><label for="quo-number">Quotation number</label><input id="quo-number" type="text" value="QT-1001"></div>
+    <div class="form-field"><label for="quo-valid">Valid for (days)</label><input id="quo-valid" type="number" value="14" min="1"></div>
+  </div>
+  <div id="quo-rows" style="margin-top:1rem;"></div>
+  <button class="btn btn-outline btn-sm" id="quo-add-row" type="button" style="margin-top:.5rem;">+ Add Line Item</button>
+  <div class="form-field" style="margin-top:1rem;"><label for="quo-terms">Payment terms</label><input id="quo-terms" type="text" value="50% advance, 50% on completion"></div>
+  <button class="btn btn-primary btn-block" id="quo-calc-btn" type="button" style="margin-top:1rem;">Calculate Totals</button>
+  <div id="quo-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--3">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="quo-subtotal">-</span><span class="label" style="color:var(--color-gray-500);">Subtotal</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-amber-500);font-size:1.3rem;" id="quo-vat">-</span><span class="label" style="color:var(--color-gray-500);">VAT (5%)</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.3rem;" id="quo-total">-</span><span class="label" style="color:var(--color-gray-500);">Total</span></div>
+    </div>
+    <button class="btn btn-outline btn-block" id="quo-print" type="button" style="margin-top:1rem;">Print / Save as PDF</button>
+  </div>
+</div>
+<script>
+(function(){
+  var rowsEl = document.getElementById('quo-rows');
+  if(!rowsEl) return;
+  function addRow(desc, qty, price){
+    var div = document.createElement('div');
+    div.className = 'grid grid--3';
+    div.style.gap = '.5rem'; div.style.marginBottom = '.5rem';
+    div.innerHTML = '<div class="form-field" style="margin-bottom:0;"><input placeholder="Description" class="quo-desc" value="'+(desc||'')+'"></div>'+
+      '<div class="form-field" style="margin-bottom:0;"><input type="number" placeholder="Qty" class="quo-qty" value="'+(qty!==undefined?qty:1)+'" min="0" step="1"></div>'+
+      '<div class="form-field" style="margin-bottom:0;"><input type="number" placeholder="Unit Price (AED)" class="quo-price" value="'+(price!==undefined?price:0)+'" min="0" step="0.01"></div>';
+    rowsEl.appendChild(div);
+  }
+  addRow('8-camera CCTV system, installed', 1, 6500);
+  addRow('Annual maintenance (year 1, optional)', 1, 800);
+  document.getElementById('quo-add-row').addEventListener('click', function(){ addRow('', 1, 0); });
+  function fmt(n){ return 'AED ' + n.toLocaleString('en-AE', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  document.getElementById('quo-calc-btn').addEventListener('click', function(){
+    var qtys = document.querySelectorAll('.quo-qty');
+    var prices = document.querySelectorAll('.quo-price');
+    var subtotal = 0;
+    for(var i=0;i<qtys.length;i++){ subtotal += (parseFloat(qtys[i].value)||0) * (parseFloat(prices[i].value)||0); }
+    var vat = subtotal*0.05;
+    var total = subtotal+vat;
+    document.getElementById('quo-result').style.display='block';
+    document.getElementById('quo-subtotal').textContent = fmt(subtotal);
+    document.getElementById('quo-vat').textContent = fmt(vat);
+    document.getElementById('quo-total').textContent = fmt(total);
+  });
+  document.getElementById('quo-print').addEventListener('click', function(){ window.print(); });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">How this quotation generator works</h2>
+<p>Add your line items, quantities and unit prices, set a validity period and payment terms, then calculate to get the subtotal, 5% VAT and total. Unlike an invoice, a quotation is a proposal rather than a demand for payment, so it includes a validity period after which pricing may change.</p>
+<h2 id="quote-vs-invoice">Quotation vs invoice: what's the difference?</h2>
+<p>A quotation is an estimate you send before work begins, giving the client a fixed price to accept; an invoice is issued after work is agreed (or completed) and is a formal request for payment with legal VAT invoice requirements. Our <a href="../invoice-generator/">invoice generator</a> is built for that second step.</p>
+<h2 id="get-quote">Want a real quotation for your project?</h2>
+<p>This tool is great for a quick estimate — for an exact, fixed-price quotation backed by a free site survey, contact our team directly.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">What's the difference between a quotation and an invoice?</button><div class="faq-a"><p>A quotation is a proposed price sent before work starts and is not a demand for payment, while an invoice is issued once work is agreed or completed and formally requests payment with VAT invoice details.</p></div></div>
+<div class="faq-item"><button class="faq-q">How long should a quotation stay valid?</button><div class="faq-a"><p>14 to 30 days is typical for installation projects, since material costs can shift — this tool defaults to 14 days but you can set any validity period.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does this quotation include VAT automatically?</button><div class="faq-a"><p>Yes, it applies the standard UAE 5% VAT rate on top of your subtotal automatically.</p></div></div>
+<div class="faq-item"><button class="faq-q">Can I convert a quotation into an invoice later?</button><div class="faq-a"><p>Yes — once a client accepts a quotation, use the same line items in our invoice generator to issue the formal tax invoice.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

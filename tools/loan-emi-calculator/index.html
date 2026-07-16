@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PoE Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Calculate total power budget needed across PoE devices on a switch.">
-<link rel="canonical" href="https://burooq.net/tools/poe-calculator">
-
+<title>Loan EMI Calculator — Monthly Payment | Alburooq</title>
+<meta name="description" content="Calculate your monthly loan installment (EMI) from loan amount, interest rate and tenure — free calculator for personal, business or equipment loans.">
+<link rel="canonical" href="https://burooq.net/tools/loan-emi-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Calculate total power budget needed across PoE devices on a switch.">
-<meta property="og:url" content="https://burooq.net/tools/poe-calculator">
+<meta property="og:title" content="Loan EMI Calculator — Monthly Payment | Alburooq">
+<meta property="og:description" content="Calculate your monthly loan installment (EMI) from loan amount, interest rate and tenure — free calculator for personal, business or equipment loans.">
+<meta property="og:url" content="https://burooq.net/tools/loan-emi-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Calculate total power budget needed across PoE devices on a switch.">
+<meta name="twitter:title" content="Loan EMI Calculator — Monthly Payment | Alburooq">
+<meta name="twitter:description" content="Calculate your monthly loan installment (EMI) from loan amount, interest rate and tenure — free calculator for personal, business or equipment loans.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Loan EMI Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/loan-emi-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does EMI stand for?", "acceptedAnswer": {"@type": "Answer", "text": "Equated Monthly Installment - a fixed monthly payment amount that repays a loan's principal and interest fully over an agreed period."}}, {"@type": "Question", "name": "Does a lower interest rate always mean lower total interest?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily if it comes with a much longer tenure - a lower rate over more months can still result in more total interest paid than a slightly higher rate over a shorter period, so it's worth comparing both the EMI and total repayment figures."}}, {"@type": "Question", "name": "What happens if I enter 0% interest?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator simply divides the loan amount evenly across the number of months, since there's no interest component to add."}}, {"@type": "Question", "name": "Does this include bank processing fees?", "acceptedAnswer": {"@type": "Answer", "text": "No, this calculates pure principal and interest based on the EMI formula - always add any processing fees, insurance or other charges your specific lender quotes separately."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,98 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">PoE Calculator</span></div>
-    <h1>PoE Calculator</h1>
-    <p class="u-max-w-md">Calculate total power budget needed across PoE devices on a switch.</p>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Loan EMI Calculator</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Loan EMI Calculator</h1>
+    <p class="u-max-w-md">Enter the loan amount, annual interest rate and repayment period to calculate your monthly installment (EMI), plus total interest paid over the life of the loan.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="emi-calc">
+  <div class="form-field"><label for="emi-amount">Loan amount (AED)</label><input id="emi-amount" type="number" value="50000" min="0" step="100"></div>
+  <div class="form-field"><label for="emi-rate">Annual interest rate (%)</label><input id="emi-rate" type="number" value="6" min="0" step="0.1"></div>
+  <div class="form-field"><label for="emi-tenure">Tenure (months)</label><input id="emi-tenure" type="number" value="36" min="1" step="1"></div>
+  <button class="btn btn-primary btn-block" id="emi-calc-btn">Calculate EMI</button>
+  <div id="emi-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--3">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="emi-monthly">-</span><span class="label" style="color:var(--color-gray-500);">Monthly EMI</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-amber-500);font-size:1.3rem;" id="emi-interest">-</span><span class="label" style="color:var(--color-gray-500);">Total Interest</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.3rem;" id="emi-total">-</span><span class="label" style="color:var(--color-gray-500);">Total Repayment</span></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('emi-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var P = parseFloat(document.getElementById('emi-amount').value)||0;
+    var annualRate = parseFloat(document.getElementById('emi-rate').value)||0;
+    var n = parseFloat(document.getElementById('emi-tenure').value)||1;
+    var r = (annualRate/100)/12;
+    var emi;
+    if(r === 0){ emi = P/n; } else {
+      emi = P * r * Math.pow(1+r, n) / (Math.pow(1+r, n) - 1);
+    }
+    var total = emi * n;
+    var interest = total - P;
+    function fmt(n){ return 'AED ' + n.toLocaleString('en-AE',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+    document.getElementById('emi-result').style.display='block';
+    document.getElementById('emi-monthly').textContent = fmt(emi);
+    document.getElementById('emi-interest').textContent = fmt(interest);
+    document.getElementById('emi-total').textContent = fmt(total);
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The EMI formula</h2>
+<p>EMI = P &times; r &times; (1+r)<sup>n</sup> &divide; [(1+r)<sup>n</sup> &minus; 1], where P is the loan principal, r is the monthly interest rate (annual rate &divide; 12 &divide; 100), and n is the number of monthly installments. This calculates a fixed monthly payment that fully repays the loan, including interest, by the end of the tenure.</p>
+<h2 id="who-needs-this">Useful for both personal and business loans</h2>
+<p>This works equally well for a personal loan, a car loan, or a business/equipment financing loan — such as financing a larger CCTV or smart home installation project through a bank facility rather than paying the full amount upfront.</p>
+<h2 id="get-quote">Considering an installment plan for your project instead?</h2>
+<p>We offer installment options directly on select installation packages — ask our team when requesting a quote.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">What does EMI stand for?</button><div class="faq-a"><p>Equated Monthly Installment - a fixed monthly payment amount that repays a loan's principal and interest fully over an agreed period.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does a lower interest rate always mean lower total interest?</button><div class="faq-a"><p>Not necessarily if it comes with a much longer tenure - a lower rate over more months can still result in more total interest paid than a slightly higher rate over a shorter period, so it's worth comparing both the EMI and total repayment figures.</p></div></div>
+<div class="faq-item"><button class="faq-q">What happens if I enter 0% interest?</button><div class="faq-a"><p>The calculator simply divides the loan amount evenly across the number of months, since there's no interest component to add.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does this include bank processing fees?</button><div class="faq-a"><p>No, this calculates pure principal and interest based on the EMI formula - always add any processing fees, insurance or other charges your specific lender quotes separately.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">

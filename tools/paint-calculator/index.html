@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PoE Calculator | Alburooq Smart Solutions</title>
-<meta name="description" content="Calculate total power budget needed across PoE devices on a switch.">
-<link rel="canonical" href="https://burooq.net/tools/poe-calculator">
-
+<title>Paint Calculator — How Much Paint Do I Need? | Alburooq</title>
+<meta name="description" content="Calculate how many liters of paint you need based on wall area, number of coats and paint coverage rate — free calculator for any room or villa.">
+<link rel="canonical" href="https://burooq.net/tools/paint-calculator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta property="og:description" content="Calculate total power budget needed across PoE devices on a switch.">
-<meta property="og:url" content="https://burooq.net/tools/poe-calculator">
+<meta property="og:title" content="Paint Calculator — How Much Paint Do I Need? | Alburooq">
+<meta property="og:description" content="Calculate how many liters of paint you need based on wall area, number of coats and paint coverage rate — free calculator for any room or villa.">
+<meta property="og:url" content="https://burooq.net/tools/paint-calculator/">
 <meta property="og:image" content="https://burooq.net/assets/hero/home-hero.svg">
 <meta property="og:site_name" content="Alburooq Smart Solutions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PoE Calculator | Alburooq Smart Solutions">
-<meta name="twitter:description" content="Calculate total power budget needed across PoE devices on a switch.">
+<meta name="twitter:title" content="Paint Calculator — How Much Paint Do I Need? | Alburooq">
+<meta name="twitter:description" content="Calculate how many liters of paint you need based on wall area, number of coats and paint coverage rate — free calculator for any room or villa.">
 <link rel="icon" href="../../assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/css/variables.css" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +30,12 @@
 <link rel="stylesheet" href="../../assets/css/utilities.css">
 <link rel="stylesheet" href="../../assets/css/animations.css">
 <link rel="stylesheet" href="../../assets/css/responsive.css">
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Paint Calculator: How Much Paint Do I Need?", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://burooq.net/tools/paint-calculator/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@type": "Organization", "name": "Alburooq Smart Solutions"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much paint coverage should I assume per liter?", "acceptedAnswer": {"@type": "Answer", "text": "Most standard emulsion paints cover 8-12 m² per liter per coat, but always check the manufacturer's stated coverage on the tin, since formulations vary."}}, {"@type": "Question", "name": "Do I need to paint 2 coats?", "acceptedAnswer": {"@type": "Answer", "text": "Two coats is standard for most walls, especially when changing color significantly or painting over a darker existing color - a single coat often leaves patchy, uneven coverage."}}, {"@type": "Question", "name": "Should I deduct doors and windows from wall area?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, subtract the combined area of doors and windows so you don't overbuy paint - this calculator has a field specifically for that deduction."}}, {"@type": "Question", "name": "Does this work for exterior walls too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the same length x height formula applies - just use exterior-grade weatherproof paint and note that exterior paint coverage rates can differ from interior paint."}}]}
+</script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
@@ -149,16 +153,100 @@ ml('account','2426568');
 
 <section class="section--navy" style="padding-block:3.5rem;">
   <div class="container">
-    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">PoE Calculator</span></div>
-    <h1>PoE Calculator</h1>
-    <p class="u-max-w-md">Calculate total power budget needed across PoE devices on a switch.</p>
+    <div class="breadcrumb"><a href="../../" style="color:var(--color-blue-100)">Home</a> / <a href="../" style="color:var(--color-blue-100)">Tools</a> / <span aria-current="page" style="color:#fff">Paint Calculator: How Much Paint Do I Need?</span></div>
+    <p class="eyebrow">Free Tool · New 2026</p>
+    <h1>Paint Calculator: How Much Paint Do I Need?</h1>
+    <p class="u-max-w-md">Enter your wall dimensions and number of coats to calculate exactly how many liters of paint to buy, based on standard coverage rates.</p>
   </div>
 </section>
-<section class="section"><div class="container card u-max-w-md">
-  <p>This calculator is being finalized. In the meantime our engineers can give you an exact figure during a free site survey.</p>
-  <a class="btn btn-primary" href="../../request-quote/">Request a Free Survey</a>
-  <p style="margin-top:1rem;"><a href="../">← Back to all tools</a></p>
-</div></section>
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start;">
+    <div class="u-max-w-md">
+      
+<div class="card" id="paint-calc">
+  <div class="grid grid--2" style="gap:.75rem;">
+    <div class="form-field"><label for="paint-length">Total wall length (meters)</label><input id="paint-length" type="number" value="20" min="0" step="0.1"></div>
+    <div class="form-field"><label for="paint-height">Wall height (meters)</label><input id="paint-height" type="number" value="3" min="0" step="0.1"></div>
+    <div class="form-field"><label for="paint-deduct">Door/window area to deduct (m²)</label><input id="paint-deduct" type="number" value="6" min="0" step="0.1"></div>
+    <div class="form-field"><label for="paint-coats">Number of coats</label><input id="paint-coats" type="number" value="2" min="1" step="1"></div>
+    <div class="form-field"><label for="paint-coverage">Paint coverage (m² per liter)</label><input id="paint-coverage" type="number" value="10" min="1" step="0.5"></div>
+  </div>
+  <button class="btn btn-primary btn-block" id="paint-calc-btn">Calculate</button>
+  <div id="paint-result" style="display:none;margin-top:1.25rem;">
+    <div class="grid grid--2">
+      <div class="stat"><span class="num" style="color:var(--color-blue-600);font-size:1.3rem;" id="paint-area">-</span><span class="label" style="color:var(--color-gray-500);">Paintable Area</span></div>
+      <div class="stat"><span class="num" style="color:var(--color-navy-900);font-size:1.4rem;" id="paint-liters">-</span><span class="label" style="color:var(--color-gray-500);">Paint Needed</span></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('paint-calc-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var len = parseFloat(document.getElementById('paint-length').value)||0;
+    var h = parseFloat(document.getElementById('paint-height').value)||0;
+    var deduct = parseFloat(document.getElementById('paint-deduct').value)||0;
+    var coats = parseFloat(document.getElementById('paint-coats').value)||1;
+    var coverage = parseFloat(document.getElementById('paint-coverage').value)||10;
+    var area = Math.max(0, (len*h) - deduct);
+    var liters = (area * coats) / coverage;
+    document.getElementById('paint-result').style.display='block';
+    document.getElementById('paint-area').textContent = area.toFixed(1) + ' m²';
+    document.getElementById('paint-liters').textContent = Math.ceil(liters*10)/10 + ' liters';
+  });
+})();
+</script>
+
+    </div>
+    <div>
+      <div class="card card--feature" style="margin-bottom:1.5rem;">
+        <h3>Want an exact number, not an estimate?</h3>
+        <p>This calculator gives a strong planning estimate. For an exact, guaranteed figure, our engineers confirm everything during a free site survey.</p>
+        <a class="btn btn-primary btn-block" href="../../request-quote/">Request a Free Site Survey</a>
+        <a class="btn btn-whatsapp btn-block" style="margin-top:.6rem;" href="https://wa.me/971544389066" target="_blank" rel="noopener">WhatsApp an Engineer</a>
+      </div>
+      <div class="card card--feature">
+  <h3>Planning a project?</h3>
+  <div style="display:flex;flex-direction:column;gap:.6rem;">
+    <a class="card card--service" href="../../services/">Browse All Services</a>
+    <a class="card card--service" href="../../request-quote/">Request a Free Quote</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt section">
+  <div class="container u-max-w-md">
+    
+<h2 id="how-it-works">The paint calculation formula</h2>
+<ul>
+<li><strong>Paintable area</strong> = (Total wall length &times; height) &minus; door/window area</li>
+<li><strong>Paint needed (liters)</strong> = (Paintable area &times; number of coats) &divide; coverage rate per liter</li>
+</ul>
+<p>Coverage rate varies by paint type and wall surface — budget emulsion paints often cover less per liter than premium paints, and rough or previously unpainted walls absorb more paint on the first coat. Check your specific paint tin's stated coverage rate rather than assuming a generic number for an exact figure.</p>
+<h2 id="who-needs-this">Useful beyond just walls</h2>
+<p>This same formula works for ceilings (measure length &times; width instead of length &times; height) and for exterior villa walls, gates and boundary walls — just measure the relevant surface area and deduct any doors, windows or gates.</p>
+<h2 id="get-quote">Planning a bigger renovation alongside painting?</h2>
+<p>If you're repainting as part of a wider renovation that also involves networking, smart home wiring or CCTV, it's worth planning cabling routes before the paint goes on.</p>
+<p><a href="../../request-quote/" class="btn btn-primary">Request a Free Quote</a></p>
+
+</div>
+</section>
+
+<section class="section">
+  <div class="container u-max-w-md">
+    <h2>Frequently asked questions</h2>
+    
+
+<div class="faq-item"><button class="faq-q">How much paint coverage should I assume per liter?</button><div class="faq-a"><p>Most standard emulsion paints cover 8-12 m² per liter per coat, but always check the manufacturer's stated coverage on the tin, since formulations vary.</p></div></div>
+<div class="faq-item"><button class="faq-q">Do I need to paint 2 coats?</button><div class="faq-a"><p>Two coats is standard for most walls, especially when changing color significantly or painting over a darker existing color - a single coat often leaves patchy, uneven coverage.</p></div></div>
+<div class="faq-item"><button class="faq-q">Should I deduct doors and windows from wall area?</button><div class="faq-a"><p>Yes, subtract the combined area of doors and windows so you don't overbuy paint - this calculator has a field specifically for that deduction.</p></div></div>
+<div class="faq-item"><button class="faq-q">Does this work for exterior walls too?</button><div class="faq-a"><p>Yes, the same length x height formula applies - just use exterior-grade weatherproof paint and note that exterior paint coverage rates can differ from interior paint.</p></div></div>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">
