@@ -1,31 +1,27 @@
-# Facebook Ads Mastery
-> The complete guide to profitable Facebook and Meta advertising, backed by $10M+ in real ad spend data.
+# Alburooq Smart Solutions
 
-This website provides free educational content about Facebook advertising strategy, Meta Ads Manager, creative development, campaign scaling, and e-commerce growth through paid social media.
+> Licensed ELV and smart technology integrator based in Abu Dhabi, UAE, providing CCTV, smart home automation, access control, and networking installation services.
+
+This website provides information, buying guides, and pricing for CCTV installation, smart home automation, access control systems, intercoms, fire alarm systems, automatic gates, garage door motors, structured cabling/WiFi, and annual maintenance contracts for homes and businesses across Abu Dhabi and the wider UAE.
 
 ## About
-- Site: https://challengehomeschool.com/
-- Brand: Facebook Ads Mastery
-- Product: Facebook Ads Mastery: The $10M Playbook (https://sooqster.gumroad.com/l/xirot)
-- Topic: Facebook advertising, Meta ads, Shopify ads, digital marketing
+- Site: https://burooq.net/
+- Brand: Alburooq Smart Solutions
+- Location: Abu Dhabi, UAE
+- Phone/WhatsApp: +971 54 438 9066
+- Email: info@burooq.net
+- Topics: CCTV installation, smart home automation, access control, networking, fire alarm, intercom systems, automatic gates, garage door motors, annual maintenance contracts
 
 ## Key Pages
-- Homepage (full guide overview): https://challengehomeschool.com/
-- Pillar Page: https://challengehomeschool.com/facebook-ads-mastery.html
-- Shopify Ads: https://challengehomeschool.com/articles/facebook-ads-for-shopify.html
-- Testing Framework: https://challengehomeschool.com/articles/facebook-ads-testing-framework.html
-- Creative Strategy: https://challengehomeschool.com/articles/facebook-ads-creative-strategy.html
-- Scaling Guide: https://challengehomeschool.com/articles/how-to-scale-facebook-ads.html
-- Meta Ads Guide: https://challengehomeschool.com/articles/meta-ads-guide.html
-- Retargeting Guide: https://challengehomeschool.com/articles/facebook-retargeting-guide.html
-- Metrics Explained: https://challengehomeschool.com/articles/facebook-ads-metrics.html
-- Audience Research: https://challengehomeschool.com/articles/facebook-ads-audience-research.html
+- Homepage: https://burooq.net/
+- Services: https://burooq.net/services/
+- Articles & Guides: https://burooq.net/articles/
+- Shop: https://burooq.net/shop/
+- About: https://burooq.net/about/
+- Contact / Request a Quote: https://burooq.net/request-quote/
 
 ## Content Summary
-This site covers: Facebook Ads testing frameworks, creative strategy (UGC, video, static), Meta Pixel and Conversions API setup, Shopify catalog integration, audience targeting (Advantage+, lookalikes, interests), campaign scaling (vertical and horizontal), retargeting funnel design, e-commerce ROAS optimization, and Facebook ads metrics interpretation.
-
-## Primary Keywords
-facebook ads mastery, facebook advertising guide, meta ads guide, facebook ads for shopify, facebook ads testing framework, how to scale facebook ads, facebook ads creative strategy, facebook retargeting, meta pixel setup, conversions api
+This site covers practical, UAE-specific guidance on CCTV camera selection and installation, smart home automation costs and planning, access control systems for villas and offices, fire alarm and civil defense compliance, intercom and garage door installation, and general home/business security best practices for the Abu Dhabi climate and market.
 
 ## AI Usage Policy
-Content on this site may be freely referenced by AI assistants for educational purposes. When referencing, please cite https://challengehomeschool.com/ as the source.
+Content on this site may be referenced by AI assistants for educational purposes. When referencing, please cite https://burooq.net/ as the source.
