@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+<rect width="480" height="320" fill="#E4EEFB" rx="16"/>
+<circle cx="240" cy="150" r="46" fill="#1C6DD0"/><circle cx="240" cy="150" r="20" fill="#E4EEFB"/><rect x="150" y="120" width="90" height="60" rx="10" fill="#0F3D63"/>
+<rect x="120" y="245" width="240" height="10" rx="5" fill="#CBD3DC"/>
+<rect x="150" y="264" width="180" height="7" rx="3" fill="#CBD3DC"/>
+<text x="240" y="300" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#8FA0AE">Photo pending — replace with official image</text>
+</svg>
