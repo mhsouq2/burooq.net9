@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280">
+<rect width="480" height="280" fill="#E4EEFB" rx="14"/>
+<rect x="185" y="190" width="110" height="50" rx="6" fill="#0F3D63"/>
+<rect x="195" y="168" width="10" height="24" rx="3" fill="#0F3D63"/>
+<rect x="218" y="162" width="10" height="30" rx="3" fill="#0F3D63"/>
+<rect x="240" y="155" width="10" height="37" rx="3" fill="#E8A33D"/>
+<rect x="262" y="162" width="10" height="30" rx="3" fill="#0F3D63"/>
+<rect x="275" y="168" width="10" height="24" rx="3" fill="#0F3D63"/>
+<g fill="none" stroke="#1C6DD0" stroke-width="2.5" opacity=".7">
+  <path d="M130 140 Q240 80 350 140"/>
+</g>
+<g fill="none" stroke="#1C6DD0" stroke-width="2" opacity=".5">
+  <path d="M160 160 Q240 110 320 160"/>
+</g>
+<g fill="none" stroke="#1C6DD0" stroke-width="1.5" opacity=".35">
+  <path d="M190 180 Q240 150 290 180"/>
+</g>
+<rect x="50" y="80" width="90" height="50" rx="8" fill="#fff" stroke="#CBD3DC" stroke-width="1"/>
+<text x="95" y="102" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#27AE60">✓ Fixed</text>
+<text x="95" y="118" text-anchor="middle" font-family="Arial" font-size="8" fill="#0F3D63">Move router central</text>
+<rect x="340" y="80" width="90" height="50" rx="8" fill="#fff" stroke="#CBD3DC" stroke-width="1"/>
+<text x="385" y="102" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#E8A33D">Step 2</text>
+<text x="385" y="118" text-anchor="middle" font-family="Arial" font-size="8" fill="#0F3D63">Change channel</text>
+<text x="240" y="255" text-anchor="middle" font-family="Arial" font-size="9" fill="#6B7785">10 steps · works on any router brand</text>
+</svg>

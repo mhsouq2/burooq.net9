@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280">
+<rect width="480" height="280" fill="#E4EEFB" rx="14"/>
+<rect x="175" y="40" width="130" height="210" rx="18" fill="#0F3D63"/>
+<rect x="205" y="36" width="70" height="10" rx="5" fill="#0F3D63"/>
+<rect x="183" y="52" width="114" height="190" rx="10" fill="#15202B"/>
+<rect x="183" y="52" width="114" height="142" rx="10" fill="#27AE60"/>
+<text x="240" y="135" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="28" fill="#fff">75%</text>
+<text x="240" y="160" text-anchor="middle" font-family="Arial" font-size="10" fill="#E4EEFB">Battery</text>
+<rect x="183" y="218" width="114" height="24" rx="0 0 10 10" fill="#15202B"/>
+<g fill="#E8A33D">
+  <circle cx="80" cy="100" r="5"/><line x1="80" y1="60" x2="80" y2="75" stroke="#E8A33D" stroke-width="2"/>
+  <line x1="80" y1="125" x2="80" y2="140" stroke="#E8A33D" stroke-width="2"/>
+  <line x1="45" y1="100" x2="60" y2="100" stroke="#E8A33D" stroke-width="2"/>
+  <line x1="100" y1="100" x2="115" y2="100" stroke="#E8A33D" stroke-width="2"/>
+</g>
+<text x="80" y="104" text-anchor="middle" font-family="Arial" font-size="16" fill="#E8A33D">☀</text>
+<rect x="50" y="165" width="80" height="18" rx="4" fill="#fff" opacity=".8"/>
+<text x="90" y="178" text-anchor="middle" font-family="Arial" font-size="8" fill="#0F3D63">Dark Mode ON</text>
+<rect x="350" y="80" width="80" height="18" rx="4" fill="#fff" opacity=".8"/>
+<text x="390" y="93" text-anchor="middle" font-family="Arial" font-size="8" fill="#27AE60">5GHz WiFi</text>
+<rect x="350" y="108" width="80" height="18" rx="4" fill="#fff" opacity=".8"/>
+<text x="390" y="121" text-anchor="middle" font-family="Arial" font-size="8" fill="#0F3D63">Auto-Brightness</text>
+<rect x="350" y="136" width="80" height="18" rx="4" fill="#E8A33D" opacity=".9"/>
+<text x="390" y="149" text-anchor="middle" font-family="Arial" font-size="8" fill="#0F3D63">Low Power Mode</text>
+</svg>

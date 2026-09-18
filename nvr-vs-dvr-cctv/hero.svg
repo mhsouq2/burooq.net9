@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+<rect width="480" height="320" fill="#E4EEFB" rx="16"/>
+<rect x="60" y="120" width="160" height="80" rx="8" fill="#0F3D63"/>
+<text x="140" y="165" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="#E8A33D">DVR</text>
+<rect x="260" y="120" width="160" height="80" rx="8" fill="#1C6DD0"/>
+<text x="340" y="165" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="#fff">NVR</text>
+<line x1="60" y1="100" x2="140" y2="120" stroke="#15202B" stroke-width="6"/>
+<line x1="160" y1="100" x2="140" y2="120" stroke="#15202B" stroke-width="6"/>
+<line x1="300" y1="80" x2="340" y2="120" stroke="#1C6DD0" stroke-width="4"/>
+<line x1="370" y1="80" x2="340" y2="120" stroke="#1C6DD0" stroke-width="4"/>
+<circle cx="60" cy="92" r="12" fill="#0F3D63"/><circle cx="160" cy="92" r="12" fill="#0F3D63"/>
+<circle cx="300" cy="72" r="12" fill="#1C6DD0"/><circle cx="370" cy="72" r="12" fill="#1C6DD0"/>
+<rect x="120" y="240" width="240" height="14" rx="7" fill="#CBD3DC"/>
+</svg>

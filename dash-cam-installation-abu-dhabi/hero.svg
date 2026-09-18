@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+<rect width="480" height="320" fill="#E4EEFB" rx="16"/>
+<path d="M120,220 L150,140 Q160,120 190,120 L290,120 Q320,120 330,140 L360,220 Z" fill="#0F3D63"/>
+<rect x="140" y="220" width="200" height="14" fill="#15202B"/>
+<circle cx="180" cy="234" r="22" fill="#15202B"/><circle cx="300" cy="234" r="22" fill="#15202B"/>
+<rect x="215" y="90" width="50" height="45" rx="6" fill="#1C6DD0"/>
+<circle cx="240" cy="112" r="12" fill="#E4EEFB"/>
+<rect x="230" y="60" width="20" height="35" rx="4" fill="#8FA0AE"/>
+<path d="M240,60 Q260,40 280,55" fill="none" stroke="#E8A33D" stroke-width="3" stroke-dasharray="4 4"/>
+<text x="290" y="50" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#0F3D63">REC ●</text>
+<rect x="120" y="255" width="240" height="8" rx="4" fill="#CBD3DC"/>
+</svg>
