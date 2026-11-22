@@ -23,6 +23,7 @@ This website provides information, buying guides, and pricing for CCTV installat
 - CCTV Installation: https://burooq.net/services/cctv-installation-abu-dhabi/
 - Networking: https://burooq.net/services/networking/
 - Arabic service pages: https://burooq.net/services/data-recovery-arabic/ , https://burooq.net/services/laptop-repair-arabic/ , https://burooq.net/services/wifi-booster-arabic/ , https://burooq.net/services/sound-systems-arabic/ , https://burooq.net/services/website-design-arabic/
+- Burooq Fleet (fleet & traffic fines software, sign up online): https://burooq.net/software/fleet-management-software/
 - Free PDF Converter (JPG to PDF, text to PDF, merge PDF): https://burooq.net/tools/pdf-converter/
 - BurooqMart online store (sister site): https://burooqmart.com/
 - Articles & Guides: https://burooq.net/articles/
