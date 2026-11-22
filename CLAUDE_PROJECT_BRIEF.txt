@@ -9,7 +9,7 @@
 - Email: info@burooq.net
 - Location: Abu Dhabi, UAE
 - Business type: Licensed ELV and smart technology integrator
-- Services: CCTV installation, smart home automation, access control, networking, fire alarm, intercom, automatic gates, garage door motors, annual maintenance contracts
+- Services: CCTV installation, smart home automation, access control, networking, fire alarm, intercom, automatic gates, garage door motors, annual maintenance contracts, WiFi booster/mesh, sound systems, laptop repair & maintenance, data recovery, website design
 
 ## KEY INTEGRATIONS
 - MailerLite account ID: 2426568

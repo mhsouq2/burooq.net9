@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://burooq.net/</loc><lastmod>2026-11-14</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url><loc>https://burooq.net/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://burooq.net/about/</loc></url>
   <url><loc>https://burooq.net/areas/</loc></url>
   <url><loc>https://burooq.net/areas/abu-dhabi/</loc></url>
@@ -74,7 +74,6 @@
   <url><loc>https://burooq.net/articles/cctv-camera-placement-guide-abu-dhabi-villa/</loc></url>
   <url><loc>https://burooq.net/articles/cctv-privacy-laws-uae-abu-dhabi/</loc></url>
   <url><loc>https://burooq.net/articles/cctv-without-wifi-internet-uae/</loc></url>
-  <url><loc>https://burooq.net/articles/does-cctv-record-audio-uae/</loc></url>
   <url><loc>https://burooq.net/articles/cctv-footage-retention-how-long-uae/</loc></url>
   <url><loc>https://burooq.net/articles/is-smart-home-worth-it-abu-dhabi/</loc></url>
   <url><loc>https://burooq.net/articles/are-smart-homes-safe-hacking-privacy-abu-dhabi/</loc></url>
@@ -130,7 +129,6 @@
   <url><loc>https://burooq.net/privacy-policy/</loc></url>
   <url><loc>https://burooq.net/projects/</loc></url>
   <url><loc>https://burooq.net/request-quote/</loc></url>
-  <url><loc>https://burooq.net/services/</loc></url>
   <url><loc>https://burooq.net/services/access-control/</loc></url>
   <url><loc>https://burooq.net/services/annual-maintenance-contract/</loc></url>
   <url><loc>https://burooq.net/services/automatic-gates/</loc></url>
@@ -147,7 +145,6 @@
   <url><loc>https://burooq.net/services/networking/</loc></url>
   <url><loc>https://burooq.net/services/smart-home/</loc></url>
   <url><loc>https://burooq.net/services/smart-locks/</loc></url>
-  <url><loc>https://burooq.net/services/sound-systems/</loc></url>
   <url><loc>https://burooq.net/services/time-attendance/</loc></url>
   <url><loc>https://burooq.net/services/tv-mounting/</loc></url>
   <url><loc>https://burooq.net/services/wifi-solutions/</loc><lastmod>2026-11-14</lastmod></url>
@@ -211,7 +208,7 @@
   <url><loc>https://burooq.net/software/visitor-management/</loc></url>
   <url><loc>https://burooq.net/terms/</loc></url>
   <url><loc>https://burooq.net/testimonials/</loc></url>
-  <url><loc>https://burooq.net/tools/</loc></url>
+  <url><loc>https://burooq.net/tools/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://burooq.net/tools/attendance-hours-calculator/</loc></url>
   <url><loc>https://burooq.net/tools/bandwidth-calculator/</loc></url>
   <url><loc>https://burooq.net/tools/camera-coverage-calculator/</loc></url>
@@ -261,4 +258,17 @@
   <url><loc>https://burooq.net/tools/slug-generator/</loc></url>
   <url><loc>https://burooq.net/services/dash-cam-installation-abu-dhabi-arabic/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://burooq.net/services/wifi-installation-abu-dhabi-arabic/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://burooq.net/articles/does-cctv-record-audio-uae/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://burooq.net/services/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://burooq.net/services/data-recovery/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/data-recovery/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/data-recovery-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/data-recovery/"/></url>
+  <url><loc>https://burooq.net/services/data-recovery-arabic/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/data-recovery/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/data-recovery-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/data-recovery/"/></url>
+  <url><loc>https://burooq.net/services/laptop-repair/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/laptop-repair/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/laptop-repair-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/laptop-repair/"/></url>
+  <url><loc>https://burooq.net/services/laptop-repair-arabic/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/laptop-repair/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/laptop-repair-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/laptop-repair/"/></url>
+  <url><loc>https://burooq.net/services/wifi-booster/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/wifi-booster/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/wifi-booster-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/wifi-booster/"/></url>
+  <url><loc>https://burooq.net/services/wifi-booster-arabic/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/wifi-booster/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/wifi-booster-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/wifi-booster/"/></url>
+  <url><loc>https://burooq.net/services/sound-systems/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/sound-systems/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/sound-systems-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/sound-systems/"/></url>
+  <url><loc>https://burooq.net/services/sound-systems-arabic/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/sound-systems/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/sound-systems-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/sound-systems/"/></url>
+  <url><loc>https://burooq.net/services/website-design/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/website-design/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/website-design-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/website-design/"/></url>
+  <url><loc>https://burooq.net/services/website-design-arabic/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="en" href="https://burooq.net/services/website-design/"/><xhtml:link rel="alternate" hreflang="ar" href="https://burooq.net/services/website-design-arabic/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://burooq.net/services/website-design/"/></url>
+  <url><loc>https://burooq.net/tools/pdf-converter/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

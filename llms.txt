@@ -10,11 +10,21 @@ This website provides information, buying guides, and pricing for CCTV installat
 - Location: Abu Dhabi, UAE
 - Phone/WhatsApp: +971 54 438 9066
 - Email: info@burooq.net
-- Topics: CCTV installation, smart home automation, access control, networking, fire alarm, intercom systems, automatic gates, garage door motors, annual maintenance contracts
+- Topics: CCTV installation, smart home automation, access control, networking, fire alarm, intercom systems, automatic gates, garage door motors, annual maintenance contracts, WiFi boosters and mesh, sound systems, laptop repair, data recovery, website design
 
 ## Key Pages
 - Homepage: https://burooq.net/
 - Services: https://burooq.net/services/
+- Data Recovery: https://burooq.net/services/data-recovery/
+- Laptop Repair & Maintenance: https://burooq.net/services/laptop-repair/
+- WiFi Booster & Extender: https://burooq.net/services/wifi-booster/
+- Sound Systems: https://burooq.net/services/sound-systems/
+- Website Design: https://burooq.net/services/website-design/
+- CCTV Installation: https://burooq.net/services/cctv-installation-abu-dhabi/
+- Networking: https://burooq.net/services/networking/
+- Arabic service pages: https://burooq.net/services/data-recovery-arabic/ , https://burooq.net/services/laptop-repair-arabic/ , https://burooq.net/services/wifi-booster-arabic/ , https://burooq.net/services/sound-systems-arabic/ , https://burooq.net/services/website-design-arabic/
+- Free PDF Converter (JPG to PDF, text to PDF, merge PDF): https://burooq.net/tools/pdf-converter/
+- BurooqMart online store (sister site): https://burooqmart.com/
 - Articles & Guides: https://burooq.net/articles/
 - Shop: https://burooq.net/shop/
 - About: https://burooq.net/about/
