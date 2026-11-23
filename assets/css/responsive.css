@@ -16,6 +16,10 @@
 }
 
 /* RTL (Arabic) fixes: off-screen elements must not widen the page */
-html[dir="rtl"], html[dir="rtl"] body { overflow-x: hidden; }
+/* (overflow handled for all pages below) */
 html[dir="rtl"] .skip-link:not(:focus) { left: auto; right: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 html[dir="rtl"] .skip-link:focus { left: auto; right: 1rem; }
+
+/* Phones: the off-screen menu must not widen the page (caused sideways scrolling site-wide) */
+html { overflow-x: hidden; }
+@supports (overflow: clip) { html { overflow-x: clip; } }
