@@ -170,3 +170,20 @@ P['fleet'] = dict(
 # (contracting, shop POS, e-menu) come up most often.
 ROTATION = ['contracting', 'retail', 'emenu', 'grocery', 'contracting', 'salon', 'emenu',
             'restaurant', 'contracting', 'tailoring', 'emenu', 'laundry', 'carwash', 'fleet']
+
+
+# First-second hook (who it is for) and the honest urgency line (cost of waiting). No fake deadlines.
+P['contracting'].update(call=('Contractors!', 'أصحاب شركات المقاولات!'), loss=("Every week without numbers is profit you can't see.", 'كل أسبوع بدون أرقام = ربح ما تشوفه.'))
+P['retail'].update(call=('Shop owners!', 'أصحاب المحلات!'), loss=('Every day without a system, money leaks from the drawer.', 'كل يوم بدون نظام، فلوس تضيع من الدرج.'))
+P['grocery'].update(call=('Grocery owners!', 'أصحاب البقالات!'), loss=('Every unpaid credit you forget is your money.', 'كل آجل تنساه هو من فلوسك.'))
+P['salon'].update(call=('Salon owners!', 'أصحاب الصالونات!'), loss=('Every day on paper, you guess instead of know.', 'كل يوم على الورق، تخمّن بدل ما تعرف.'))
+P['tailoring'].update(call=('Tailor shops!', 'أصحاب محلات الخياطة!'), loss=('One lost order = one lost customer.', 'طلب واحد ضايع = زبون ضايع.'))
+P['restaurant'].update(call=('Restaurant owners!', 'أصحاب المطاعم!'), loss=('Every wrong order costs you food and customers.', 'كل طلب غلط يكلّفك أكل وزبائن.'))
+P['emenu'].update(call=('Restaurants & cafés!', 'المطاعم والكافيهات!'), loss=('Every reprint is money thrown away.', 'كل طباعة جديدة فلوس ضايعة.'))
+P['laundry'].update(call=('Laundry owners!', 'أصحاب المغاسل!'), loss=('Every lost ticket = an angry customer.', 'كل إيصال ضايع = زبون زعلان.'))
+P['carwash'].update(call=('Car wash owners!', 'أصحاب مغاسل السيارات!'), loss=("Every car not recorded is cash you can't track.", 'كل سيارة ما تسجّلها = كاش ما تقدر تتابعه.'))
+P['fleet'].update(call=('Rent-a-car & transport!', 'شركات التأجير والنقل!'), loss=("Fines you don't track = surprises later.", 'مخالفات ما تتابعها = مفاجآت بعدين.'))
+
+START = ('Start today', 'ابدأ اليوم')
+# Real calendar moments only (month -> line). Shown in place of START in those months.
+SEASON = {12: ('Start 2027 organised', 'ابدأ 2027 بشغلك مرتب'), 1: ('Make this year organised', 'خلّ هالسنة شغلك مرتب')}

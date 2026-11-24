@@ -35,6 +35,7 @@ hook_en, hook_ar = p['hooks'][(cycle + n) % len(p['hooks'])]
 off = 0 if cycle % 2 == 0 else 3
 feats = p['features'][off:off + 3]
 ACC = p['color']
+start_en, start_ar = C.SEASON.get(day.month, C.START)
 url_path = f"/software/{p['slug']}/"
 
 BASE = f"""
@@ -65,8 +66,21 @@ def page(css, body, dur):
 
 
 SC = []
+# 0 — first-second hook: who this is for
+SC.append(('s0', 1.8, f"""
+.flash{{position:absolute;inset:0;background:{GOLD};animation:fl var(--d) linear both}}
+@keyframes fl{{0%{{opacity:1}}30%{{opacity:1}}100%{{opacity:0}}}}
+.cw{{position:absolute;left:30px;right:30px;top:420px;text-align:center;animation:punch var(--d) cubic-bezier(.2,1.6,.4,1) both}}
+@keyframes punch{{0%{{transform:scale(2.2);opacity:0}}18%{{transform:scale(1);opacity:1}}100%{{transform:scale(1.04)}}}}
+.cw .en{{font:800 86px Inter;line-height:1.05;color:#fff;text-shadow:0 6px 0 rgba(0,0,0,.25)}}
+.cw .ar{{font:800 74px Tajawal;line-height:1.25;color:#fff;margin-top:18px;text-shadow:0 6px 0 rgba(0,0,0,.25)}}
+.warn{{width:120px;height:120px;margin:0 auto 34px;border-radius:50%;background:#ef4444;color:#fff;font:800 84px Inter;
+  display:flex;align-items:center;justify-content:center;animation:shake var(--d) linear both}}
+@keyframes shake{{0%,20%{{transform:rotate(0)}}25%{{transform:rotate(-12deg)}}30%{{transform:rotate(12deg)}}35%{{transform:rotate(-8deg)}}40%,100%{{transform:rotate(0)}}}}
+#root{{animation:none}} .brand{{display:none}}
+""", f"""<div class="flash"></div><div class="cw"><div class="warn">!</div><div class="en">{E(p['call'][0])}</div><div class="ar">{E(p['call'][1])}</div></div>"""))
 # 1 — the pain
-SC.append(('s1', 4.4, f"""
+SC.append(('s1', 3.8, f"""
 .paper{{position:absolute;left:50%;top:150px;width:330px;height:420px;margin-left:-165px;background:#f5efe4;border-radius:16px;
   box-shadow:0 30px 60px rgba(0,0,0,.45);padding:34px 30px;animation:pin var(--d) ease-out both;color:#5b4632}}
 .paper b{{display:block;font:800 36px Inter;margin-bottom:22px}} .paper b.ar{{font:800 36px Tajawal}}
@@ -128,6 +142,19 @@ SC.append(('s3', 8.4, f"""
 @keyframes f2{{0%,64%{{opacity:0;transform:translateX(-80px)}}72%,100%{{opacity:1;transform:none}}}}
 """, f"""<div class="t"><div class="en">All in one place</div><div class="ar">كل شيء في مكان واحد</div></div><div class="list">{fc}</div>"""))
 
+# 3b — honest urgency: the cost of waiting
+SC.append(('s3b', 3.6, f"""
+.band{{position:absolute;left:0;right:0;top:330px;background:#dc2626;padding:56px 40px;text-align:center;transform:rotate(-3deg);
+  box-shadow:0 20px 50px rgba(0,0,0,.4);animation:sl var(--d) cubic-bezier(.2,.8,.2,1) both}}
+@keyframes sl{{0%{{transform:rotate(-3deg) translateX(-110%)}}16%,100%{{transform:rotate(-3deg) translateX(0)}}}}
+.band .en{{font:800 54px Inter;line-height:1.12}} .band .ar{{font:800 50px Tajawal;line-height:1.3;margin-top:18px}}
+.go{{position:absolute;left:0;right:0;top:860px;text-align:center;animation:pulse var(--d) ease-in-out both}}
+.go b{{display:inline-block;background:{GOLD};color:#1f2937;font:800 62px Inter;padding:24px 54px;border-radius:70px}}
+.go .ar{{display:block;font:800 56px Tajawal;color:{GOLD};margin-top:22px}}
+@keyframes pulse{{0%,30%{{opacity:0;transform:scale(.8)}}40%{{opacity:1;transform:scale(1.08)}}50%{{transform:scale(1)}}62%{{transform:scale(1.07)}}74%,100%{{transform:scale(1)}}}}
+""", f"""<div class="band"><div class="en">{E(p['loss'][0])}</div><div class="ar">{E(p['loss'][1])}</div></div>
+<div class="go"><b>{E(start_en)} →</b><span class="ar">{E(start_ar)}</span></div>"""))
+
 # 4 — price + how to buy
 SC.append(('s4', 5.6, f"""
 .wrap{{position:absolute;left:36px;right:36px;top:110px;text-align:center}}
@@ -139,6 +166,8 @@ SC.append(('s4', 5.6, f"""
 .buy{{display:inline-block;margin-top:40px;background:{GOLD};color:#1f2937;font:800 44px Inter;padding:22px 44px;border-radius:60px;animation:pop2 var(--d) ease-out both}}
 .buy span{{font-family:Tajawal}}
 @keyframes pop2{{0%,30%{{opacity:0;transform:scale(.8)}}40%,100%{{opacity:1;transform:none}}}}
+.buy{{animation:pop2 var(--d) ease-out both,beat 1s ease-in-out 1.4s infinite}}
+@keyframes beat{{0%,100%{{transform:scale(1)}}50%{{transform:scale(1.06)}}}}
 .url{{font:800 46px Inter;margin-top:28px;animation:pop2 var(--d) ease-out both}}
 .wa{{display:inline-flex;gap:18px;align-items:center;margin-top:30px;background:{GREEN};color:#fff;font:800 50px Inter;padding:20px 40px;border-radius:60px;
   animation:pop3 var(--d) ease-out both}}
@@ -194,10 +223,10 @@ def render(stills=False):
 def caption():
     f = '\n'.join(f'✅ {a}' for a, _ in feats); fa = '\n'.join(f'✅ {b}' for _, b in feats)
     link = C.SITE + url_path
-    en = (f"{hook_en}\n\nE-Sannad {p['en']} by Alburooq:\n{f}\n\n💳 {C.PRICE_EN} ({C.PRICE_EN2}).\n"
-          f"Buy online: {link}\nWhatsApp: {C.WHATSAPP}")
-    ar = (f"{hook_ar}\n\n{p['ar']} من إي-سند (البروق):\n{fa}\n\n💳 {C.PRICE_AR} ({C.PRICE_AR2}).\n"
-          f"اشترِ أونلاين: {link}\nواتساب: {C.WHATSAPP}")
+    en = (f"{p['call'][0]} {hook_en}\n\nE-Sannad {p['en']} by Alburooq:\n{f}\n\n💳 {C.PRICE_EN} ({C.PRICE_EN2}).\n"
+          f"⏳ {p['loss'][0]} {start_en}.\nBuy online: {link}\nWhatsApp: {C.WHATSAPP}")
+    ar = (f"{p['call'][1]} {hook_ar}\n\n{p['ar']} من إي-سند (البروق):\n{fa}\n\n💳 {C.PRICE_AR} ({C.PRICE_AR2}).\n"
+          f"⏳ {p['loss'][1]} {start_ar}.\nاشترِ أونلاين: {link}\nواتساب: {C.WHATSAPP}")
     return {'date': day.isoformat(), 'product': key, 'page_url': link, 'hook_en': hook_en, 'hook_ar': hook_ar,
             'features': feats, 'caption': ar + '\n\n' + en + '\n\n' + p['tags'], 'hashtags': p['tags']}
 
@@ -208,7 +237,8 @@ if __name__ == '__main__':
     if stills: print('stills in', OUT); raise SystemExit
     total = sum(d for _, d, _, _ in SC)
     starts = [sum(d for _, d, _, _ in SC[:i]) for i in range(len(SC))]
-    dings = [starts[2] + SC[2][1] * x for x in (0.1, 0.38, 0.66)] + [starts[3] + SC[3][1] * 0.46]
+    ix = {nm: i for i, (nm, *_ ) in enumerate(SC)}
+    dings = [0.05] + [starts[ix['s3']] + SC[ix['s3']][1] * x for x in (0.1, 0.38, 0.66)] + [starts[ix['s4']] + SC[ix['s4']][1] * 0.46]
     lst = os.path.join(WORK, 'list.txt')
     open(lst, 'w').write(''.join(f"file '{f}'\n" for f in parts))
     silent = os.path.join(WORK, 'silent.mp4'); wav = os.path.join(WORK, 'music.wav')
