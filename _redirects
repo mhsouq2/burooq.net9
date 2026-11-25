@@ -123,3 +123,9 @@
 /shop/seagate-skyhawk-4tb-hdd/outdoor-siren-strobe-alarm/ /shop/outdoor-siren-strobe-alarm/ 301
 /shop/seagate-skyhawk-4tb-hdd/outdoor-siren-strobe-alarm-arabic/ /shop/outdoor-siren-strobe-alarm-arabic/ 301
 /testimonials/terms/ /terms/ 301
+
+# SEO Nov 2026: merge competing articles into service pages
+/articles/cctv-installation-company-abu-dhabi/ /services/cctv-installation-abu-dhabi/ 301
+/articles/cctv-installation-company-abu-dhabi /services/cctv-installation-abu-dhabi/ 301
+/articles/cctv-smart-home-security-installation-services-abu-dhabi/ /services/ 301
+/articles/cctv-smart-home-security-installation-services-abu-dhabi /services/ 301
